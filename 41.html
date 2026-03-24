@@ -1,105 +1,89 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H56XHD5MLW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H56XHD5MLW');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>41. AIによるコンテンツ監査（コンテンツオーディット）と低品質ページ整理術 | Zero-Cost SEO 100本ノック</title>
-    <meta name="description" content="AIを活用してサイト内の全コンテンツを評価。検索エンジンからの評価を下げている低品質ページを特定し、リライト・統合・削除を適切に判断するコンテンツ監査の自動化手法を詳説します。">
-    <link rel="canonical" href="https://tomokazu-hoshi.github.io/41.html">
-    
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="41. AIによるコンテンツ監査（コンテンツオーディット）と低品質ページ整理術">
-    <meta property="og:description" content="増えすぎたページをAIが整理。サイト全体の評価を底上げする「引き算」のSEO。">
-    <meta property="og:image" content="https://tomokazu-hoshi.github.io/images/ogp.png">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "41. Content Audit and Low-Quality Page Management with AI",
-      "author": { "@type": "Person", "name": "星 友和" },
-      "publisher": { "@type": "Organization", "name": "Zero-Cost SEO" },
-      "image": "https://tomokazu-hoshi.github.io/images/ogp.png",
-      "datePublished": "2026-03-22T08:00:00+09:00"
-    }
-    </script>
-
-    <style>
-        :root { --main-blue: #002b5b; --accent-orange: #ff9900; --bg-light: #f4f7f9; }
-        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; line-height: 1.8; color: #333; margin: 0; padding: 0; background: #fff; }
-        .container { max-width: 850px; margin: 0 auto; padding: 0 25px; }
-        
-        /* パンくずリスト */
-        .breadcrumb { padding: 20px 0; font-size: 0.85rem; color: #666; }
-        .breadcrumb a { color: var(--main-blue); text-decoration: none; font-weight: bold; }
-
-        /* 記事ヘッダー */
-        header { margin-bottom: 40px; border-bottom: 4px solid var(--main-blue); padding-bottom: 20px; }
-        .article-num { color: var(--accent-orange); font-weight: bold; font-size: 1.2rem; display: block; }
-        h1 { font-size: 2.2rem; color: var(--main-blue); margin: 5px 0; }
-
-        /* 本文エリア */
-        .entry-content { font-size: 1.15rem; letter-spacing: 0.02em; }
-        .entry-content p { margin-bottom: 1.5em; }
-
-        /* ナビゲーション（次へ・前へ） */
-        .article-nav { display: flex; justify-content: space-between; gap: 15px; margin: 60px 0; padding-top: 30px; border-top: 1px solid #eee; }
-        .article-nav a { flex: 1; text-align: center; padding: 18px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; font-size: 1rem; }
-        .btn-prev { background: #f0f0f0; color: #555; border: 1px solid #ddd; }
-        .btn-top { background: #fff; color: var(--main-blue); border: 1px solid var(--main-blue); }
-        .btn-next { background: var(--main-blue); color: #fff; }
-        .article-nav a:hover { opacity: 0.8; transform: translateY(-2px); }
-
-        @media (max-width: 600px) { .article-nav { flex-direction: column; } h1 { font-size: 1.8rem; } }
-    </style>
+    <title>41. リライトによる検索順位の引き上げ術 | Zero-Cost SEO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
-    <nav class="breadcrumb">
-        <a href="/">TOP</a> ＞ <span id="category-name">基盤構築と基本戦略</span> ＞ 41. AIによるコンテンツ監査（コンテンツオーディット）と低品質ページ整理術
-    </nav>
+<header class="main-header">
+    <div class="container">
+        <h1>Zero-Cost SEO</h1>
+    </div>
+</header>
 
-    <header>
-        <span class="article-num">NO.41</span>
-        <h1>AIによるコンテンツ監査（コンテンツオーディット）と低品質ページ整理術</h1>
-    </header>
+<main class="container">
+    <a href="chapter3.html" class="back-link">← 第3章 目次へ戻る</a>
+    
+    <article class="post-content">
+        <h1>41. リライトによる検索順位の引き上げ術</h1>
+        <p>SEO記事は、公開して終わりではありません。むしろ、公開後のデータに基づいて内容を更新する「リライト」こそが、検索順位を劇的に押し上げる鍵となります。AIを分析パートナーとして使い、効率的かつ効果的な改善を行いましょう。</p>
+        
+        <h2>データに基づく「優先順位」の決定</h2>
+        <p>すべての記事をリライトする必要はありません。Googleサーチコンソールを確認し、「表示回数は多いがクリック率（CTR）が低い記事」や、「10位〜20位付近で停滞している記事」を優先的に選びます。AIに現在の検索意図と自分の記事を比較させ、「不足している情報は何か」「最新のトレンドと乖離していないか」を特定させることで、最小限の手間で最大限の順位アップを狙えます。</p>
 
-    <article class="entry-content">
-        <p>SEOにおいて、ページを増やすことと同じくらい重要なのが、価値を生まなくなったページを「整理」することです。低品質なページがサイト内に散乱していると、クローラーの巡回効率が下がり、ドメイン全体の信頼性が損なわれます。Zero-Cost SEOでは、AIを活用して膨大な記事群を多角的に評価し、効率的なコンテンツ監査（オーディット）を遂行します。</p>
-        <p>AIを使えば、アクセス数や滞在時間、情報の新しさを基準に、各ページに対して「維持・リライト・統合・NOINDEX・削除」の5段階評価を自動で行うことが可能です。サイトを「量」から「質」へと転換させ、検索エンジンに「このサイトには質の高い情報しかない」と認識させるための、戦略的なコンテンツ整理のワークフローを詳説します。</p>
+        <h2>情報の鮮度と「読後感」のアップデート</h2>
+        <p>検索エンジンは「情報の新しさ」を評価します。古い統計データや期限切れの情報を最新のものに更新するだけで、サイトの信頼性は高まります。また、リライトの際は単に文字数を増やすのではなく、読者が抱く「新たな疑問」に先回りして答える構成に磨き上げましょう。AIに導入文のリライトや、より具体的な解決策の追加を依頼し、読者が「この記事だけで完結した」と感じる読後感を提供することが、上位表示を維持する最短ルートです。</p>
     </article>
 
-    <div class="article-nav">
-        <a id="link-prev" href="#" class="btn-prev">← 前の記事</a>
-        <a href="/" class="btn-top">目次へ戻る</a>
-        <a id="link-next" href="#" class="btn-next">次の記事を読む →</a>
+    <nav class="post-nav" style="display: flex; justify-content: space-between; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
+        <a href="40.html" style="text-decoration: none; color: #f39c12; font-weight: bold;">← 前のページへ</a>
+        <a href="42.html" style="text-decoration: none; color: #f39c12; font-weight: bold;">次のページへ →</a>
+    </nav>
+
+    <section class="article-footer-nav">
+        <h3>同じカテゴリー（第3章：戦略・収益化編）の記事</h3>
+        <ul class="vertical-article-list">
+            <li><a href="36.html">36. 収益を生むキーワードの選び方</a></li>
+            <li><a href="37.html">37. 被リンクを獲得するコンテンツの共通点</a></li>
+            <li><a href="38.html">38. E-E-A-Tを強化する著者情報の書き方</a></li>
+            <li><a href="39.html">39. 成約率(CVR)を高めるマイクロコピー</a></li>
+            <li><a href="40.html">40. 内部リンクの最適化とトピッククラスター</a></li>
+            <li><a href="41.html">41. リライトによる検索順位の引き上げ術</a></li>
+            <li><a href="42.html">42. 長期的な資産価値を生む「エバーグリーン」記事</a></li>
+            <li><a href="43.html">43. 読者の信頼を勝ち取るアフィリエイト手法</a></li>
+            <li><a href="44.html">44. ドメインパワーを育てるSNS活用術</a></li>
+            <li><a href="45.html">45. Googleサーチコンソールによる健康診断</a></li>
+            <li><a href="46.html">46. ユーザー行動分析(GA4)の基本</a></li>
+            <li><a href="47.html">47. 検索順位の変動に対するメンタル管理</a></li>
+            <li><a href="48.html">48. 画像SEOとAI生成画像の活用</a></li>
+            <li><a href="49.html">49. 動画コンテンツとのシナジー効果</a></li>
+            <li><a href="50.html">50. Q&A（FAQ）セクションによるSEO効果</a></li>
+            <li><a href="51.html">51. 専門家へのインタビュー記事の作り方</a></li>
+            <li><a href="52.html">52. 被リンク営業の基礎とマナー</a></li>
+            <li><a href="53.html">53. サイトの表示速度とコアウェブバイタル</a></li>
+            <li><a href="54.html">54. 多言語展開(Hreflang)の基礎</a></li>
+            <li><a href="55.html">55. 定期的なメンテナンスと品質維持</a></li>
+        </ul>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="index.html" style="color: #666; text-decoration: none; font-size: 0.9rem; border-bottom: 1px solid #ddd;">
+                他のカテゴリーの記事を読む（トップページへ戻る）
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <div class="container">
+        <div style="margin-bottom: 20px;">
+            <a href="hosting-comparison-guide.html" style="color: #bbb; text-decoration: none; font-size: 0.75rem;">
+                Webサイト構築における無料と有料の真実：GitHubからWordPressへの移行ガイド
+            </a>
+        </div>
+        <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
     </div>
-</div>
-
-<script>
-    const filename = window.location.pathname.split('/').pop() || '41.html';
-    const currentNum = parseInt(filename.replace(/[^0-9]/g, ''));
-
-    if (!isNaN(currentNum)) {
-        const prev = document.getElementById('link-prev');
-        const next = document.getElementById('link-next');
-
-        if (currentNum > 1) {
-            prev.href = (currentNum - 1).toString().padStart(2, '0') + ".html";
-        } else {
-            prev.style.display = 'none';
-        }
-
-        if (currentNum < 100) {
-            next.href = (currentNum + 1).toString().padStart(2, '0') + ".html";
-        } else {
-            next.style.display = 'none';
-        }
-    }
-</script>
+</footer>
 
 </body>
 </html>
