@@ -1,105 +1,89 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H56XHD5MLW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H56XHD5MLW');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>35. AIによる構造化データ（Schema.org）自動生成術 | Zero-Cost SEO 100本ノック</title>
-    <meta name="description" content="AIを活用してSchema.orgの構造化データをミスなく自動生成。検索結果でのリッチスニペット表示を実現し、クリック率を最大化するための技術的SEOの自動化手法を詳説します。">
-    <link rel="canonical" href="https://tomokazu-hoshi.github.io/35.html">
-    
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="35. AIによる構造化データ（Schema.org）自動生成術">
-    <meta property="og:description" content="AIがコードを書く。検索エンジンへの「正しい自己紹介」でリッチスニペットを掌中に。">
-    <meta property="og:image" content="https://tomokazu-hoshi.github.io/images/ogp.png">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "35. Automated Structured Data Markup with AI",
-      "author": { "@type": "Person", "name": "星 友和" },
-      "publisher": { "@type": "Organization", "name": "Zero-Cost SEO" },
-      "image": "https://tomokazu-hoshi.github.io/images/ogp.png",
-      "datePublished": "2026-03-22T08:00:00+09:00"
-    }
-    </script>
-
-    <style>
-        :root { --main-blue: #002b5b; --accent-orange: #ff9900; --bg-light: #f4f7f9; }
-        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; line-height: 1.8; color: #333; margin: 0; padding: 0; background: #fff; }
-        .container { max-width: 850px; margin: 0 auto; padding: 0 25px; }
-        
-        /* パンくずリスト */
-        .breadcrumb { padding: 20px 0; font-size: 0.85rem; color: #666; }
-        .breadcrumb a { color: var(--main-blue); text-decoration: none; font-weight: bold; }
-
-        /* 記事ヘッダー */
-        header { margin-bottom: 40px; border-bottom: 4px solid var(--main-blue); padding-bottom: 20px; }
-        .article-num { color: var(--accent-orange); font-weight: bold; font-size: 1.2rem; display: block; }
-        h1 { font-size: 2.2rem; color: var(--main-blue); margin: 5px 0; }
-
-        /* 本文エリア */
-        .entry-content { font-size: 1.15rem; letter-spacing: 0.02em; }
-        .entry-content p { margin-bottom: 1.5em; }
-
-        /* ナビゲーション（次へ・前へ） */
-        .article-nav { display: flex; justify-content: space-between; gap: 15px; margin: 60px 0; padding-top: 30px; border-top: 1px solid #eee; }
-        .article-nav a { flex: 1; text-align: center; padding: 18px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; font-size: 1rem; }
-        .btn-prev { background: #f0f0f0; color: #555; border: 1px solid #ddd; }
-        .btn-top { background: #fff; color: var(--main-blue); border: 1px solid var(--main-blue); }
-        .btn-next { background: var(--main-blue); color: #fff; }
-        .article-nav a:hover { opacity: 0.8; transform: translateY(-2px); }
-
-        @media (max-width: 600px) { .article-nav { flex-direction: column; } h1 { font-size: 1.8rem; } }
-    </style>
+    <title>35. AIプロンプトの極意 | Zero-Cost SEO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
-    <nav class="breadcrumb">
-        <a href="/">TOP</a> ＞ <span id="category-name">基盤構築と基本戦略</span> ＞ 35. AIによる構造化データ（Schema.org）自動生成術
-    </nav>
+<header class="main-header">
+    <div class="container">
+        <h1>Zero-Cost SEO</h1>
+    </div>
+</header>
 
-    <header>
-        <span class="article-num">NO.35</span>
-        <h1>AIによる構造化データ（Schema.org）自動生成術</h1>
-    </header>
+<main class="container">
+    <a href="chapter2.html" class="back-link">← 第2章 目次へ戻る</a>
+    
+    <article class="post-content">
+        <h1>35. AIプロンプトの極意</h1>
+        <p>第2章の最後を飾るのは、AIを操るための「言葉」、すなわちプロンプトの極意です。AIライティングの成否は、単なる命令の巧拙ではなく、いかにAIに「最高の役割」と「深い文脈」を与えられるかにかかっています。</p>
+        
+        <h2>プロンプトは「指示」ではなく「舞台設定」</h2>
+        <p>優れたプロンプトとは、AIに対して「何をすべきか」を教えるだけでなく、「どのような存在として振る舞うべきか」という舞台を用意することです。「あなたは世界最高峰のSEOコンサルタントです」という役割（ロール）の付与は、AIの出力の質を劇的に変えます。さらに、読者の背景、記事の目的、守るべきトーン＆マナーといった制約条件を緻密に積み上げることで、AIはあなたの意図を完璧に汲み取った「一撃」の回答を生成するようになります。</p>
 
-    <article class="entry-content">
-        <p>検索エンジンにコンテンツの意味を正しく伝える「構造化データ（Structured Data）」は、リッチスニペットの表示や音声検索への対応において不可欠な技術です。しかし、手動でのJSON-LD作成は構文エラーのリスクが伴います。Zero-Cost SEOでは、AIを活用して記事の内容から最適なSchema.orgのマークアップを瞬時に生成し、実装の精度と速度を最大化します。</p>
-        <p>AIを使えば、Article、FAQ、How-to、Reviewといった多様なデータ形式を、ページ内容に合わせて自動的に出し分けることが可能です。検索結果での占有面積を広げ、競合サイトよりも高いクリック率を獲得するための、AIによる技術的SEOの自動化ワークフローを詳説します。</p>
+        <h2>第2章の総括：AIを真の相棒にするために</h2>
+        <p>構成案の作成から、感情を揺さぶるコピー、そしてテクニカルな最適化まで、AIはあらゆる場面で強力な武器となります。しかし、最後にその文章に命を吹き込み、信頼性を担保するのは「人間であるあなた」の役割です。AIが生成した土台を疑い、磨き、独自の視点を加える。この共同作業を繰り返すことで、あなたのサイトは唯一無二の資産へと成長します。次章からは、これらの技術を駆使して具体的に収益を生み出し、サイトを拡大させる「戦略編」へと進んでいきましょう。</p>
     </article>
 
-    <div class="article-nav">
-        <a id="link-prev" href="#" class="btn-prev">← 前の記事</a>
-        <a href="/" class="btn-top">目次へ戻る</a>
-        <a id="link-next" href="#" class="btn-next">次の記事を読む →</a>
+    <nav class="post-nav" style="display: flex; justify-content: space-between; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
+        <a href="34.html" style="text-decoration: none; color: #f39c12; font-weight: bold;">← 前のページへ</a>
+        <a href="36.html" style="text-decoration: none; color: #f39c12; font-weight: bold;">次のページへ →</a>
+    </nav>
+
+    <section class="article-footer-nav">
+        <h3>同じカテゴリー（第2章：AIライティング編）の記事</h3>
+        <ul class="vertical-article-list">
+            <li><a href="16.html">16. 読者の心をつかむAI構成案</a></li>
+            <li><a href="17.html">17. 感情を揺さぶるコピーライティング</a></li>
+            <li><a href="18.html">18. AIによる共起語の自然な挿入</a></li>
+            <li><a href="19.html">19. 記事の信頼性を高めるファクトチェック</a></li>
+            <li><a href="20.html">20. AI記事の品質管理術</a></li>
+            <li><a href="21.html">21. 読了率を高める導入文の作り方</a></li>
+            <li><a href="22.html">22. 見出し構成(Hタグ)のSEO法則</a></li>
+            <li><a href="23.html">23. AI生成文を人間らしく修正する技術</a></li>
+            <li><a href="24.html">24. 専門用語を分かりやすく解説するAI活用</a></li>
+            <li><a href="25.html">25. 読者の「悩み」を深掘りするリサーチ</a></li>
+            <li><a href="26.html">26. 比較記事の公平性を保つ構成</a></li>
+            <li><a href="27.html">27. AIによるストーリーテリングの実装</a></li>
+            <li><a href="28.html">28. 結論から書くPREP法の徹底</a></li>
+            <li><a href="29.html">29. 箇条書きと強調の視認性向上</a></li>
+            <li><a href="30.html">30. テクニカルSEO完全網羅</a></li>
+            <li><a href="31.html">31. 独自性(Originality)のAI付加術</a></li>
+            <li><a href="32.html">32. ターゲットペルソナの精密設定</a></li>
+            <li><a href="33.html">33. AIへの効果的なフィードバック法</a></li>
+            <li><a href="34.html">34. 長文記事を飽きさせない緩急</a></li>
+            <li><a href="35.html">35. AIプロンプトの極意</a></li>
+        </ul>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="index.html" style="color: #666; text-decoration: none; font-size: 0.9rem; border-bottom: 1px solid #ddd;">
+                他のカテゴリーの記事を読む（トップページへ戻る）
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <div class="container">
+        <div style="margin-bottom: 20px;">
+            <a href="hosting-comparison-guide.html" style="color: #bbb; text-decoration: none; font-size: 0.75rem;">
+                Webサイト構築における無料と有料の真実：GitHubからWordPressへの移行ガイド
+            </a>
+        </div>
+        <p>&copy; 2026 Zero-Cost SEO</p>
     </div>
-</div>
-
-<script>
-    const filename = window.location.pathname.split('/').pop() || '35.html';
-    const currentNum = parseInt(filename.replace(/[^0-9]/g, ''));
-
-    if (!isNaN(currentNum)) {
-        const prev = document.getElementById('link-prev');
-        const next = document.getElementById('link-next');
-
-        if (currentNum > 1) {
-            prev.href = (currentNum - 1).toString().padStart(2, '0') + ".html";
-        } else {
-            prev.style.display = 'none';
-        }
-
-        if (currentNum < 100) {
-            next.href = (currentNum + 1).toString().padStart(2, '0') + ".html";
-        } else {
-            next.style.display = 'none';
-        }
-    }
-</script>
+</footer>
 
 </body>
 </html>
