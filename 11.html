@@ -1,109 +1,84 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H56XHD5MLW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H56XHD5MLW');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>11. AI電子書籍（Kindle）出版戦略 | Zero-Cost SEO 100本ノック</title>
-    <meta name="description" content="AIを活用してブログコンテンツを電子書籍化し、Kindleストアからの流入と印税収益を確保する戦略。資産サイトの価値を多角化し、プラットフォームに依存しない収益源を構築する手法を解説します。">
-    <link rel="canonical" href="https://tomokazu-hoshi.github.io/11.html">
-    
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="11. AI電子書籍（Kindle）出版戦略">
-    <meta property="og:description" content="ブログを資産から「出版物」へ。AIによるKindle展開。">
-    <meta property="og:image" content="https://tomokazu-hoshi.github.io/images/ogp.png">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "11. AI eBook Kindle Strategy",
-      "author": { "@type": "Person", "name": "星 友和" },
-      "publisher": { "@type": "Organization", "name": "Zero-Cost SEO" },
-      "image": "https://tomokazu-hoshi.github.io/images/ogp.png",
-      "datePublished": "2026-03-22T08:00:00+09:00"
-    }
-    </script>
-
-    <style>
-        :root { --main-blue: #002b5b; --accent-orange: #ff9900; --bg-light: #f4f7f9; }
-        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; line-height: 1.8; color: #333; margin: 0; padding: 0; background: #fff; }
-        .container { max-width: 850px; margin: 0 auto; padding: 0 25px; }
-        
-        /* パンくずリスト */
-        .breadcrumb { padding: 20px 0; font-size: 0.85rem; color: #666; }
-        .breadcrumb a { color: var(--main-blue); text-decoration: none; font-weight: bold; }
-
-        /* 記事ヘッダー */
-        header { margin-bottom: 40px; border-bottom: 4px solid var(--main-blue); padding-bottom: 20px; }
-        .article-num { color: var(--accent-orange); font-weight: bold; font-size: 1.2rem; display: block; }
-        h1 { font-size: 2.2rem; color: var(--main-blue); margin: 5px 0; }
-
-        /* 本文エリア */
-        .entry-content { font-size: 1.15rem; letter-spacing: 0.02em; }
-        .entry-content p { margin-bottom: 1.5em; }
-
-        /* ナビゲーション（次へ・前へ） */
-        .article-nav { display: flex; justify-content: space-between; gap: 15px; margin: 60px 0; padding-top: 30px; border-top: 1px solid #eee; }
-        .article-nav a { flex: 1; text-align: center; padding: 18px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; font-size: 1rem; }
-        .btn-prev { background: #f0f0f0; color: #555; border: 1px solid #ddd; }
-        .btn-top { background: #fff; color: var(--main-blue); border: 1px solid var(--main-blue); }
-        .btn-next { background: var(--main-blue); color: #fff; }
-        .article-nav a:hover { opacity: 0.8; transform: translateY(-2px); }
-
-        @media (max-width: 600px) { .article-nav { flex-direction: column; } h1 { font-size: 1.8rem; } }
-    </style>
+    <title>11. セキュリティとしての静的配信 | Zero-Cost SEO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
-    <nav class="breadcrumb">
-        <a href="/">TOP</a> ＞ <span id="category-name">基盤構築と基本戦略</span> ＞ 11. AI電子書籍（Kindle）出版戦略
-    </nav>
+<header class="main-header">
+    <div class="container">
+        <h1>Zero-Cost SEO</h1>
+    </div>
+</header>
 
-    <header>
-        <span class="article-num">NO.11</span>
-        <h1>AI電子書籍（Kindle）出版戦略</h1>
-    </header>
+<main class="container">
+    <a href="chapter1.html" class="back-link">← 第1章 目次へ戻る</a>
+    
+    <article class="post-content">
+        <h1>11. セキュリティとしての静的配信</h1>
+        <p>Zero-Cost SEOで静的サイトを選択する理由は、速度やコストだけではありません。「セキュリティ」こそが、個人が長期的にサイトを運営し続けるための最大の守護神となります。</p>
+        
+        <h2>攻撃対象領域（アタックサーフェス）の排除</h2>
+        <p>WordPressのような動的サイトには、常にデータベースや管理画面へのログインが存在します。これらは悪意のある第三者にとっての「入り口」となり得ます。一方、GitHub Pagesで配信される静的サイトには、そもそも攻撃すべきデータベースも、ログイン画面も存在しません。この「入り口がない」という構造そのものが、最強のセキュリティ対策となります。</p>
 
-    <article class="entry-content">
-        <p>ウェブサイトに蓄積された高品質な記事群は、そのまま電子書籍としての価値を持ちます。Zero-Cost SEOのステップアップとして、AIを活用したKindle出版を行い、Amazonという巨大なプラットフォームから逆流入と印税収益を狙う戦略を展開します。</p>
-        <p>AIを使えば、既存記事の再構成、書籍用のアウトライン作成、そしてプロレベルの表紙デザインまでを短時間で完結できます。ブログを単なる情報発信の場に留めず、複数の収益チャネルを持つ「メディア」へと昇華させるための具体的な手順を詳説します。</p>
+        <h2>改ざんリスクとバックアップ</h2>
+        <p>万が一、ローカル環境でミスが起きても、Gitで管理されているため、過去の正常なバージョンへ瞬時に戻すことができます。サーバー側でのファイル改ざんリスクがほぼゼロであることは、サイトを「資産」として安心して放置（ロングテール集客）できることを意味します。セキュリティにリソースを割けない個人だからこそ、静的配信という選択が賢明なのです。</p>
     </article>
 
-    <div class="article-nav">
-        <a id="link-prev" href="#" class="btn-prev">← 前の記事</a>
-        <a href="/" class="btn-top">目次へ戻る</a>
-        <a id="link-next" href="#" class="btn-next">次の記事を読む →</a>
+    <nav class="post-nav" style="display: flex; justify-content: space-between; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
+        <a href="10.html" style="text-decoration: none; color: #f39c12; font-weight: bold;">← 前のページへ</a>
+        <a href="12.html" style="text-decoration: none; color: #f39c12; font-weight: bold;">次のページへ →</a>
+    </nav>
+
+    <section class="article-footer-nav">
+        <h3>同じカテゴリー（第1章：基礎・環境構築編）の記事</h3>
+        <ul class="vertical-article-list">
+            <li><a href="01.html">1. Zero-Cost SEOの幕開け</a></li>
+            <li><a href="02.html">2. AIを軍師に迎える思考法</a></li>
+            <li><a href="03.html">3. 個人が資本に勝つための戦略</a></li>
+            <li><a href="04.html">4. GitHub Pagesを選ぶ理由</a></li>
+            <li><a href="05.html">5. 継続を力に変える習慣術</a></li>
+            <li><a href="06.html">6. 静的サイトジェネレーターの優位性</a></li>
+            <li><a href="07.html">7. ドメインの選定とブランド構築</a></li>
+            <li><a href="08.html">8. サーバーレス運営のコストメリット</a></li>
+            <li><a href="09.html">9. Gitによるコンテンツ管理の初歩</a></li>
+            <li><a href="10.html">10. GitHub Pagesの爆速設定</a></li>
+            <li><a href="11.html">11. セキュリティとしての静的配信</a></li>
+            <li><a href="12.html">12. HTML/CSSのSEO最適化</a></li>
+            <li><a href="13.html">13. 表示速度が順位に与える影響</a></li>
+            <li><a href="14.html">14. レスポンシブデザインの必須条件</a></li>
+            <li><a href="15.html">15. モバイルファーストインデックス対応</a></li>
+        </ul>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="index.html" style="color: #666; text-decoration: none; font-size: 0.9rem; border-bottom: 1px solid #ddd;">
+                他のカテゴリーの記事を読む（トップページへ戻る）
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <div class="container">
+        <div style="margin-bottom: 20px;">
+            <a href="hosting-comparison-guide.html" style="color: #bbb; text-decoration: none; font-size: 0.75rem;">
+                Webサイト構築における無料と有料の真実：GitHubからWordPressへの移行ガイド
+            </a>
+        </div>
+        <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
     </div>
-</div>
-
-<script>
-    const filename = window.location.pathname.split('/').pop() || '11.html';
-    const currentNum = parseInt(filename.replace(/[^0-9]/g, ''));
-
-    if (!isNaN(currentNum)) {
-        const prev = document.getElementById('link-prev');
-        const next = document.getElementById('link-next');
-
-        // 前の記事（09番へ戻る）
-        if (currentNum > 1) {
-            let pNum = currentNum - 1;
-            if (currentNum === 11) pNum = 9; // 10番を飛ばしている場合の調整
-            prev.href = pNum.toString().padStart(2, '0') + ".html";
-        } else {
-            prev.style.display = 'none';
-        }
-
-        // 次の記事
-        if (currentNum < 100) {
-            next.href = (currentNum + 1).toString().padStart(2, '0') + ".html";
-        } else {
-            next.style.display = 'none';
-        }
-    }
-</script>
+</footer>
 
 </body>
 </html>
