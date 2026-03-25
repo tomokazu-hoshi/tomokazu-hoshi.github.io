@@ -10,7 +10,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>13. SSL化（HTTPS）とセキュリティの信頼性 | Zero-Cost SEO</title>
+    <title>13. Google Search Consoleへの登録と初期設定 | Zero-Cost SEO</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -19,6 +19,7 @@
 <header class="main-header">
     <div class="container">
         <h1>Zero-Cost SEO</h1>
+        <p>技術とAIで、コストゼロの資産サイトを構築する</p>
     </div>
 </header>
 
@@ -26,16 +27,24 @@
     <a href="chapter1.html" class="back-link">← 第1章 目次へ戻る</a>
     
     <article class="post-content">
-        <h1>13. SSL化（HTTPS）とセキュリティの信頼性</h1>
-        <p>インターネット上の通信を暗号化する「SSL化（HTTPS）」は、現代のWebサイトにおいて「あって当たり前」の標準装備です。Googleは2014年からHTTPSをランキングシグナルとして採用しており、非SSLのサイトは検索順位で不利になるだけでなく、ブラウザで「保護されていない通信」と警告が表示され、読者の信頼を致命的に損ないます。</p>
+        <h1>13. Google Search Consoleへの登録と初期設定</h1>
+        <p>サイトが完成し、インターネット上に公開されただけでは十分ではありません。あなたのサイトがGoogleの検索エンジンに正しくインデックス（登録）され、どのようなキーワードで読者が訪れているかを知る必要があります。そのための羅針盤となるのが「Google Search Console（グーグル・サーチコンソール）」です。このツールを使いこなすことが、SEOをデータに基づいて改善していくための第一歩となります。</p>
 
-        [attachment_0](attachment)
+        
 
-        <h2>Cloudflareで実現する強固なセキュリティ</h2>
-        <p>Zero-Cost SEOでは、Cloudflareを介することで、サーバー側の複雑な設定なしにワンクリックでSSL化を実現します。これにより、ユーザーとサイト間の通信は完全に暗号化され、情報の盗聴や改ざんのリスクを排除できます。さらに、CloudflareのWAF（Web Application Firewall）機能を活用することで、DDoS攻撃や悪意のあるボットからサイトを「無料」で守ることが可能です。静的サイトの安全性にこの盾を加えることで、エンタープライズ級の信頼性を手に入れることができます。</p>
+        <h2>Googleにサイトの存在を証明する「所有権の確認」</h2>
+        <p>サーチコンソールを利用するには、まずそのサイトが自分のものであることをGoogleに証明（所有権の確認）する必要があります。GitHub Pagesで構築したサイトの場合、最も簡単な方法は「HTMLタグ」による確認です。Googleから発行された専用のメタタグを、<code>index.html</code>の<code>&lt;head&gt;</code>セクション内に貼り付けてプッシュするだけで、瞬時に確認が完了します。また、独自ドメインを使用している場合は、DNS設定にTXTレコードを追加する「ドメインプロパティ」での登録を行うと、サイト全体のデータをより網羅的に取得できるようになります。</p>
 
-        <h2>セキュリティは最大の「おもてなし」</h2>
-        <p>読者が安心して記事を読み、アフィリエイトリンクをクリックしたり問い合わせをしたりするためには、サイトが安全であることが大前提です。HTTPS化されていることは、検索エンジンに対して「このサイトは責任を持って運営されている」という意思表示になります。AIを使ってサイトを監査する際も、すべての内部リンクや外部リソースがHTTPSで統一されているか（ミックスコンテンツの解消）を確認しましょう。安全な環境を提供することは、ユーザーに対する最大の敬意であり、SEOの基本中の基本です。</p>
+        <h2>インデックスを加速させる初期設定</h2>
+        <p>登録が完了したら、最初に行うべき重要な設定が2つあります。</p>
+        <ul>
+            <li><strong>サイトマップの送信:</strong> 10.htmlで作成した<code>sitemap.xml</code>のURLを登録します。これにより、Googleのクローラーにサイト全体の構造を伝え、新しい記事を素早く見つけてもらうことが可能になります。</li>
+            <li><strong>URL検査ツールの活用:</strong> 公開したばかりの重要な記事がある場合、このツールを使って直接Googleにインデックス登録のリクエストを送ることができます。</li>
+        </ul>
+
+        
+
+        <p>サーチコンソールは「登録して終わり」ではなく、定期的にチェックする習慣をつけましょう。「カバレッジ」レポートでエラーが出ていないか、どのようなキーワードで表示されているかを確認し、AIにそのデータを読み込ませて分析させることで、次なる戦略が見えてきます。次は、読者の動きをより詳細に分析するための「Google Analytics 4」の導入に進みましょう。</p>
     </article>
 
     <nav class="post-nav" style="display: flex; justify-content: space-between; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
@@ -44,24 +53,30 @@
     </nav>
 
     <section class="article-footer-nav">
-        <h3>同じカテゴリー（第1章：インフラ構築編）の記事</h3>
+        <h3>同じカテゴリー（第1章：ゼロコスト・爆速インフラ構築編）の記事</h3>
         <ul class="vertical-article-list">
-            <li><a href="01.html">1. コンセプト：コスト0で最強のSEO資産を作る</a></li>
-            <li><a href="02.html">2. GitHub Pages：サーバー代0円の圧倒的メリット</a></li>
-            <li><a href="03.html">3. 独自ドメインの取得とCloudflareの魔法</a></li>
-            <li><a href="04.html">4. 静的サイトがSEOで最強である物理的な理由</a></li>
-            <li><a href="05.html">5. GitHubデスクトップで管理する一生消えない資産</a></li>
-            <li><a href="06.html">6. 爆速HTML/CSSテンプレートの構造解説</a></li>
-            <li><a href="07.html">7. セマンティックHTML：検索エンジンに好かれる書き方</a></li>
-            <li><a href="08.html">8. Googleアナリティクス4(GA4)の収益用設定</a></li>
-            <li><a href="09.html">9. サーチコンソール：検索意図を可視化する初期設定</a></li>
-            <li><a href="10.html">10. XMLサイトマップとrobots.txtの戦略的配置</a></li>
-            <li><a href="11.html">11. ファビコンとOGP設定：SNS拡散の土台作り</a></li>
-            <li><a href="12.html">12. モバイルファーストインデックスの完全攻略</a></li>
-            <li><a href="13.html">13. SSL化（HTTPS）とセキュリティの信頼性</a></li>
-            <li><a href="14.html">14. 構造化データ（JSON-LD）で検索結果を独占する</a></li>
-            <li><a href="15.html">15. 第1章まとめ：収益を生むための土台完成</a></li>
+            <li><a href="01.html">1. GitHub Pages×AIで作る「維持費0円」の資産サイト</a></li>
+            <li><a href="02.html">2. AI軍師と共に戦略を練る：プロンプトエンジニアリング</a></li>
+            <li><a href="03.html">3. 個人が資本に勝つためのランチェスター戦略</a></li>
+            <li><a href="04.html">4. 爆速表示を実現する静的サイトの優位性</a></li>
+            <li><a href="05.html">5. GitHubアカウントの作成とリポジトリの設定</a></li>
+            <li><a href="06.html">6. ローカル環境の構築：VS CodeとGitの連携</a></li>
+            <li><a href="07.html">7. HTML5/CSS3の基本構造：SEOに強いコードの書き方</a></li>
+            <li><a href="08.html">8. 独自ドメインの取得とGitHub Pagesへの紐付け</a></li>
+            <li><a href="09.html">9. SSL化の確認とセキュリティ設定の基本</a></li>
+            <li><a href="10.html">10. AIを活用したサイトマップとディレクトリ設計</a></li>
+            <li><a href="11.html">11. 内部リンク構造の最適化：クローラビリティを高める</a></li>
+            <li><a href="12.html">12. サイトデザインの基本：ユーザビリティと表示速度の両立</a></li>
+            <li><a href="13.html">13. Google Search Consoleへの登録と初期設定</a></li>
+            <li><a href="14.html">14. Google Analytics 4 (GA4) によるデータ計測の開始</a></li>
+            <li><a href="15.html">15. 第1章まとめ：インフラ構築が資産サイトの命運を握る</a></li>
         </ul>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="index.html" style="color: #666; text-decoration: none; font-size: 0.9rem; border-bottom: 1px solid #ddd;">
+                他のカテゴリーの記事を読む（トップページへ戻る）
+            </a>
+        </div>
     </section>
 </main>
 
