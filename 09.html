@@ -10,7 +10,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>9. サーチコンソール：検索意図を可視化する初期設定 | Zero-Cost SEO</title>
+    <title>9. SSL化の確認とセキュリティ設定の基本 | Zero-Cost SEO</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -19,6 +19,7 @@
 <header class="main-header">
     <div class="container">
         <h1>Zero-Cost SEO</h1>
+        <p>技術とAIで、コストゼロの資産サイトを構築する</p>
     </div>
 </header>
 
@@ -26,16 +27,19 @@
     <a href="chapter1.html" class="back-link">← 第1章 目次へ戻る</a>
     
     <article class="post-content">
-        <h1>9. サーチコンソール：検索意図を可視化する初期設定</h1>
-        <p>Googleサーチコンソール（GSC）は、検索エンジンがあなたのサイトをどのように認識し、ユーザーがどのような言葉で辿り着いているかを知るための「羅針盤」です。GA4がサイト内の行動を追うのに対し、GSCはサイトに来る前の「検索意図」を可視化します。</p>
+        <h1>9. SSL化の確認とセキュリティ設定の基本</h1>
+        <p>WebサイトのURLが「http://」ではなく「https://」で始まっていることは、現代のインターネットにおいて最低限のマナーであり、SEOにおける必須条件です。これはSSL/TLSという技術を用いて通信を暗号化していることを示します。GitHub Pagesでは、この重要なセキュリティ設定を非常に簡単な操作で、かつ無料で有効にすることができます。</p>
 
         
 
-        <h2>所有権の確認：静的サイトでの確実な方法</h2>
-        <p>静的サイトの場合、最も確実な所有権の確認方法は「HTMLファイルのアップロード」または「HTMLタグの挿入」です。GSCから発行されたメタタグを、すべてのページの <code>&lt;head&gt;</code> 内に配置しましょう。これにより、Googleはあなたがそのサイトの正当な管理者であることを認識し、詳細なデータの提供を開始します。Cloudflareを使用している場合は、DNSレコードによる確認（TXTレコード）を行うことで、より強固な認証が可能です。</p>
+        <h2>なぜSEOにSSL化が必要なのか</h2>
+        <p>Googleは2014年に「HTTPSをランキング信号に使用する」と正式に発表しました。暗号化されていないサイトは、検索結果で不利になるだけでなく、ブラウザ（Chrome等）で「保護されていない通信」という警告が表示され、読者の信頼を著しく損ないます。特に、将来的にアフィリエイトや教材販売など、ユーザーの行動を促す「収益化」を目指すのであれば、安全な通信環境の提供は避けて通れない道です。</p>
 
-        <h2>「お宝キーワード」を発掘する分析の土台</h2>
-        <p>初期設定が完了したら、まず注目すべきは「検索パフォーマンス」です。ここでは、まだ順位は低いものの表示回数が多いキーワード、つまり「需要はあるがコンテンツが不足している領域」を特定できます。AIにGSCのデータを読み込ませ、現在の記事に足りない要素を分析させることで、無駄のないリライトや新規記事の作成が可能になります。検索ユーザーが「何を解決したくて」あなたのサイトに来たのかを、データから読み解く習慣をつけましょう。</p>
+        <h2>GitHub Pagesでの「Enforce HTTPS」設定</h2>
+        <p>独自ドメインの設定が完了し、DNSの設定が浸透すると、GitHubのリポジトリ設定（Settings > Pages）にある「Enforce HTTPS」というチェックボックスが選択可能になります。ここにチェックを入れるだけで、すべてのアクセスが自動的に安全なHTTPS接続にリダイレクトされるようになります。一般的なレンタルサーバーでは証明書の更新手続きが必要な場合もありますが、GitHub Pagesでは証明書の管理・更新もすべて自動で行われるため、手間は一切かかりません。</p>
+
+        <h2>静的サイトが誇る「鉄壁のセキュリティ」</h2>
+        <p>Zero-Cost SEOで静的サイトを採用している隠れた大きなメリットは、そのセキュリティの高さです。WordPressなどの動的サイトはデータベース（MySQL等）を使用するため、SQLインジェクションなどの攻撃を受けるリスクが常にあります。しかし、GitHub Pagesで公開しているのは単なる「HTMLファイル」です。攻撃者が侵入する隙間となるデータベース自体が存在しないため、物理的にハッキングのリスクを極限まで抑えることができます。この「守りの強さ」も、長期的に資産を守り続けるための重要な要素です。</p>
     </article>
 
     <nav class="post-nav" style="display: flex; justify-content: space-between; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
@@ -44,24 +48,30 @@
     </nav>
 
     <section class="article-footer-nav">
-        <h3>同じカテゴリー（第1章：インフラ構築編）の記事</h3>
+        <h3>同じカテゴリー（第1章：ゼロコスト・爆速インフラ構築編）の記事</h3>
         <ul class="vertical-article-list">
-            <li><a href="01.html">1. コンセプト：コスト0で最強のSEO資産を作る</a></li>
-            <li><a href="02.html">2. GitHub Pages：サーバー代0円の圧倒的メリット</a></li>
-            <li><a href="03.html">3. 独自ドメインの取得とCloudflareの魔法</a></li>
-            <li><a href="04.html">4. 静的サイトがSEOで最強である物理的な理由</a></li>
-            <li><a href="05.html">5. GitHubデスクトップで管理する一生消えない資産</a></li>
-            <li><a href="06.html">6. 爆速HTML/CSSテンプレートの構造解説</a></li>
-            <li><a href="07.html">7. セマンティックHTML：検索エンジンに好かれる書き方</a></li>
-            <li><a href="08.html">8. Googleアナリティクス4(GA4)の収益用設定</a></li>
-            <li><a href="09.html">9. サーチコンソール：検索意図を可視化する初期設定</a></li>
-            <li><a href="10.html">10. XMLサイトマップとrobots.txtの戦略的配置</a></li>
-            <li><a href="11.html">11. ファビコンとOGP設定：SNS拡散の土台作り</a></li>
-            <li><a href="12.html">12. モバイルファーストインデックスの完全攻略</a></li>
-            <li><a href="13.html">13. SSL化（HTTPS）とセキュリティの信頼性</a></li>
-            <li><a href="14.html">14. 構造化データ（JSON-LD）で検索結果を独占する</a></li>
-            <li><a href="15.html">15. 第1章まとめ：収益を生むための土台完成</a></li>
+            <li><a href="01.html">1. GitHub Pages×AIで作る「維持費0円」の資産サイト</a></li>
+            <li><a href="02.html">2. AI軍師と共に戦略を練る：プロンプトエンジニアリング</a></li>
+            <li><a href="03.html">3. 個人が資本に勝つためのランチェスター戦略</a></li>
+            <li><a href="04.html">4. 爆速表示を実現する静的サイトの優位性</a></li>
+            <li><a href="05.html">5. GitHubアカウントの作成とリポジトリの設定</a></li>
+            <li><a href="06.html">6. ローカル環境の構築：VS CodeとGitの連携</a></li>
+            <li><a href="07.html">7. HTML5/CSS3の基本構造：SEOに強いコードの書き方</a></li>
+            <li><a href="08.html">8. 独自ドメインの取得とGitHub Pagesへの紐付け</a></li>
+            <li><a href="09.html">9. SSL化の確認とセキュリティ設定の基本</a></li>
+            <li><a href="10.html">10. AIを活用したサイトマップとディレクトリ設計</a></li>
+            <li><a href="11.html">11. 内部リンク構造の最適化：クローラビリティを高める</a></li>
+            <li><a href="12.html">12. サイトデザインの基本：ユーザビリティと表示速度の両立</a></li>
+            <li><a href="13.html">13. Google Search Consoleへの登録と初期設定</a></li>
+            <li><a href="14.html">14. Google Analytics 4 (GA4) によるデータ計測の開始</a></li>
+            <li><a href="15.html">15. 第1章まとめ：インフラ構築が資産サイトの命運を握る</a></li>
         </ul>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="index.html" style="color: #666; text-decoration: none; font-size: 0.9rem; border-bottom: 1px solid #ddd;">
+                他のカテゴリーの記事を読む（トップページへ戻る）
+            </a>
+        </div>
     </section>
 </main>
 
