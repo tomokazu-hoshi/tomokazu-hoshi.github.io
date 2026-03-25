@@ -10,7 +10,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6. 爆速HTML/CSSテンプレートの構造解説 | Zero-Cost SEO</title>
+    <title>6. ローカル環境の構築：VS CodeとGitの連携 | Zero-Cost SEO</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -19,6 +19,7 @@
 <header class="main-header">
     <div class="container">
         <h1>Zero-Cost SEO</h1>
+        <p>技術とAIで、コストゼロの資産サイトを構築する</p>
     </div>
 </header>
 
@@ -26,14 +27,22 @@
     <a href="chapter1.html" class="back-link">← 第1章 目次へ戻る</a>
     
     <article class="post-content">
-        <h1>6. 爆速HTML/CSSテンプレートの構造解説</h1>
-        <p>SEOで競合に勝つためには、小手先のテクニック以前に「サイトそのものが驚くほど軽い」という物理的な優位性が必要です。Zero-Cost SEOで使用するテンプレートは、極限まで無駄を削ぎ落とし、Googleの評価指標であるコアウェブバイタルを容易にクリアできるよう設計されています。</p>
+        <h1>6. ローカル環境の構築：VS CodeとGitの連携</h1>
+        <p>GitHubのブラウザ画面上でもファイルの編集は可能ですが、100記事、200記事と資産を積み上げていくためには、手元のパソコンで効率よく作業できる「ローカル環境」の構築が不可欠です。世界中のプロの開発者が愛用するエディタ「Visual Studio Code (VS Code)」と、変更履歴を記録するツール「Git」を連携させることで、執筆スピードと安全性を両立させましょう。</p>
 
-        <h2>「引き算」で設計されたHTML構造</h2>
-        <p>一般的なWordPressテーマには、使われない機能のために大量のコードが含まれています。私たちのテンプレートは、必要なメタタグとコンテンツ表示用のタグだけで構成されています。この「コードの少なさ（コード・トゥ・テキスト比率）」は、クローラーがあなたのサイトをスキャンする速度を劇的に高め、重要なキーワードを迷わず発見させることに繋がります。AIを使ってページを増やす際も、このシンプルな「型」を崩さないことが重要です。</p>
+        
 
-        <h2>CSSの最適化とレンダリングの高速化</h2>
-        <p>デザインを司るCSSも、外部ファイル化してブラウザキャッシュを最大限に活用します。複雑なフレームワーク（Bootstrap等）は一切使わず、数KB程度の軽量な自作CSSのみで構成することで、スマホの低速な通信環境下でも瞬時に表示が完了します。「一瞬で表示される」というユーザー体験は、滞在時間の延長や直帰率の低下を招き、結果として検索エンジンからの高い評価（ポジティブなユーザー行動シグナル）を呼び込みます。この爆速テンプレートこそが、収益化という山を登るための「超軽量な最新装備」なのです。</p>
+        <h2>最強のエディタ「VS Code」を導入する</h2>
+        <p>VS Codeは、Microsoftが提供している無料の高機能エディタです。単に文字を入力するだけでなく、HTMLの書き間違いを教えてくれたり、AIによる執筆補助（Copilotなど）を追加したりすることができます。まずは公式サイトからインストールし、日本語化パッケージを導入して、あなたの「執筆基地」を整えましょう。これにより、ブラウザ上では難しかった「複数ファイルの一括編集」や「高度な検索」が自由自在になります。</p>
+
+        <h2>Gitで「タイムマシン」を手に入れる</h2>
+        <p>Git（ギット）は、ファイルの変更履歴を保存するためのツールです。「記事を書き直したけれど、やっぱり前の状態に戻したい」と思ったことはありませんか？ GitをVS Codeと連携させておけば、ボタン一つで過去のどの時点の状態にも戻すことができます。これを活用する基本的な流れは以下の3ステップです。</p>
+        <ul>
+            <li><strong>Clone（クローン）：</strong> GitHub上のリポジトリを、自分のパソコンへコピーする。</li>
+            <li><strong>Commit（コミット）：</strong> 変更を加えた内容に「何をしたか」のメモを添えて、ローカルに保存する。</li>
+            <li><strong>Push（プッシュ）：</strong> ローカルでの変更を、インターネット上のGitHubへ反映（公開）させる。</li>
+        </ul>
+        <p>一見難しそうに感じるかもしれませんが、VS Codeを使えばコマンドを打つ必要はなく、マウス操作だけでこれらの作業が完結します。一度この環境に慣れてしまえば、ブラウザでの編集には二度と戻れないほどの快適さを実感できるはずです。準備が整ったら、次はいよいよSEOに強いサイトの「骨組み」を書いていきましょう。</p>
     </article>
 
     <nav class="post-nav" style="display: flex; justify-content: space-between; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
@@ -42,24 +51,30 @@
     </nav>
 
     <section class="article-footer-nav">
-        <h3>同じカテゴリー（第1章：インフラ構築編）の記事</h3>
+        <h3>同じカテゴリー（第1章：ゼロコスト・爆速インフラ構築編）の記事</h3>
         <ul class="vertical-article-list">
-            <li><a href="01.html">1. コンセプト：コスト0で最強のSEO資産を作る</a></li>
-            <li><a href="02.html">2. GitHub Pages：サーバー代0円の圧倒的メリット</a></li>
-            <li><a href="03.html">3. 独自ドメインの取得とCloudflareの魔法</a></li>
-            <li><a href="04.html">4. 静的サイトがSEOで最強である物理的な理由</a></li>
-            <li><a href="05.html">5. GitHubデスクトップで管理する「一生消えない資産」</a></li>
-            <li><a href="06.html">6. 爆速HTML/CSSテンプレートの構造解説</a></li>
-            <li><a href="07.html">7. セマンティックHTML：検索エンジンに好かれる書き方</a></li>
-            <li><a href="08.html">8. Googleアナリティクス4(GA4)の収益用設定</a></li>
-            <li><a href="09.html">9. サーチコンソール：検索意図を可視化する初期設定</a></li>
-            <li><a href="10.html">10. XMLサイトマップとrobots.txtの戦略的配置</a></li>
-            <li><a href="11.html">11. ファビコンとOGP設定：SNS拡散の土台作り</a></li>
-            <li><a href="12.html">12. モバイルファーストインデックスの完全攻略</a></li>
-            <li><a href="13.html">13. SSL化（HTTPS）とセキュリティの信頼性</a></li>
-            <li><a href="14.html">14. 構造化データ（JSON-LD）で検索結果を独占する</a></li>
-            <li><a href="15.html">15. 第1章まとめ：収益を生むための土台完成</a></li>
+            <li><a href="01.html">1. GitHub Pages×AIで作る「維持費0円」の資産サイト</a></li>
+            <li><a href="02.html">2. AI軍師と共に戦略を練る：プロンプトエンジニアリング</a></li>
+            <li><a href="03.html">3. 個人が資本に勝つためのランチェスター戦略</a></li>
+            <li><a href="04.html">4. 爆速表示を実現する静的サイトの優位性</a></li>
+            <li><a href="05.html">5. GitHubアカウントの作成とリポジトリの設定</a></li>
+            <li><a href="06.html">6. ローカル環境の構築：VS CodeとGitの連携</a></li>
+            <li><a href="07.html">7. HTML5/CSS3の基本構造：SEOに強いコードの書き方</a></li>
+            <li><a href="08.html">8. 独自ドメインの取得とGitHub Pagesへの紐付け</a></li>
+            <li><a href="09.html">9. SSL化の確認とセキュリティ設定の基本</a></li>
+            <li><a href="10.html">10. AIを活用したサイトマップとディレクトリ設計</a></li>
+            <li><a href="11.html">11. 内部リンク構造の最適化：クローラビリティを高める</a></li>
+            <li><a href="12.html">12. サイトデザインの基本：ユーザビリティと表示速度の両立</a></li>
+            <li><a href="13.html">13. Google Search Consoleへの登録と初期設定</a></li>
+            <li><a href="14.html">14. Google Analytics 4 (GA4) によるデータ計測の開始</a></li>
+            <li><a href="15.html">15. 第1章まとめ：インフラ構築が資産サイトの命運を握る</a></li>
         </ul>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="index.html" style="color: #666; text-decoration: none; font-size: 0.9rem; border-bottom: 1px solid #ddd;">
+                他のカテゴリーの記事を読む（トップページへ戻る）
+            </a>
+        </div>
     </section>
 </main>
 
