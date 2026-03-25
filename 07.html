@@ -10,7 +10,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7. セマンティックHTML：検索エンジンに好かれる書き方 | Zero-Cost SEO</title>
+    <title>7. HTML5/CSS3の基本構造：SEOに強いコードの書き方 | Zero-Cost SEO</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -19,12 +19,7 @@
 <header class="main-header">
     <div class="container">
         <h1>Zero-Cost SEO</h1>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="index.html">ホーム</a></li>
-                <li><a href="chapter1.html">第1章</a></li>
-            </ul>
-        </nav>
+        <p>技術とAIで、コストゼロの資産サイトを構築する</p>
     </div>
 </header>
 
@@ -32,16 +27,23 @@
     <a href="chapter1.html" class="back-link">← 第1章 目次へ戻る</a>
     
     <article class="post-content">
-        <h1>7. セマンティックHTML：検索エンジンに好かれる書き方</h1>
-        <p>検索エンジンは、人間のように目で見てデザインを理解しているわけではありません。背後にあるHTMLタグの意味を読み取り、情報の重要度を判断しています。意味のあるタグ使い（セマンティックHTML）を徹底することで、サイトの評価を劇的に高めることができます。</p>
+        <h1>7. HTML5/CSS3の基本構造：SEOに強いコードの書き方</h1>
+        <p>SEOにおいて、HTMLは単なる「見た目を作るための指示書」ではなく、検索エンジンのクローラーに「どこに何が書かれているか」を伝えるための「地図」です。最新のHTML5標準に沿った正しいタグ使い（セマンティックHTML）をマスターすることで、AIが生成した高品質なコンテンツの価値を、検索エンジンに100%伝えることができるようになります。</p>
 
         
 
-        <h2>「div」の多用を避け、意味のあるタグを選ぶ</h2>
-        <p>単に見栄えを整えるために <code>&lt;div&gt;</code> を多用するのは、検索エンジンに対して「どこが重要か」を隠しているのと同じです。主要なコンテンツには <code>&lt;main&gt;</code>、独立した記事には <code>&lt;article&gt;</code>、補足情報には <code>&lt;aside&gt;</code> を使うことで、クローラーはページ構造を正確に把握できるようになります。AIを使ってコードを生成する際も、これらのセマンティックな構造を意識したプロンプトを与えることが不可欠です。</p>
+        <h2>検索エンジンに意味を伝える「セマンティックHTML」</h2>
+        <p>かつてのWeb制作では、全ての要素を <code>&lt;div&gt;</code> タグで囲む手法が一般的でしたが、現在はそれぞれの場所に意味を持たせることが求められます。Zero-Cost SEOで採用すべき主要なタグは以下の通りです。</p>
+        <ul>
+            <li><strong>&lt;header&gt;:</strong> サイトのロゴやナビゲーションなど、導入部分を示します。</li>
+            <li><strong>&lt;main&gt;:</strong> そのページの「主役」となるコンテンツを囲みます。1ページに1つだけ使用します。</li>
+            <li><strong>&lt;article&gt;:</strong> ニュース記事やブログ投稿など、それ自体で独立した内容を示します。</li>
+            <li><strong>&lt;section&gt;:</strong> 章や節など、意味のある情報のまとまりを示します。</li>
+            <li><strong>&lt;h1&gt;〜&lt;h6&gt;:</strong> 見出しの階層を正しく守ります。特にh1はページの主題として1つに絞ります。</li>
+        </ul>
 
-        <h2>見出し（H1〜H6）の論理的な階層構造</h2>
-        <p>見出しタグは、本の目次のように論理的な順序で並べる必要があります。<code>&lt;h1&gt;</code> はそのページの主題であり、原則として1回のみ使用します。その下に <code>&lt;h2&gt;</code>、さらに詳細な区分として <code>&lt;h3&gt;</code> と順番に階層を下げていきます。デザイン上の都合で <code>&lt;h2&gt;</code> の次に <code>&lt;h4&gt;</code> を使うといった「順序飛ばし」は、SEO評価を損なう原因となります。論理的な構造は、ユーザーにとっても情報の整理を助け、結果として滞在時間の向上にも寄与します。</p>
+        <h2>CSS3による「軽量で高速なデザイン」</h2>
+        <p>静的サイトの強みである表示速度を最大化するためには、CSS（スタイルシート）の書き方も重要です。過度な装飾や、重い画像ファイルを背景に多用することは避けます。代わりに、CSS3の機能を活用して、コードだけでボタンのグラデーションや角丸を表現することで、読み込み時間を劇的に短縮できます。また、外部ファイルを読み込む回数を減らすため、CSSは1つのファイル（style.css）にまとめ、無駄な記述を削ぎ落とした「軽量な設計」を心がけましょう。これが、クローラーとユーザーの両方に好まれるサイトへの近道です。</p>
     </article>
 
     <nav class="post-nav" style="display: flex; justify-content: space-between; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
@@ -50,24 +52,30 @@
     </nav>
 
     <section class="article-footer-nav">
-        <h3>同じカテゴリー（第1章：インフラ構築編）の記事</h3>
+        <h3>同じカテゴリー（第1章：ゼロコスト・爆速インフラ構築編）の記事</h3>
         <ul class="vertical-article-list">
-            <li><a href="01.html">1. コンセプト：コスト0で最強のSEO資産を作る</a></li>
-            <li><a href="02.html">2. GitHub Pages：サーバー代0円の圧倒的メリット</a></li>
-            <li><a href="03.html">3. 独自ドメインの取得とCloudflareの魔法</a></li>
-            <li><a href="04.html">4. 静的サイトがSEOで最強である物理的な理由</a></li>
-            <li><a href="05.html">5. GitHubデスクトップで管理する一生消えない資産</a></li>
-            <li><a href="06.html">6. 爆速HTML/CSSテンプレートの構造解説</a></li>
-            <li><a href="07.html">7. セマンティックHTML：検索エンジンに好かれる書き方</a></li>
-            <li><a href="08.html">8. Googleアナリティクス4(GA4)の収益用設定</a></li>
-            <li><a href="09.html">9. サーチコンソール：検索意図を可視化する初期設定</a></li>
-            <li><a href="10.html">10. XMLサイトマップとrobots.txtの戦略的配置</a></li>
-            <li><a href="11.html">11. ファビコンとOGP設定：SNS拡散の土台作り</a></li>
-            <li><a href="12.html">12. モバイルファーストインデックスの完全攻略</a></li>
-            <li><a href="13.html">13. SSL化（HTTPS）とセキュリティの信頼性</a></li>
-            <li><a href="14.html">14. 構造化データ（JSON-LD）で検索結果を独占する</a></li>
-            <li><a href="15.html">15. 第1章まとめ：収益を生むための土台完成</a></li>
+            <li><a href="01.html">1. GitHub Pages×AIで作る「維持費0円」の資産サイト</a></li>
+            <li><a href="02.html">2. AI軍師と共に戦略を練る：プロンプトエンジニアリング</a></li>
+            <li><a href="03.html">3. 個人が資本に勝つためのランチェスター戦略</a></li>
+            <li><a href="04.html">4. 爆速表示を実現する静的サイトの優位性</a></li>
+            <li><a href="05.html">5. GitHubアカウントの作成とリポジトリの設定</a></li>
+            <li><a href="06.html">6. ローカル環境の構築：VS CodeとGitの連携</a></li>
+            <li><a href="07.html">7. HTML5/CSS3の基本構造：SEOに強いコードの書き方</a></li>
+            <li><a href="08.html">8. 独自ドメインの取得とGitHub Pagesへの紐付け</a></li>
+            <li><a href="09.html">9. SSL化の確認とセキュリティ設定の基本</a></li>
+            <li><a href="10.html">10. AIを活用したサイトマップとディレクトリ設計</a></li>
+            <li><a href="11.html">11. 内部リンク構造の最適化：クローラビリティを高める</a></li>
+            <li><a href="12.html">12. サイトデザインの基本：ユーザビリティと表示速度の両立</a></li>
+            <li><a href="13.html">13. Google Search Consoleへの登録と初期設定</a></li>
+            <li><a href="14.html">14. Google Analytics 4 (GA4) によるデータ計測の開始</a></li>
+            <li><a href="15.html">15. 第1章まとめ：インフラ構築が資産サイトの命運を握る</a></li>
         </ul>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="index.html" style="color: #666; text-decoration: none; font-size: 0.9rem; border-bottom: 1px solid #ddd;">
+                他のカテゴリーの記事を読む（トップページへ戻る）
+            </a>
+        </div>
     </section>
 </main>
 
