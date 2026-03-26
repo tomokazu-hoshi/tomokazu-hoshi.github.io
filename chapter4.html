@@ -5,44 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-E-A-Tと信頼性構築編 - Zero-Cost SEO</title>
     <style>
-        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; background-color: #f9f9f9; color: #333; line-height: 1.8; margin: 0; padding: 0; }
-        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-        .back-to-top { display: inline-block; color: #d4a017; text-decoration: none; font-size: 16px; margin-bottom: 25px; font-weight: bold; }
-        .chapter-title { font-size: 26px; font-weight: 800; margin-bottom: 10px; color: #333; }
-        .lead-text { font-size: 15px; color: #666; margin-bottom: 30px; }
-        h1 { font-size: 24px; margin: 40px 0 20px; color: #333; border-bottom: 3px solid #d4a017; padding-bottom: 10px; }
-        h2 { font-size: 20px; margin-top: 30px; border-left: 5px solid #d4a017; padding-left: 15px; }
-        .seo-body { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; }
-        .nav-buttons { display: flex; justify-content: space-between; margin: 40px 0; }
-        .nav-buttons a { color: #d4a017; text-decoration: none; font-weight: bold; font-size: 14px; border: 1px solid #d4a017; padding: 8px 15px; border-radius: 20px; }
-        .article-card { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 15px; display: flex; align-items: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03); text-decoration: none; color: #333; border: 1px solid #eee; transition: transform 0.2s ease; }
-        .article-card:active { transform: scale(0.98); }
-        .article-num { color: #d4a017; font-size: 22px; font-weight: bold; width: 45px; flex-shrink: 0; text-align: center; }
-        .article-name { font-size: 16px; font-weight: 500; flex-grow: 1; padding: 0 15px; line-height: 1.4; }
-        .arrow { color: #ccc; font-size: 20px; }
-        .footer { text-align: center; margin-top: 60px; padding-bottom: 40px; color: #888; font-size: 13px; }
-        .migration-guide { background: #f0f0f0; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 12px; line-height: 1.5; text-align: left; }
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .back-to-top {
+            display: inline-block;
+            color: #d4a017;
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: #333;
+            line-height: 1.3;
+        }
+        .lead-text {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-size: 24px;
+            margin: 40px 0 20px;
+            color: #333;
+            border-bottom: 3px solid #d4a017;
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 30px;
+            border-left: 5px solid #d4a017;
+            padding-left: 15px;
+        }
+        .seo-body {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+        .nav-buttons a {
+            color: #d4a017;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid #d4a017;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+        .article-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #eee;
+            transition: transform 0.2s ease;
+        }
+        .article-card:active {
+            transform: scale(0.98);
+        }
+        .article-num {
+            color: #d4a017;
+            font-size: 22px;
+            font-weight: bold;
+            width: 45px;
+            flex-shrink: 0;
+            text-align: center;
+        }
+        .article-name {
+            font-size: 16px;
+            font-weight: 500;
+            flex-grow: 1;
+            padding: 0 15px;
+            line-height: 1.4;
+        }
+        .arrow {
+            color: #ccc;
+            font-size: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-bottom: 40px;
+            color: #888;
+            font-size: 13px;
+        }
+        .migration-guide {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            line-height: 1.5;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
+
 <div class="container">
     <a href="index.html" class="back-to-top">← トップページへ戻る</a>
     <div class="chapter-title">第4章：E-E-A-Tと信頼性構築編</div>
-    <p class="lead-text">信頼こそが最大の資産。AI時代に選ばれるための全15ステップです。</p>
-    <div class="article-list">
-        <a href="51.html" class="article-card"><span class="article-num">51</span><span class="article-name">E-E-A-Tとは：AI時代の検索エンジンが求める信頼の正体</span><span class="arrow">→</span></a>
-        <a href="65.html" class="article-card"><span class="article-num">65</span><span class="article-name">第4章まとめ：信頼が収益を永続的なものにする</span><span class="arrow">→</span></a>
-    </div>
+    <p class="lead-text">AI時代のSEOで最も重要な「信頼」を勝ち取り、検索エンジンから評価され続けるための全15ステップです。</p>
 
     <h1>E-E-A-Tと信頼性構築編</h1>
 
     <div class="seo-body">
-        <p>AIコンテンツが氾濫する中で、検索エンジンは「誰が書いたか」をかつてないほど重視しています。本章では、著者情報の拡充から実体験の証明まで、サイトの信頼性を盤石にする技術を網羅します。</p>
+        <p>AIがコンテンツを量産できる時代だからこそ、検索エンジンは「誰が書いたか」という信頼性（E-E-A-T）を最重視しています。本章では、サイト運営者の専門性を証明し、読者からの確かな信頼を構築するエンジニアリング手法を解説します。</p>
+        <p>単なる記事公開に留まらず、一次情報の扱い方やサイテーション（言及）の獲得など、ブランドとしての価値を高めるための具体的な戦略を学びましょう。</p>
     </div>
 
     <div class="nav-buttons">
-        <a href="chapter3.html">← 第3章へ</a>
-        <a href="chapter5.html">第5章へ →</a>
+        <a href="chapter3.html">← 前の章へ</a>
+        <a href="chapter5.html">次の章へ →</a>
     </div>
 
     <div class="article-list">
@@ -64,12 +163,17 @@
         <a href="65.html" class="article-card"><span class="article-num">65</span><span class="article-name">第4章まとめ：信頼が収益を永続的なものにする</span><span class="arrow">→</span></a>
     </div>
 
-    <div style="text-align: center; margin-top: 30px;"><a href="index.html" style="color: #d4a017; text-decoration: none; font-weight: bold;">[トップページへ戻る]</a></div>
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="index.html" style="color: #d4a017; text-decoration: none; font-weight: bold;">[トップページへ戻る]</a>
+    </div>
 
     <div class="footer">
-        <div class="migration-guide">【移行ガイド】ドメインの信頼性を引き継ぐには、旧サイトからの301リダイレクト設定が必須です。GitHub Pagesでも、独自のドメイン管理機能を用いて正確な遷移を実現しましょう。</div>
+        <div class="migration-guide">
+            【移行ガイド】WordPressからGitHub Pagesへ移行した際、記事の公開日がリセットされないよう、HTMLのmetaタグや構造化データで正確な「初回公開日」を記述することが、E-E-A-Tの維持には不可欠です。
+        </div>
         <p>© 2026 Zero-Cost SEO - 星 友和</p>
     </div>
 </div>
+
 </body>
 </html>
