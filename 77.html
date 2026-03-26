@@ -1,95 +1,96 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H56XHD5MLW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H56XHD5MLW');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>77. AIによる「E-E-A-T」の自己診断と信頼性スコアの向上術 | Zero-Cost SEO 100本ノック</title>
-    <meta name="description" content="Googleが最重視する評価基準「E-E-A-T」。AIを活用して自社サイトの専門性、経験、権威性、信頼性を客観的に診断し、アルゴリズムに高く評価されるための改善策を詳説します。">
-    <link rel="canonical" href="https://tomokazu-hoshi.github.io/77.html">
-    
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="77. AIによる「E-E-A-T」の自己診断と信頼性スコアの向上術">
-    <meta property="og:description" content="信頼を数値化する。AIが判定する、あなたのサイトに足りない「経験」と「権威」の正体。">
-    <meta property="og:image" content="https://tomokazu-hoshi.github.io/images/ogp.png">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Self-Diagnosing E-E-A-T and Improving Trust Scores with AI",
-      "author": { "@type": "Person", "name": "星 友和" },
-      "publisher": { "@type": "Organization", "name": "Zero-Cost SEO" },
-      "image": "https://tomokazu-hoshi.github.io/images/ogp.png",
-      "datePublished": "2026-03-26T08:00:00+09:00"
-    }
-    </script>
-
-    <style>
-        :root { --main-blue: #002b5b; --accent-orange: #ff9900; --bg-light: #f4f7f9; }
-        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; line-height: 1.8; color: #333; margin: 0; padding: 0; background: #fff; }
-        .container { max-width: 850px; margin: 0 auto; padding: 0 25px; }
-        
-        /* パンくずリスト */
-        .breadcrumb { padding: 20px 0; font-size: 0.85rem; color: #666; }
-        .breadcrumb a { color: var(--main-blue); text-decoration: none; font-weight: bold; }
-
-        /* 記事ヘッダー */
-        header { margin-bottom: 40px; border-bottom: 4px solid var(--main-blue); padding-bottom: 20px; }
-        .article-num { color: var(--accent-orange); font-weight: bold; font-size: 1.2rem; display: block; }
-        h1 { font-size: 2.2rem; color: var(--main-blue); margin: 5px 0; }
-
-        /* 本文エリア */
-        .entry-content { font-size: 1.15rem; letter-spacing: 0.02em; }
-        .entry-content p { margin-bottom: 1.5em; }
-
-        /* ナビゲーション（次へ・前へ） */
-        .article-nav { display: flex; justify-content: space-between; gap: 15px; margin: 60px 0; padding-top: 30px; border-top: 1px solid #eee; }
-        .article-nav a { flex: 1; text-align: center; padding: 18px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; font-size: 1rem; }
-        .btn-prev { background: #f0f0f0; color: #555; border: 1px solid #ddd; }
-        .btn-top { background: #fff; color: var(--main-blue); border: 1px solid var(--main-blue); }
-        .btn-next { background: var(--main-blue); color: #fff; }
-        .article-nav a:hover { opacity: 0.8; transform: translateY(-2px); }
-
-        @media (max-width: 600px) { .article-nav { flex-direction: column; } h1 { font-size: 1.8rem; } }
-    </style>
+    <title>77. 画像生成の自動ワークフロー：アイキャッチ量産術 | Zero-Cost SEO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
-    <nav class="breadcrumb">
-        <a href="/">TOP</a> ＞ <span id="category-name">基盤構築と基本戦略</span> ＞ 77. AIによる「E-E-A-T」の自己診断と信頼性スコアの向上術
-    </nav>
+<header class="main-header">
+    <div class="container">
+        <h1>Zero-Cost SEO</h1>
+        <p>技術とAIで、コストゼロの資産サイトを構築する</p>
+    </div>
+</header>
 
-    <header>
-        <span class="article-num">NO.77</span>
-        <h1>AIによる「E-E-A-T」の自己診断と信頼性スコアの向上術</h1>
-    </header>
+<main class="container">
+    <a href="chapter5.html" class="back-link">← 第5章 目次へ戻る</a>
+    
+    <article class="post-content">
+        <h1>77. 画像生成の自動ワークフロー：アイキャッチ量産術</h1>
+        <p>ブログ記事におけるアイキャッチ画像や本文内の図解は、読者の滞在時間を延ばし、SNSでのクリック率を劇的に向上させる視覚的要素です。しかし、高品質な画像を毎回作成したり探したりするのは、サイトの量産体制において大きなボトルネックとなります。画像生成AIをシステムのワークフローに組み込み、記事の文脈に完全に一致した独自の画像を自動で量産するエンジニアリング手法を解説します。</p>
 
-    <article class="entry-content">
-        <p>Googleの検索品質評価ガイドラインで最重要視されている「E-E-A-T（経験、専門性、権威性、信頼性）」。これを高めることは、もはやSEOの絶対条件です。Zero-Cost SEOでは、AIを用いてサイト全体のコンテンツを網羅的に解析し、Googleの評価基準に照らして「どの要素が不足しているか」を精密に診断します。</p>
-        <p>AIを活用すれば、著者のプロフィール情報の充実度、外部サイトからのサイテーション、専門的な用語の適切な使用、そして実体験に基づいた情報の有無を自動チェックできます。アルゴリズムが「この記事は信頼に足る」と確信するためのシグナルをどのように配置し、競合サイトを超える圧倒的な信頼性を構築するか、その具体的な改善フローを詳説します。</p>
+        <h2>記事内容に連動したプロンプトの自動生成</h2>
+        <p>画像の自動生成において最も重要なのは、AIに対する指示書（プロンプト）の精度です。LLM（大規模言語モデル）を活用し、執筆した記事の要旨やキーワードから、その内容を最もよく表す画像生成用プロンプトを自動で抽出させます。単なる風景ではなく、記事のテーマやトーンを反映させたプロンプトをPython経由で生成することで、一貫性のあるビジュアル制作が可能になります。これにより、記事ごとに最適化された独自の画像が、人間を介さずに出力されます。</p>
+
+        <h2>画像生成AI（DALL-E/Midjourney）のAPI連携</h2>
+        <p>生成されたプロンプトを、DALL-E 3やMidjourney、Stable Diffusionなどの画像生成AIのAPIに送信し、自動で画像を生成させます。生成された画像はスクリプトで自動的にダウンロードされ、適切なファイル名に変更、さらに軽量化（WebP形式への変換など）を施した上で、GitHubのリポジトリの適切なディレクトリへ保存されます。このパイプラインを構築することで、文章だけでなく視覚情報も含めた完全な「記事パッケージ」が無人で完成します。</p>
+
+        <h2>ブランドイメージを統一する画風の固定技術</h2>
+        <p>複数のサイトや記事で画風がバラバラになると、サイト全体のブランディングを損ないます。プロンプトの中に「特定のアーティスト風」「ミニマルなデザイン」「特定のカラーパレット」などの指定を定型化し、AIに学習させることで、サイト全体で統一感のある画像を生成し続けることができます。これにより、読者は一目で「あのサイトの記事だ」と認識できるようになり、サイトのアイデンティティが強化されます。技術による視覚支配が、資産価値をさらに高めます。</p>
+
+        <h2>まとめ</h2>
+        <p>文章も画像もAIで自動化されたら、次は「管理」の領域です。AIを単なるライターではなく、外注先を管理するディレクターとして活用し、運用のさらなる効率化を目指す「外注化のAI化」手法へと進みましょう。</p>
     </article>
 
-    <div class="article-nav">
-        <a id="link-prev" href="#" class="btn-prev">← 前の記事</a>
-        <a href="/" class="btn-top">目次へ戻る</a>
-        <a id="link-next" href="#" class="btn-next">次の記事を読む →</a>
+    <nav class="post-nav" style="display: flex; justify-content: space-between; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
+        <a href="76.html" style="text-decoration: none; color: #f39c12; font-weight: bold;">← 前のページへ</a>
+        <a href="78.html" style="text-decoration: none; color: #f39c12; font-weight: bold;">次のページへ →</a>
+    </nav>
+
+    <section class="article-footer-nav">
+        <h3>同じカテゴリー（第5章：AIオートメーション・スケーリング編）の記事</h3>
+        <ul class="vertical-article-list">
+            <li><a href="66.html">66. AIオートメーション：運用の自動化ロードマップ</a></li>
+            <li><a href="67.html">67. Python×AIで記事を自動投稿する仕組み</a></li>
+            <li><a href="68.html">68. 複数サイトを同時に育てるポートフォリオ戦略</a></li>
+            <li><a href="69.html">69. AIエージェントによる自動リサーチとトレンドキャッチ</a></li>
+            <li><a href="70.html">70. API連携：最新AIモデルをサイト運用に組み込む方法</a></li>
+            <li><a href="71.html">71. データの自動バックアップと復旧体制の構築</a></li>
+            <li><a href="72.html">72. 検索順位の自動監視：変動をいち早く察知する</a></li>
+            <li><a href="73.html">73. SNS自動投稿システム：流入経路の多角化</a></li>
+            <li><a href="74.html">74. AIによるコメント返信の効率化：コミュニティ活性化</a></li>
+            <li><a href="75.html">75. 競合サイトの自動分析：AIで優位性を保つ</a></li>
+            <li><a href="76.html">76. 広告運用の自動化：最小コストで最大アクセスを得る</a></li>
+            <li><a href="77.html">77. 画像生成の自動ワークフロー：アイキャッチ量産術</a></li>
+            <li><a href="78.html">78. 外注化のAI化：AIをディレクターとして活用する</a></li>
+            <li><a href="79.html">79. サーバーレス構成の検討：さらなる安定性と速度を求めて</a></li>
+            <li><a href="80.html">80. 第5章まとめ：AIに任せられることはすべて任せる</a></li>
+        </ul>
+
+        <h3>次のカテゴリー（第6章：新時代のサイト運営・未来戦略編）の記事</h3>
+        <ul class="vertical-article-list">
+            <li><a href="81.html">81. AIによるパーソナライズ：読者ごとに最適化された体験</a></li>
+        </ul>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="index.html" style="color: #666; text-decoration: none; font-size: 0.9rem; border-bottom: 1px solid #ddd;">
+                他のカテゴリーの記事を読む（トップページへ戻る）
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <div class="container">
+        <div style="margin-bottom: 20px;">
+            <a href="hosting-comparison-guide.html" style="color: #bbb; text-decoration: none; font-size: 0.85rem;">
+                Webサイト構築における無料と有料の真実：GitHubからWordPressへの移行ガイド
+            </a>
+        </div>
+        <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
     </div>
-</div>
-
-<script>
-    const filename = window.location.pathname.split('/').pop() || '77.html';
-    const currentNum = parseInt(filename.replace(/[^0-9]/g, ''));
-
-    if (!isNaN(currentNum)) {
-        const prev = document.getElementById('link-prev');
-        const next = document.getElementById('link-next');
-        if (currentNum > 1) { prev.href = (currentNum - 1).toString().padStart(2, '0') + ".html"; } else { prev.style.display = 'none'; }
-        if (currentNum < 100) { next.href = (currentNum + 1).toString().padStart(2, '0') + ".html"; } else { next.style.display = 'none'; }
-    }
-</script>
+</footer>
 
 </body>
 </html>
