@@ -30,30 +30,37 @@
     
     <article class="post-content">
         <h1>8. 独自ドメインの取得とGitHub Pagesへの紐付け</h1>
-        <p>長期的な資産価値を考えるなら独自ドメイン（例：example.com）の取得は必須です。信頼性を保証し、SEO評価を蓄積するための重要なステップです。</p>
+        <p>GitHub Pagesはデフォルトで `ユーザー名.github.io` というURLを付与してくれますが、長期的な資産価値を考えるなら「独自ドメイン（例：example.com）」の取得は必須です。独自ドメインはサイトの「信頼性」を保証し、万が一プラットフォームを移転することになっても、積み上げたSEO評価をそのまま引き継ぐことができる唯一の手段だからです。</p>
 
         <div style="background-color: #fff9db; border: 2px dashed #f39c12; padding: 20px; margin: 30px 0; border-radius: 8px;">
             <h3 style="margin-top: 0; color: #e67e22;">🚀 この記事のあとの作業工程</h3>
             <ol style="line-height: 1.8; font-size: 0.95rem;">
-                <li><strong>ドメイン名を購入する</strong><br>
+                <li><strong>ドメイン名を決め、管理サービスで購入する</strong><br>
                     → <a href="https://www.onamae.com/" target="_blank" rel="noopener">お名前.com（外部リンク）</a></li>
-                <li><strong>DNS設定を行う（Cloudflare等推奨）</strong><br>
+                <li><strong>DNS設定を行い、GitHubのサーバーに紐付ける</strong><br>
                     → <a href="https://www.cloudflare.com/ja-jp/" target="_blank" rel="noopener">Cloudflare公式へ（外部リンク）</a></li>
-                <li><strong>GitHubのサーバーに紐付ける</strong></li>
-                <li><strong>第9回「SSL化」の確認へ進む</strong></li>
+                <li><strong>GitHubの設定画面でカスタムドメインを入力する</strong></li>
+                <li><strong>第9回「SSL化（常時暗号化）」の確認へ進む</strong></li>
             </ol>
         </div>
 
+        <h2>独自ドメインがSEOに与える影響</h2>
+        <p>Googleの検索エンジンは、ドメインの「運用履歴」を評価します。無料ドメインの場合、その評価は提供元のプラットフォームに帰属してしまいますが、独自ドメインであれば、あなたが更新し続けるほど、ドメインパワーがあなた自身の資産として蓄積されていきます。将来、強力な検索上位を独占するための「種まき」として、初期段階での独自ドメイン導入を強く推奨します。</p>
+
+        <h2>GitHubとの紐付け：DNSの壁を越える</h2>
+        <p>「エンジニアではないから設定が難しそう」と感じるかもしれませんが、やるべきことは「ドメイン管理画面にGitHubの指定アドレスを入力する」だけです。この設定により、世界中の誰かがあなたのドメインにアクセスしたとき、GitHub上にあるあなたのサイトファイルへ自動的に誘導されるようになります。<a href="https://www.onamae.com/" target="_blank" rel="noopener">お名前.com</a>などの国内サービスや、高速な <a href="https://www.cloudflare.com/ja-jp/" target="_blank" rel="noopener">Cloudflare</a> を活用するのが一般的です。</p>
+
         <div style="margin: 30px 0; padding: 20px; background: #f1f8ff; border: 1px solid #c8e1ff; border-radius: 8px; font-size: 0.95rem;">
             <strong style="color: #0366d6;">💡 ドメイン設定ガイド：</strong><br>
+            <p style="margin-top: 10px;">具体的なドメインの買い方や、DNSの書き換え手順を画像付きで確認したい方は、こちらをご覧ください。</p>
             <a href="domain-setup-guide.html" style="display: inline-block; margin-top: 5px; font-weight: bold; color: #0366d6; text-decoration: underline;">
-                👉 独自ドメイン取得とDNS設定のマニュアルを読む
+                👉 独自ドメイン取得とDNS設定の完全マニュアルを読む
             </a>
         </div>
     </article>
 
     <nav class="post-nav" style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
-        <a href="07.html" style="text-decoration: none; color: #f39c12; font-weight: bold; flex: 1; text-align: left;">← [7. SEOに強いコード] へ戻る</a>
+        <a href="07.html" style="text-decoration: none; color: #f39c12; font-weight: bold; flex: 1; text-align: left;">← [7. SEOに強いコードの書き方] へ戻る</a>
         <a href="09.html" style="text-decoration: none; color: #f39c12; font-weight: bold; flex: 1; text-align: right;">[9. SSL化とセキュリティ] へ進む →</a>
     </nav>
 
