@@ -25,49 +25,60 @@
 
 <main class="container">
     <nav>
-        <a href="01.html" class="back-link">← 第1回 導入編へ戻る</a>
+        <a href="#" onclick="history.back(); return false;" class="back-link">← 前のページへ戻る</a>
     </nav>
     
     <article class="post-content">
         <h1>GitHubアカウント作成 完全ガイド</h1>
-        <p>GitHubは英語がメインのサイトですが、手順通りに進めれば数分で完了します。ここではPC、およびiPhone/Androidスマホでの登録手順を詳しく解説します。</p>
+        <p>GitHubは世界中のクリエイターが利用するプラットフォームです。サイト全体は英語ですが、手順は非常にシンプルです。ここでは、PCとスマホ（iPhone/Android）それぞれの登録手順を、迷わないように解説します。</p>
 
-        <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
-            <h2 style="margin-top: 0; font-size: 1.2rem;">📝 登録前に準備するもの</h2>
-            <ul style="margin-bottom: 0;">
-                <li><strong>メールアドレス：</strong> 認証コードが届くもの（Gmail等）</li>
-                <li><strong>ユーザー名：</strong> サイトのURL（ユーザー名.github.io）になります</li>
+        <div style="background-color: #f8f9fa; padding: 25px; border-radius: 8px; margin: 30px 0; border-left: 5px solid #3498db;">
+            <h2 style="margin-top: 0; font-size: 1.2rem; color: #2c3e50;">📝 登録前に用意するもの</h2>
+            <ul style="margin-bottom: 0; line-height: 1.8;">
+                <li><strong>メールアドレス：</strong> 認証コードを受け取れるもの（Gmail推奨）</li>
+                <li><strong>希望のユーザー名：</strong> あなたのサイトのURL（<code>ユーザー名.github.io</code>）の一部になります</li>
+                <li><strong>パスワード：</strong> 8文字以上、英数字を含むもの</li>
             </ul>
         </div>
 
-        <h2 style="border-left: 5px solid #3498db; padding-left: 15px;">1. PCでの登録手順</h2>
-        <ol>
-            <li><a href="https://github.com/join" target="_blank" rel="noopener">GitHub公式サイト</a>にアクセスし、[Sign up] をクリックします。</li>
-            <li>メールアドレスを入力し [Continue] をクリックします。</li>
-            <li>パスワードを設定し [Continue]、希望のユーザー名を入力し [Continue] をクリックします。</li>
-            <li>「y」か「n」を入力（お知らせメールの要否）し、パズル認証を完了させます。</li>
-            <li>登録したメールに届く **8桁の認証コード** を入力すれば完了です！</li>
+        <h2 style="border-bottom: 2px solid #3498db; padding-bottom: 5px; margin-top: 40px;">1. PCでの登録手順</h2>
+        
+        <ol style="line-height: 2;">
+            <li><a href="https://github.com/signup" target="_blank" rel="noopener">GitHub公式サイトのサインアップページ</a>を開きます。</li>
+            <li><strong>Email address:</strong> アドレスを入力し「Continue」を押します。</li>
+            <li><strong>Password:</strong> パスワードを決めて「Continue」を押します。</li>
+            <li><strong>Username:</strong> ユーザー名を入力します。
+                <ul><li style="font-size: 0.9rem; color: #666;">※URLの一部になるため、シンプルで分かりやすい名前がおすすめです。</li></ul>
+            </li>
+            <li><strong>Email preferences:</strong> お知らせが不要なら「n」と入力して「Continue」。</li>
+            <li><strong>Verify your account:</strong> パズルを解いて人間であることを証明します。</li>
+            <li>メールに届いた **8桁の認証コード** を入力すれば完了です。</li>
         </ol>
 
-        <h2 style="border-left: 5px solid #2ecc71; padding-left: 15px; margin-top: 40px;">2. スマホ（iPhone/Android）での登録手順</h2>
-        <p>※アプリを入れる必要はありません。ブラウザ（SafariやChrome）から行います。</p>
-        <ol>
-            <li>スマホのブラウザで <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> を開き、[Sign up] をタップします。</li>
-            <li>入力欄が順番に現れるので、メールアドレス・パスワード・ユーザー名を1つずつ入力して進めます。</li>
-            <li>パズル認証（画像を選ぶテスト）をクリアし、[Create account] をタップします。</li>
-            <li>メールを確認し、認証コードを入力すれば完了です。</li>
+        <h2 style="border-bottom: 2px solid #2ecc71; padding-bottom: 5px; margin-top: 40px;">2. スマホ（iPhone/Android）での登録手順</h2>
+        <p>※専用アプリを入れなくても、ブラウザ（SafariやChrome）から登録可能です。</p>
+        
+        <ol style="line-height: 2;">
+            <li>スマホのブラウザで <a href="https://github.com/signup" target="_blank" rel="noopener">GitHubサインアップ画面</a> にアクセスします。</li>
+            <li>画面の指示に従い、メールアドレス ➔ パスワード ➔ ユーザー名を順に入力します。</li>
+            <li>「Create account」をタップし、パズル認証を完了させます。</li>
+            <li>届いたメールのコードを入力すれば設定完了です。</li>
         </ol>
 
-        <div style="background-color: #fff5f5; border: 1px solid #feb2b2; padding: 15px; border-radius: 8px; margin-top: 30px;">
-            <strong>⚠️ 注意：ユーザー名は慎重に！</strong><br>
-            <p style="font-size: 0.9rem; margin-top: 5px;">GitHub Pagesを無料で使う場合、サイトのアドレスは <code>https://ユーザー名.github.io/</code> となります。後で変更も可能ですが、愛着の持てる名前にしましょう。</p>
+        <div style="background-color: #fff5f5; border: 1px solid #feb2b2; padding: 20px; border-radius: 8px; margin-top: 40px;">
+            <strong style="color: #c53030;">⚠️ 重要なアドバイス</strong><br>
+            <p style="font-size: 0.95rem; margin-top: 10px; line-height: 1.6;">
+                GitHub Pagesを利用する場合、独自ドメインを設定するまでは <strong>「https://ユーザー名.github.io/」</strong> というアドレスがあなたのサイトの顔になります。
+                覚えやすく、サイトの内容に関連したユーザー名を設定しましょう。
+            </p>
         </div>
     </article>
 
-    <div style="text-align: center; margin-top: 40px;">
-        <a href="01.html" style="background: #3498db; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold;">
-            ← 登録が完了したので記事に戻る
+    <div style="text-align: center; margin: 50px 0;">
+        <a href="#" onclick="history.back(); return false;" style="background: #3498db; color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3); transition: transform 0.2s;">
+            ← 登録作業を終えて元の記事に戻る
         </a>
+        <p style="font-size: 0.8rem; color: #999; margin-top: 15px;">※ブラウザの「戻る」ボタンと同じ動作をします</p>
     </div>
 </main>
 
