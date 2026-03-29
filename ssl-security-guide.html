@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H56XHD5MLW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H56XHD5MLW');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSL化のトラブル解消とセキュリティ強化ガイド | Zero-Cost SEO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="container">
+        <h1>Zero-Cost SEO</h1>
+        <p>技術とAIで、コストゼロの資産サイトを構築する</p>
+    </div>
+</header>
+
+<main class="container">
+    <nav>
+        <a href="#" onclick="history.back(); return false;" class="back-link">← 本編へ戻る</a>
+    </nav>
+    
+    <article class="post-content">
+        <h1>SSL化のトラブル解消とセキュリティ強化ガイド</h1>
+        <p>GitHub Pagesでは無料でSSL（HTTPS）を利用できますが、独自ドメイン設定直後はエラーが出ることがあります。その対処法と安全性を高めるポイントを解説します。</p>
+
+        <h2 style="border-left: 5px solid #e74c3c; padding-left: 15px;">1. 「Enforce HTTPS」が押せない時の対処法</h2>
+        <p>独自ドメインを設定した直後、GitHubのPages設定画面で「Enforce HTTPS」にチェックが入れられない（グレーアウトしている）場合があります。これは、GitHub側であなたのドメインの所有権とDNSが正しいか確認中（Provisioning）であることを意味します。</p>
+        
+        
+
+        <ul>
+            <li><strong>解決策：</strong> 通常、設定から15分〜1時間程度でチェックが可能になります。最大24時間待ってもダメな場合は、DNSレコードの設定ミスを疑ってください。</li>
+        </ul>
+
+        <h2 style="border-left: 5px solid #3498db; padding-left: 15px; margin-top: 40px;">2. 混合コンテンツ（Mixed Content）に注意</h2>
+        <p>SSL化しても、アドレスバーに「鍵マーク」が出ない、または「保護されていない」と出る場合は、HTML内に <code>http://</code> から始まる画像やスクリプトが混ざっている可能性があります。これらをすべて <code>https://</code> に書き換える必要があります。</p>
+
+        <h2 style="border-left: 5px solid #2ecc71; padding-left: 15px; margin-top: 40px;">3. 静的サイトならではの「無敵」のセキュリティ</h2>
+        <p>静的サイトはデータベースを持ちません。これにより、WordPressサイトが日々さらされている「ログイン画面への攻撃」や「プラグインの脆弱性」から完全に解放されています。この「攻撃する場所がない」という状態こそが、最強のセキュリティ対策なのです。</p>
+
+        <div style="background-color: #f1f8ff; border: 2px dashed #3498db; padding: 20px; margin-top: 40px; border-radius: 8px;">
+            <h3 style="margin-top: 0; color: #0366d6;">🔒 安全性が確認できたら</h3>
+            <p style="font-size: 0.95rem; margin-bottom: 0;">アドレスバーの鍵マークを確認し、サイトが安全であることを確認してください。次は、AIを使って「サイト全体の設計」を行う第10回へ進みます。</p>
+        </div>
+    </article>
+
+    <div style="text-align: center; margin: 50px 0;">
+        <a href="#" onclick="history.back(); return false;" style="background: #2ecc71; color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block;">
+            ← セキュリティを確認したので本編に戻る
+        </a>
+    </div>
+</main>
+
+<footer class="main-footer">
+    <div class="container">
+        <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
+    </div>
+</footer>
+
+</body>
+</html>
