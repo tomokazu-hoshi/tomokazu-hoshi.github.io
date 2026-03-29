@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H56XHD5MLW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H56XHD5MLW');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爆速表示を維持するミニマリスト・デザイン術 | Zero-Cost SEO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="container">
+        <h1>Zero-Cost SEO</h1>
+        <p>技術とAIで、コストゼロの資産サイトを構築する</p>
+    </div>
+</header>
+
+<main class="container">
+    <nav>
+        <a href="#" onclick="history.back(); return false;" class="back-link">← 第12回 本編へ戻る</a>
+    </nav>
+    
+    <article class="post-content">
+        <h1>爆速表示を維持するミニマリスト・デザイン術</h1>
+        <p>サイトのデザインにおいて、最大の美徳は「速さ」と「読みやすさ」です。豪華な装飾を捨て、コードの力だけで洗練された空間を作る「ミニマリスト・デザイン」の具体的な手法を伝授します。これにより、PageSpeed Insightsでの100点満点と、高い読者満足度を同時に手に入れます。</p>
+
+        <h2 style="border-left: 5px solid #34495e; padding-left: 15px;">1. 「画像」ではなく「余白」でデザインする</h2>
+        <p>初心者がやりがちなミスは、寂しさを埋めるために不要な画像を入れてしまうことです。ミニマリズムでは、<strong>「余白（ホワイトスペース）」</strong>こそが最強の装飾です。文章の周りに十分な余白を持たせることで、読者の視線は自然と重要なメッセージへと誘導されます。</p>
+        <p>AIにCSSを頼む際は、以下の条件を加えてください：<br>
+        <code style="background: #eee; padding: 2px 5px;">「十分なラインハイライト（1.8以上）と、段落間のマージンを広めにとって、圧迫感のないレイアウトにして」</code></p>
+
+        <h2 style="border-left: 5px solid #27ae60; padding-left: 15px; margin-top: 40px;">2. 信頼を勝ち取る「黄金の配色案」</h2>
+        <p>色は3色以内に抑えるのが鉄則です。迷ったら以下の3パターンから選んでください。これらはすべて、CSSの色コードだけで指定可能です。</p>
+        
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+            <div style="flex: 1; min-width: 200px; border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
+                <strong>🔵 信頼・ビジネス</strong><br>
+                <small>ベース：#FFFFFF (白)</small><br>
+                <small>メイン：#2C3E50 (濃紺)</small><br>
+                <small>アクセント：#3498DB (青)</small>
+            </div>
+            <div style="flex: 1; min-width: 200px; border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
+                <strong>🟢 自然・健康</strong><br>
+                <small>ベース：#F9F9F9 (薄灰)</small><br>
+                <small>メイン：#2D3436 (墨黒)</small><br>
+                <small>アクセント：#27AE60 (緑)</small>
+            </div>
+            <div style="flex: 1; min-width: 200px; border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
+                <strong>🟠 情熱・行動</strong><br>
+                <small>ベース：#FFFFFF (白)</small><br>
+                <small>メイン : #2F3640 (暗灰)</small><br>
+                <small>アクセント：#E67E22 (橙)</small>
+            </div>
+        </div>
+
+        <h2 style="border-left: 5px solid #f1c40f; padding-left: 15px; margin-top: 40px;">3. フォントとアイコンの軽量化テクニック</h2>
+        <p>フォントはサイトの印象を大きく左右しますが、読み込みが重いのが難点です。Zero-Cost SEOでは、以下の組み合わせを推奨します。</p>
+        <ul>
+            <li><strong>日本語フォント：</strong> <a href="https://fonts.google.com/noto/specimen/Noto+Sans+JP" target="_blank" rel="noopener">Noto Sans JP</a>（必要なウェイトだけを読み込む）</li>
+            <li><strong>アイコン：</strong> 画像（PNG/JPG）は使わず、SVG形式の <a href="https://lucide.dev/" target="_blank" rel="noopener">Lucide Icons</a> を使用する。コードとして埋め込むため、一瞬で表示されます。</li>
+        </ul>
+
+        <h2 style="border-left: 5px solid #e67e22; padding-left: 15px; margin-top: 40px;">4. そのまま使えるミニマリストCSSテンプレート</h2>
+        <p>AIに以下のプロンプトを投げて、土台となるCSSを作成させましょう。</p>
+        <div style="background: #2d3436; color: #dfe6e9; padding: 20px; border-radius: 8px; margin: 20px 0; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
+            /* AIへの指示 */<br>
+            以下の特徴を持つモダンでミニマリストなCSSを書いてください：<br>
+            1. 背景は白(#FFFFFF)、本文は読みやすい濃い灰色(#2D3436)<br>
+            2. 見出しには適度な太さと下線をつけ、アクセントカラーは #3498DB を使用<br>
+            3. スマホ表示(レスポンシブ)を最優先し、コンテナ幅は最大 800px に設定<br>
+            4. 画像には自動的に角丸(8px)を適用
+        </div>
+
+        <div style="background-color: #fff9db; border: 2px dashed #f39c12; padding: 20px; margin-top: 40px; border-radius: 8px;">
+            <h3 style="margin-top: 0; color: #e67e22;">🚀 デザインを確定させよう</h3>
+            <p style="font-size: 0.95rem; margin-bottom: 0;">「見た目」にこだわりすぎて、公開が遅れるのは本末転倒です。まずはこのミニマリスト設定で80点の完成度を目指し、即座に「第13回：計測ツールの設定」へ進みましょう。データが取れ始めてから、ゆっくり微調整すれば良いのです。</p>
+        </div>
+    </article>
+
+    <div style="text-align: center; margin: 50px 0;">
+        <a href="#" onclick="history.back(); return false;" style="background: #2ecc71; color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);">
+            ← デザインのコツを掴んだので本編に戻る
+        </a>
+    </div>
+</main>
+
+<footer class="main-footer">
+    <div class="container">
+        <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
+    </div>
+</footer>
+
+</body>
+</html>
