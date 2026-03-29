@@ -24,34 +24,46 @@
 </header>
 
 <main class="container">
-    <a href="chapter1.html" class="back-link">← 第1章 目次へ戻る</a>
+    <nav>
+        <a href="chapter1.html" class="back-link">← 第1章 目次へ戻る</a>
+    </nav>
     
     <article class="post-content">
         <h1>10. AIを活用したサイトマップとディレクトリ設計</h1>
-        <p>静的サイト運営において、ファイルやフォルダの構成はサイトの「骨組み」そのものです。WordPressのような動的サイトと違い、静的サイトではURLの構造がそのままフォルダの階層構造と一致します。この設計を適当にしてしまうと、後からの修正が非常に困難になり、SEO評価も分散してしまいます。AIを軍師として使い、拡張性と論理性を兼ね備えたディレクトリ設計を行いましょう。</p>
+        <p>インフラが整った後、最初に行うべきは「サイトの設計図」を描くことです。場当たり的に記事を増やすのではなく、論理的なディレクトリ構造（階層構造）を構築することで、検索エンジンはサイトの専門性を正しく理解し、ユーザーは目的の情報に迷わずたどり着けるようになります。Zero-Cost SEOでは、この複雑な設計作業をAI軍師と共に進めます。</p>
 
-        
+        <div style="background-color: #fff9db; border: 2px dashed #f39c12; padding: 20px; margin: 30px 0; border-radius: 8px;">
+            <h3 style="margin-top: 0; color: #e67e22;">🚀 この記事のあとの作業工程</h3>
+            <ol style="line-height: 1.8; font-size: 0.95rem;">
+                <li><strong>ターゲットの悩みを整理し、主要カテゴリーを3〜5つ決める</strong></li>
+                <li><strong>URL構造（ディレクトリ）をシンプルかつ英語で設計する</strong></li>
+                <li><strong>AIに「トピッククラスター」に基づいた記事構成を提案させる</strong></li>
+                <li><strong>第11回「内部リンク構造の最適化」へ進む</strong></li>
+            </ol>
+        </div>
 
-        <h2>「物理構造」がSEO評価を左右する</h2>
-        <p>検索エンジンのクローラーは、サイト内を巡回する際にURLの階層構造をヒントにします。関連性の高い記事が同じディレクトリに整理されていることで、サイトの専門性（トピッククラスター）が正しく認識されます。Zero-Cost SEOでは、以下のようなシンプルかつ論理的なフォルダ構成を推奨します。</p>
-        <ul>
-            <li><strong>/ (ルート):</strong> index.html（トップページ）やsitemap.xmlを配置。</li>
-            <li><strong>/assets/:</strong> 画像、CSS、JavaScriptファイルをまとめて管理。</li>
-            <li><strong>/chapter1/:</strong> カテゴリーごとにフォルダを分け、関連記事を格納。</li>
-        </ul>
+        <h2>「トピッククラスター」で専門性を証明する</h2>
+        <p>現代のSEOでは、1つのキーワードで1位を狙うのではなく、関連する複数の記事をグループ化して「塊（クラスター）」として見せる戦略が有効です。例えば「キャンプ」という親カテゴリーの下に「テントの選び方」「焚き火のコツ」「冬キャンプの注意点」といった子記事を配置します。AIを使えば、自分一人では思いつかなかった「読者が次に知りたいトピック」を網羅した完璧なサイトマップを数分で作成できます。</p>
 
-        <h2>AIによる「sitemap.xml」の自動最適化</h2>
-        <p>サイト全体の地図である「sitemap.xml」は、クローラーにすべての記事を漏れなく見つけてもらうために不可欠なファイルです。記事数が増えてくると手動での更新は現実的ではありません。AIに「現在のフォルダ構造に基づいて、SEOに最適なsitemap.xmlの構造案を出して」と指示することで、各ページの優先順位（priority）や更新頻度（changefreq）を適切に設定したコードを生成させることができます。</p>
-        <p>また、ディレクトリ設計の段階でAIに「今後100記事まで増やす予定だが、どのカテゴリーに何記事ずつ配分するのが最もSEO的に強いか？」と相談することで、途中で構造が破綻しない「未来志向の設計図」を手に入れることができます。土台が整えば、次は内部リンクの網を張り巡らせるステップへと進みます。</p>
+        <h2>ディレクトリ構造は「シンプル・イズ・ベスト」</h2>
+        <p>URLの構造は、検索エンジンがサイトの内容を推測するための重要なヒントです。`example.com/category/post-name` のように、階層が深くなりすぎない、浅く広い構造を目指しましょう。AIに特定のテーマを伝え、「このテーマでクローラビリティの高いディレクトリ構成案を、英語のURLスラッグと共にリストアップして」と指示することで、SEOに強い「サイトの骨組み」が出来上がります。</p>
+
+        <div style="margin: 30px 0; padding: 20px; background: #f1f8ff; border: 1px solid #c8e1ff; border-radius: 8px; font-size: 0.95rem;">
+            <strong style="color: #0366d6;">💡 設計ガイド：</strong><br>
+            <p style="margin-top: 10px;">「サイトの構成案が思い浮かばない」という方は、AIに丸投げして最適なディレクトリ構造を吐き出させるための特製プロンプト集をご覧ください。</p>
+            <a href="ai-sitemap-prompt.html" style="display: inline-block; margin-top: 5px; font-weight: bold; color: #0366d6; text-decoration: underline;">
+                👉 AIでサイト設計を自動化するプロンプト集を読む
+            </a>
+        </div>
     </article>
 
-    <nav class="post-nav" style="display: flex; justify-content: space-between; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
-        <a href="09.html" style="text-decoration: none; color: #f39c12; font-weight: bold;">← 前のページへ</a>
-        <a href="11.html" style="text-decoration: none; color: #f39c12; font-weight: bold;">次のページへ →</a>
+    <nav class="post-nav" style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
+        <a href="09.html" style="text-decoration: none; color: #f39c12; font-weight: bold; flex: 1; text-align: left;">← [9. SSL化とセキュリティ設定] へ戻る</a>
+        <a href="11.html" style="text-decoration: none; color: #f39c12; font-weight: bold; flex: 1; text-align: right;">[11. 内部リンク構造の最適化] へ進む →</a>
     </nav>
 
     <section class="article-footer-nav">
-        <h3>同じカテゴリー（第1章：ゼロコスト・爆速インフラ構築編）の記事</h3>
+        <h3>同じカテゴリーの記事</h3>
         <ul class="vertical-article-list">
             <li><a href="01.html">1. GitHub Pages×AIで作る「維持費0円」の資産サイト</a></li>
             <li><a href="02.html">2. AI軍師と共に戦略を練る：プロンプトエンジニアリング</a></li>
@@ -69,12 +81,6 @@
             <li><a href="14.html">14. Google Analytics 4 (GA4) によるデータ計測の開始</a></li>
             <li><a href="15.html">15. 第1章まとめ：インフラ構築が資産サイトの命運を握る</a></li>
         </ul>
-
-        <div style="margin-top: 40px; text-align: center;">
-            <a href="index.html" style="color: #666; text-decoration: none; font-size: 0.9rem; border-bottom: 1px solid #ddd;">
-                他のカテゴリーの記事を読む（トップページへ戻る）
-            </a>
-        </div>
     </section>
 </main>
 
