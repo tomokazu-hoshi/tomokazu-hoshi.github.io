@@ -24,25 +24,42 @@
 </header>
 
 <main class="container">
-    <a href="chapter2.html" class="back-link">← 第2章 目次へ戻る</a>
+    <nav>
+        <a href="chapter2.html" class="back-link">← 第2章 目次へ戻る</a>
+    </nav>
     
     <article class="post-content">
         <h1>19. ファクトチェック：AIの嘘を見抜く技術</h1>
-        <p>AIは極めて自然な文章を作成しますが、もっともらしい嘘（ハルシネーション）をつくリスクを常に孕んでいます。情報の正確性は、SEOにおける信頼性（Trustworthiness）の根幹です。AIの利便性を享受しつつ、その出力を鵜呑みにせず、事実関係を厳格に検証する技術を身につけましょう。</p>
+        <p>AIは非常に説得力のある文章を書きますが、時に「もっともらしい嘘（ハルシネーション）」をつくことがあります。情報の正確性は、GoogleのE-E-A-T（信頼性）において最も重要な柱です。AIの出力を鵜呑みにせず、効率的に「真実」を検証するエンジニアリング手法を学びましょう。</p>
 
-        <h2>ハルシネーションの正体と対策</h2>
-        <p>AIは「次に来る確率の高い言葉」を選択しているに過ぎず、事実に基づいた思考をしているわけではありません。特に最新の統計、専門的な法律、固有の名称などは誤りが発生しやすいため、AI自身にソースを提示させることや、別の視点から再検証させるステップを自動化フローに組み込むことが重要です。</p>
+        <div style="background-color: #fff9db; border: 2px dashed #f39c12; padding: 20px; margin: 30px 0; border-radius: 8px;">
+            <h3 style="margin-top: 0; color: #e67e22;">🚀 この記事のあとの作業工程</h3>
+            <ol style="line-height: 1.8; font-size: 0.95rem;">
+                <li><strong>Googleの「誤情報に関するポリシー」を確認する</strong><br>
+                    → <a href="https://blog.google/intl/ja-jp/company-news/outreach-initiatives/fact-check-tools-google-search/" target="_blank" rel="noopener">Google Fact Check Toolsについて（外部リンク）</a></li>
+                <li><strong>AIに「根拠となるURL」を提示させるプロンプトを実行する</strong></li>
+                <li><strong>第20回「AIライティング：共感と信頼を生む文章術」へ進む</strong></li>
+            </ol>
+        </div>
 
-        <h2>AIを校閲者として二重に活用する</h2>
-        <p>執筆を担当したAIとは別のAI（または別のチャットスレッド）に、校閲エージェントとしての役割を与えます。この文章の中に事実と異なる点や、論理的な矛盾がないか、公的な情報源と照らし合わせて検証せよと指示することで、人間が一点ずつ調べる手間を最小限に抑えつつ、精度を極限まで高められます。</p>
+        <h2>なぜAIは嘘をつくのか？「ハルシネーション」の正体</h2>
+        <p>AIは「次に続く確率が最も高い言葉」を選んでいるだけであり、事実かどうかを判断しているわけではありません。特に統計データ、歴史的事実、法律、医療情報などは、AIが間違えやすい領域です。これを見逃すと、サイト全体のドメインパワーを大きく損なうリスクがあります。人間の役割は、AIが出した「答え」を「仮説」として扱い、検証することにあります。</p>
 
-        <h2>最後の一線は人間の眼で守る</h2>
-        <p>技術的な検証が済んだ後、最終的な責任を持つのは運営者である人間です。AIによるファクトチェック結果を基に、一次情報（公式サイトや公的統計）を確認する最後の一手間が、サイトの権威性を盤石なものにします。正しい情報の積み重ねこそが、長期的に検索エンジンに評価される唯一の道です。正確な情報を届ける体制が整ったら、次はサイトを伸ばすための戦略的なキーワード選定に入ります。AIで見つける穴場の攻略法へと進みましょう。</p>
+        <h2>効率的な検証：AIを使ってAIをチェックする</h2>
+        <p>すべてをGoogle検索で調べるのは時間がかかります。まずはAI自身に「今の回答に事実誤認がないか、別の視点から再検証して」と指示を出す、あるいは検索機能付きのAI（PerplexityやGeminiの検索機能）を併用することで、検証スピードは劇的に向上します。最終的には、一次情報（公式サイトや公的機関）のソースを確認する癖をつけましょう。</p>
+
+        <div style="margin: 30px 0; padding: 20px; background: #f1f8ff; border: 1px solid #c8e1ff; border-radius: 8px; font-size: 0.95rem;">
+            <strong style="color: #0366d6;">💡 ファクトチェックガイド：</strong><br>
+            <p style="margin-top: 10px;">「具体的にどうやって嘘を見抜くのか？」という実戦的な検証フローを知りたい方は、こちらのガイドをご覧ください。</p>
+            <a href="ai-fact-checking-guide.html" style="display: inline-block; margin-top: 5px; font-weight: bold; color: #0366d6; text-decoration: underline;">
+                👉 AI情報の真偽を見極める検証フローを読む
+            </a>
+        </div>
     </article>
 
-    <nav class="post-nav" style="display: flex; justify-content: space-between; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
-        <a href="18.html" style="text-decoration: none; color: #f39c12; font-weight: bold;">← 前のページへ</a>
-        <a href="20.html" style="text-decoration: none; color: #f39c12; font-weight: bold;">次のページへ →</a>
+    <nav class="post-nav" style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
+        <a href="18.html" style="text-decoration: none; color: #f39c12; font-weight: bold; flex: 1; text-align: left;">← [18. 構成案の自動生成と最適化] へ戻る</a>
+        <a href="20.html" style="text-decoration: none; color: #f39c12; font-weight: bold; flex: 1; text-align: right;">[20. AIライティング：共感と信頼の文章術] へ進む →</a>
     </nav>
 
     <section class="article-footer-nav">
@@ -50,41 +67,25 @@
         <ul class="vertical-article-list">
             <li><a href="16.html">16. AIコンテンツ・エンジニアリングの極意</a></li>
             <li><a href="17.html">17. 読者の検索意図をAIで完璧に解読する</a></li>
-            <li><a href="18.html">18. 心を動かすAIライティング：共感の設計図</a></li>
+            <li><a href="18.html">18. 構成案（プロット）の自動生成と最適化術</a></li>
             <li><a href="19.html">19. ファクトチェック：AIの嘘を見抜く技術</a></li>
-            <li><a href="20.html">20. キーワード選定術：AIで穴場キーワードを見つける</a></li>
-            <li><a href="21.html">21. 記事構成案の自動生成：論理的な骨組みを作る</a></li>
-            <li><a href="22.html">22. タイトルと見出しの最適化：クリック率（CTR）を最大化する</a></li>
-            <li><a href="23.html">23. AIによる導入文の作成：読者を一瞬で引き込む</a></li>
-            <li><a href="24.html">24. 本文の肉付け：AIと人間の知見を融合させる</a></li>
-            <li><a href="25.html">25. まとめ文の作成：読者の行動（CTA）を促す</a></li>
-            <li><a href="26.html">26. 共起語の自然な挿入：AIでSEOスコアを高める</a></li>
-            <li><a href="27.html">27. 画像選定とAlt属性：AI生成画像の活用術</a></li>
-            <li><a href="28.html">28. 内部リンクの文脈的配置：AIによる関連記事の特定</a></li>
-            <li><a href="29.html">29. 定期的なリサーチ：AIで情報の鮮度を保つ</a></li>
-            <li><a href="30.html">30. AIによる文体（トーン＆マナー）の統一</a></li>
-            <li><a href="31.html">31. 長文記事の構成術：読者を飽きさせない工夫</a></li>
-            <li><a href="32.html">32. 箇条書きと表の活用：AIで情報を構造化する</a></li>
-            <li><a href="33.html">33. 読者の「悩み」を解決するQ&Aコーナーの作り方</a></li>
-            <li><a href="34.html">34. コピペチェック：独自性を確保するための最終確認</a></li>
-            <li><a href="35.html">35. 第2章まとめ：AIを使いこなし高品質な記事を量産する</a></li>
+            <li><a href="20.html">20. AIライティング：共感と信頼を生む文章術</a></li>
+            <li><a href="21.html">21. 記事タイトルと見出しのクリック率(CTR)改善</a></li>
+            <li><a href="22.html">22. AIによる画像生成とalt属性のSEO設定</a></li>
+            <li><a href="23.html">23. 記事の鮮度を保つ！AIリライトのタイミング</a></li>
+            <li><a href="24.html">24. 競合サイトをAIで分析し、弱点を突く戦略</a></li>
+            <li><a href="25.html">25. カテゴリートップ（柱）記事の構築と役割</a></li>
+            <li><a href="26.html">26. AI校正：読みやすさと「語り」のバランス</a></li>
+            <li><a href="27.html">27. リード文（導入部）で読者の心を掴むテクニック</a></li>
+            <li><a href="28.html">28. 内部リンクの文脈をAIで最適化する</a></li>
+            <li><a href="29.html">29. まとめセクションの重要性とCTAへの誘導</a></li>
+            <li><a href="30.html">30. 第2章まとめ：AIコンテンツは資産の種である</a></li>
         </ul>
-
-        <div style="margin-top: 40px; text-align: center;">
-            <a href="index.html" style="color: #666; text-decoration: none; font-size: 0.9rem; border-bottom: 1px solid #ddd;">
-                他のカテゴリーの記事を読む（トップページへ戻る）
-            </a>
-        </div>
     </section>
 </main>
 
 <footer class="main-footer">
     <div class="container">
-        <div style="margin-bottom: 20px;">
-            <a href="hosting-comparison-guide.html" style="color: #bbb; text-decoration: none; font-size: 0.85rem;">
-                Webサイト構築における無料と有料の真実：GitHubからWordPressへの移行ガイド
-            </a>
-        </div>
         <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
     </div>
 </footer>
