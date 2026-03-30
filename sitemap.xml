@@ -1,43 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://tomokazu-hoshi.github.io/index.html</loc></url>
-
-  <url><loc>https://tomokazu-hoshi.github.io/01.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/02.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/03.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/04.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/05.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/06.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/07.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/08.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/09.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/10.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/11.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/12.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/13.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/14.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/15.html</loc></url>
   <url><loc>https://tomokazu-hoshi.github.io/16.html</loc></url>
   <url><loc>https://tomokazu-hoshi.github.io/17.html</loc></url>
   <url><loc>https://tomokazu-hoshi.github.io/18.html</loc></url>
   <url><loc>https://tomokazu-hoshi.github.io/19.html</loc></url>
-
+  <url><loc>https://tomokazu-hoshi.github.io/20.html</loc></url>
   <url><loc>https://tomokazu-hoshi.github.io/ai-content-workflow-guide.html</loc></url>
   <url><loc>https://tomokazu-hoshi.github.io/keyword-insight-guide.html</loc></url>
   <url><loc>https://tomokazu-hoshi.github.io/ai-plot-optimization-guide.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/ai-fact-checking-guide.html</loc></url> <url><loc>https://tomokazu-hoshi.github.io/migration-guide.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/minimalist-design-guide.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/niche-keyword-guide.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/pagespeed-insights-guide.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/prompt-engineering-guide.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/recommend.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/ssl-security-guide.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/vscode-git-setup-guide.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/html-css-template-guide.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/domain-setup-guide.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/ai-sitemap-prompt.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/internal-link-strategy.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/gsc-setup-guide.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/ga4-setup-guide.html</loc></url>
-  <url><loc>https://tomokazu-hoshi.github.io/chapter1-summary-checklist.html</loc></url>
+  <url><loc>https://tomokazu-hoshi.github.io/fact-check-guide.html</loc></url>
+  <url><loc>https://tomokazu-hoshi.github.io/ai-keyword-research-guide.html</loc></url>
 </urlset>
