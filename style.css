@@ -4,80 +4,159 @@ body {
     line-height: 1.8;
     color: #333;
     margin: 0;
-    background-color: #fcfcfc;
+    padding: 0;
+    background-color: #f8f9fa;
 }
+
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* ヘッダー */
+/* ヘッダー全体のレイアウト */
 .main-header {
-    background-color: #1a2a3a;
-    color: #fff;
-    padding: 30px 0;
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 0 0 0;
+    border-bottom: 4px solid #f39c12;
+}
+
+.header-top {
+    padding-bottom: 20px;
     text-align: center;
 }
-.main-header h1 { margin: 0; font-size: 1.6rem; }
 
-/* パンくず（戻るリンク） */
-.back-link {
+.header-top h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.header-top p {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ナビゲーションバー */
+.global-nav {
+    background-color: #34495e;
+    width: 100%;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list > li {
+    position: relative;
+}
+
+.nav-list > li > a {
     display: block;
-    margin: 20px 0;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.nav-list > li > a:hover {
+    background-color: #f39c12;
+}
+
+/* ドロップダウンメニュー */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-content li a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f8f9fa;
+    color: #f39c12;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* 記事コンテンツの装飾 */
+.post-content {
+    background: white;
+    padding: 40px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.post-content h1 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 10px;
+}
+
+.post-content h2 {
+    font-size: 1.4rem;
+    margin-top: 40px;
+    padding-left: 10px;
+    border-left: 5px solid #f39c12;
+}
+
+/* フッター */
+.main-footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 0;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
     text-decoration: none;
     color: #f39c12;
     font-weight: bold;
 }
 
-/* 縦並びのリスト（共通） */
-.vertical-article-list {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-}
-.vertical-article-list li {
-    border-bottom: 1px solid #eee;
-}
-.vertical-article-list a {
-    display: block;
-    padding: 15px 0;
-    text-decoration: none;
-    color: #333;
-    transition: 0.2s;
-}
-.vertical-article-list a:hover {
-    color: #f39c12;
-    padding-left: 10px;
-}
-
-/* 記事コンテンツ */
-.post-content {
-    background: #fff;
-    padding: 40px;
-    margin-top: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-/* 記事下の全リストセクション */
-.article-footer-nav {
-    margin-top: 60px;
-    padding-top: 40px;
-    border-top: 2px solid #eee;
-}
-.article-footer-nav h3 {
-    font-size: 1.1rem;
-    color: #1a2a3a;
-    margin-bottom: 20px;
-}
-
-/* フッター */
-.main-footer {
-    text-align: center;
-    padding: 40px 0;
-    background: #f8f8f8;
-    color: #999;
-    font-size: 0.8rem;
-    margin-top: 60px;
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+    }
+    .nav-list > li {
+        border-bottom: 1px solid #455a64;
+    }
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background-color: #3e5871;
+    }
+    .dropdown-content li a {
+        color: #eee;
+        padding-left: 40px;
+    }
 }
