@@ -19,7 +19,7 @@
 <header class="main-header">
     <div class="container">
         <div class="header-top">
-            <h1><a href="index.html" style="color: white; text-decoration: none;">Zero-Cost SEO</a></h1>
+            <h1><a href="index.html">Zero-Cost SEO</a></h1>
             <p>技術とAIで、コストゼロの資産サイトを構築する</p>
         </div>
         
@@ -27,8 +27,8 @@
             <ul class="nav-list">
                 <li><a href="index.html">ホーム</a></li>
                 <li class="dropdown">
-                    <a href="#">目的別ガイド ▼</a>
-                    <ul class="dropdown-content">
+                    <a id="dropdown-toggle">目的別ガイド <span id="arrow">▼</span></a>
+                    <ul class="dropdown-content" id="dropdown-menu">
                         <li><a href="chapter1.html">全て0円で収益が生まれるか試したい方はこちら</a></li>
                         <li><a href="chapter2.html">自分で記事を考えるのが苦手な方はこちら</a></li>
                         <li><a href="chapter3.html">お金はかけていいからさらに収益を得たい方はこちら</a></li>
@@ -85,41 +85,7 @@
 
         <h2>波を「資産」に変えるエバーグリーン化戦略</h2>
         <p>トレンド記事の弱点は、流行が過ぎるとアクセスが急減することです。しかし、AIを使いこなすことで、トレンド記事を長期的な資産へと変換できます。AIに対し、「今回のトレンドに関連して、今後も安定して検索され続ける周辺キーワードは何か？」を推論させます。一過性のニュースに、普遍的なノウハウや基礎知識を組み合わせることで、流行が去った後も安定して集客し続ける「エバーグリーン（常緑）」な記事へとエンジニアリングします。</p>
-
-        <div style="margin: 30px 0; padding: 20px; background: #f1f8ff; border: 1px solid #c8e1ff; border-radius: 8px; font-size: 0.95rem;">
-            <strong style="color: #0366d6;">💡 トレンド予測エンジニアリング：</strong><br>
-            <p style="margin-top: 10px;">「どのツールを使い、AIにどんなプロンプトを投げれば先読みできるのか？」実戦的なトレンド予測ワークフローを公開しています。</p>
-            <a href="ai-trend-research-guide.html" style="display: inline-block; margin-top: 5px; font-weight: bold; color: #0366d6; text-decoration: underline;">
-                👉 AIによる「トレンド・季節需要」リサーチマニュアルを読む
-            </a>
-        </div>
     </article>
-
-    <nav class="post-nav" style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
-        <a href="45.html" style="text-decoration: none; color: #f39c12; font-weight: bold; flex: 1; text-align: left;">← [45. サブスクリプションモデルの導入：安定収益の土台作り] へ戻る</a>
-        <a href="47.html" style="text-decoration: none; color: #f39c12; font-weight: bold; flex: 1; text-align: right;">[47. リライトによる収益ブースト：過去記事を金山に変える] へ進む →</a>
-    </nav>
-
-    <section class="article-footer-nav">
-        <h3>同じカテゴリー（第3章：収益化の加速・マネタイズ戦略編）の記事</h3>
-        <ul class="vertical-article-list">
-            <li><a href="36.html">36. マネタイズの設計図：コスト0から利益を生む仕組み</a></li>
-            <li><a href="37.html">37. アフィリエイト案件の選び方：高単価と成約率の相関</a></li>
-            <li><a href="38.html">38. Amazon・楽天アフィリエイト：物販で手堅く稼ぐ技術</a></li>
-            <li><a href="39.html">39. ASP（アフィリエイト・サービス・プロバイダ）の戦略的活用</a></li>
-            <li><a href="40.html">40. クリック型広告の配置最適化：ユーザー体験を損なわない手法</a></li>
-            <li><a href="41.html">41. 成約率（CVR）を劇的に高める「キラーページ」の作り方</a></li>
-            <li><a href="42.html">42. AIによるセールスライティング：PASONAの法則の実装</a></li>
-            <li><a href="43.html">43. 特典（ボーナス）戦略：自分から買う理由をAIで作る</a></li>
-            <li><a href="44.html">44. リードマグネット：メルマガ・LINE登録へ導くAI誘導術</a></li>
-            <li><a href="45.html">45. サブスクリプションモデルの導入：安定収益の土台作り</a></li>
-            <li><a href="46.html">46. 季節要因とトレンド：AIで収益の波を先読みする</a></li>
-            <li><a href="47.html">47. リライトによる収益ブースト：過去記事を金山に変える</a></li>
-            <li><a href="48.html">48. A/Bテストの実施：データに基づき収益を倍増させる</a></li>
-            <li><a href="49.html">49. 税金と確定申告：クリーンな資産運用のための基礎知識</a></li>
-            <li><a href="50.html">50. 第3章まとめ：収益を最大化し「自由」を手に入れる</a></li>
-        </ul>
-    </section>
 </main>
 
 <footer class="main-footer">
@@ -127,6 +93,30 @@
         <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
     </div>
 </footer>
+
+<script>
+    const toggle = document.getElementById('dropdown-toggle');
+    const menu = document.getElementById('dropdown-menu');
+    const arrow = document.getElementById('arrow');
+
+    toggle.addEventListener('click', function(event) {
+        event.stopPropagation(); // クリックイベントが他に広がるのを防ぐ
+        menu.classList.toggle('open');
+        
+        // 矢印の向きを変える
+        if (menu.classList.contains('open')) {
+            arrow.textContent = '▲';
+        } else {
+            arrow.textContent = '▼';
+        }
+    });
+
+    // メニュー以外をクリックした時に閉じる
+    document.addEventListener('click', function() {
+        menu.classList.remove('open');
+        arrow.textContent = '▼';
+    });
+</script>
 
 </body>
 </html>
