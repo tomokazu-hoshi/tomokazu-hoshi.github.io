@@ -36,6 +36,11 @@ body {
     font-size: 2rem;
 }
 
+.header-top h1 a {
+    color: white;
+    text-decoration: none;
+}
+
 .header-top p {
     margin: 5px 0 0 0;
     font-size: 0.9rem;
@@ -70,29 +75,35 @@ body {
     font-size: 0.95rem;
     font-weight: bold;
     transition: background 0.3s;
+    cursor: pointer; /* 指マークにする */
 }
 
 .nav-list > li > a:hover {
     background-color: #f39c12;
 }
 
-/* ドロップダウンメニュー */
+/* ドロップダウンメニューの制御 */
 .dropdown-content {
-    display: none;
+    display: none; /* 初期状態は非表示 */
     position: absolute;
     top: 100%;
     left: 0;
     background-color: white;
-    min-width: 280px; /* 文字数に合わせて少し幅を広げました */
+    min-width: 320px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1000;
     list-style: none;
     padding: 0;
 }
 
+/* クリック時にこのクラスが付与されて表示される */
+.dropdown-content.open {
+    display: block;
+}
+
 .dropdown-content li a {
     color: #333;
-    padding: 12px 16px;
+    padding: 15px 20px;
     text-decoration: none;
     display: block;
     font-size: 0.9rem;
@@ -105,16 +116,12 @@ body {
     color: #f39c12;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 /* =========================================
    4つのパネルメニュー（タイルナビ）
    ========================================= */
 .tile-nav {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2列 */
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
     margin: 30px 0;
 }
@@ -201,8 +208,6 @@ body {
 /* =========================================
    レスポンシブ（スマホ対応）
    ========================================= */
-
-/* タブレット・スマホ：メニューを縦に並べる */
 @media (max-width: 768px) {
     .nav-list {
         flex-direction: column;
@@ -215,29 +220,14 @@ body {
         box-shadow: none;
         background-color: #3e5871;
         width: 100%;
-        display: block; /* スマホでは最初から表示させておくと親切です */
     }
     .dropdown-content li a {
         color: #eee;
         padding-left: 30px;
     }
-    .post-content {
-        padding: 20px;
-    }
 }
 
-/* 小型スマホ：タイルの文字調整 */
 @media (max-width: 480px) {
-    .tile-nav {
-        gap: 10px;
-    }
-    .tile-item {
-        padding: 15px 10px;
-    }
-    .tile-keyword {
-        font-size: 0.9rem;
-    }
-    .tile-desc {
-        display: none; /* スマホでは説明文を隠してスッキリさせる */
-    }
+    .tile-keyword { font-size: 0.9rem; }
+    .tile-desc { display: none; }
 }
