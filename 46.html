@@ -28,7 +28,7 @@
                 <li><a href="index.html">ホーム</a></li>
                 <li class="dropdown">
                     <a id="dropdown-toggle">目的別ガイド <span id="arrow">▼</span></a>
-                    <ul class="dropdown-content" id="dropdown-menu">
+                    <ul id="dropdown-menu">
                         <li><a href="chapter1.html">全て0円で収益が生まれるか試したい方はこちら</a></li>
                         <li><a href="chapter2.html">自分で記事を考えるのが苦手な方はこちら</a></li>
                         <li><a href="chapter3.html">お金はかけていいからさらに収益を得たい方はこちら</a></li>
@@ -99,11 +99,15 @@
     const menu = document.getElementById('dropdown-menu');
     const arrow = document.getElementById('arrow');
 
+    // ボタンクリック時の動作
     toggle.addEventListener('click', function(event) {
-        event.stopPropagation(); // クリックイベントが他に広がるのを防ぐ
+        event.preventDefault(); // リンクの移動を防止
+        event.stopPropagation(); // 他のクリックイベントとの干渉を防止
+        
+        // メニューの開閉を切り替え
         menu.classList.toggle('open');
         
-        // 矢印の向きを変える
+        // 矢印の向きを変更
         if (menu.classList.contains('open')) {
             arrow.textContent = '▲';
         } else {
@@ -112,9 +116,11 @@
     });
 
     // メニュー以外をクリックした時に閉じる
-    document.addEventListener('click', function() {
-        menu.classList.remove('open');
-        arrow.textContent = '▼';
+    document.addEventListener('click', function(event) {
+        if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+            menu.classList.remove('open');
+            arrow.textContent = '▼';
+        }
     });
 </script>
 
