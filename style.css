@@ -160,3 +160,51 @@ body {
         padding-left: 40px;
     }
 }
+/* 4つのパネルメニュー（タイルナビ） */
+.tile-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2列 */
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.tile-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border: 2px solid #f39c12;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.tile-item:hover {
+    background-color: #f39c12;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.tile-keyword {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.tile-desc {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    text-align: center;
+}
+
+/* スマホ対応：画面が狭すぎるときは少し文字を小さく */
+@media (max-width: 480px) {
+    .tile-keyword { font-size: 0.9rem; }
+    .tile-desc { display: none; } /* スマホでは説明文を隠してスッキリさせる */
+}
