@@ -73,16 +73,36 @@
         }
         .search-trigger:active { transform: scale(0.95); }
 
-        /* 記事カード内のリストスタイル */
-        .article-card-list {
-            list-style: none;
-            padding: 0;
+        /* ナビゲーションカードのスタイル (スクリーンショット準拠) */
+        .post-nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin: 30px 0;
         }
-        .article-card-item {
-            background: #f8f9fa;
+        .post-nav a {
+            flex: 1;
+            background: white;
+            padding: 20px 10px;
             border-radius: 12px;
-            padding: 15px 20px;
+            text-decoration: none;
+            color: #f39c12;
+            font-weight: bold;
+            text-align: center;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 記事リストカード (スクリーンショット準拠) */
+        .article-card-item {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
             margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
         }
         .article-card-item a {
             text-decoration: none;
@@ -91,9 +111,18 @@
             display: block;
         }
 
-        /* 移行ガイドバナー */
+        /* 移行ガイドバナー (スクリーンショット準拠) */
         .migration-banner {
-            display: block; background: linear-gradient(135deg, #3498db, #2980b9); color: white; text-align: center; padding: 20px; border-radius: 10px; text-decoration: none; margin: 30px 0; font-weight: bold;
+            display: block;
+            background: #4a86c4; /* スクショの青色 */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 0.95rem;
         }
     </style>
 </head>
@@ -127,71 +156,53 @@
         <a href="chapter5.html" class="back-link" style="color: #f39c12; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px;">← 第5章 目次へ戻る</a>
     </nav>
     
-    <article class="post-content" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-        <h1 style="text-align: center; margin-bottom: 30px;">80. 第5章まとめ：AIに任せられることはすべて任せる</h1>
-        <p>第5章「AIオートメーション・スケーリング編」では、個人の労働を「システムの実行」へと昇華させる数々の技術を学んできました。Pythonによる自動投稿、AIによるリサーチ、資産を守るバックアップ。これらが組み合わさることで、サイトはあなたの手を離れても成長し続ける「真の資産」となります。最終章へ進む前に、第5章の要点を振り返りましょう。</p>
+    <article class="post-content">
+        <h1>80. 第5章まとめ：AIに任せられることはすべて任せる</h1>
+        <p>第5章「AIオートメーション・スケーリング編」を完了した今、あなたのサイト運営は「個人の労働」から「自律的なシステムの実行」へと進化しました。Pythonによる自動投稿、AIによるリサーチ、資産を守るバックアップ。これらが組み合わさることで、サイトはあなたの手を離れても成長し続ける「真の資産」となります。</p>
 
         <div style="background-color: #fff9db; border: 2px dashed #f39c12; padding: 20px; margin: 30px 0; border-radius: 10px;">
-            <h3 style="margin-top: 0; color: #e67e22;">🚀 第5章 完了チェックリスト</h3>
-            <ol style="line-height: 1.8; font-size: 0.95rem;">
-                <li><strong>記事の自動生成から投稿までのパイプラインが正常に稼働しているか</strong></li>
-                <li><strong>データの安全性を守るための自動バックアップ設定は完了しているか</strong></li>
-                <li><strong>第80回「自動化システム・健全性チェック」で全ての動作を確認する</strong><br>
-                    → <a href="ai-automation-summary-checklist.html" style="color: #2980b9; font-weight: bold;">健全性チェックページを開く</a></li>
-                <li><strong>第6章「未来戦略編：ブランドとAIの共生」へ進む</strong></li>
-            </ol>
-        </div>
-
-        <h2 style="border-left: 5px solid #f39c12; padding-left: 15px; margin-top: 40px;">「作業者」から「オーナー」への完全移行</h2>
-        <p>自動化の真の目的は、単に楽をすることではありません。あなたの時間を、より高次元な意思決定や戦略の構築に充てることにあります。第5章で学んだエンジニアリングを駆使すれば、1つのサイトを運営する労力で、10、20のサイトを同時に育てることが可能です。これがデジタル資産における「スケーリング」の正体です。</p>
-
-        [attachment_0](attachment)
-
-        <h2 style="border-left: 5px solid #f39c12; padding-left: 15px; margin-top: 40px;">テクノロジーを収益に変えるシステムの完成</h2>
-        <p>API連携やサーバーレス構成の導入により、あなたのサイトは独自のロジックで動く「Webアプリケーション」に近い存在となりました。今後AIが進化するたびに、あなたのシステムはより賢く、より高い収益を生むマシンへとアップデートされ続けます。インフラをAIに任せ、あなたは未来を描くことに専念してください。</p>
-
-        <div style="margin: 30px 0; padding: 20px; background: #f1f8ff; border: 1px solid #c8e1ff; border-radius: 8px; font-size: 0.95rem;">
-            <strong style="color: #0366d6;">💡 オートメーション・ファイナル：</strong><br>
-            <p style="margin-top: 10px;">構築したシステムをさらに洗練させ、10年後も動き続ける強靭な仕組みにするための公式リファレンスはこちら。</p>
-            <a href="https://docs.github.com/ja/actions" target="_blank" rel="noopener" style="display: inline-block; margin-top: 5px; font-weight: bold; color: #0366d6; text-decoration: underline;">
-                👉 GitHub Actions 公式ドキュメント（外部リンク）
+            <h3 style="margin-top: 0; color: #e67e22;">✅ 第5章 完了チェックリスト</h3>
+            <p>次の最終章へ進む前に、あなたの自動化システムが以下の状態にあるか確認してください。</p>
+            <a href="ai-automation-summary-checklist.html" style="color: #2980b9; font-weight: bold;">
+                👉 「自動化システム・健全性チェック」を開く
             </a>
         </div>
 
-        <h2 style="border-left: 5px solid #f39c12; padding-left: 15px; margin-top: 40px;">第5章：全15記事リスト</h2>
-        <p>これまでに構築した自動化の全ステップです。各カードをクリックして内容を再確認できます。</p>
+        <h2 style="border-left: 5px solid #f39c12; padding-left: 15px;">「作業者」から「オーナー」への完全移行</h2>
+        <p>自動化の真の目的は、単に楽をすることではなく、あなたの時間を、より高次元な意思決定や戦略の構築に充てることにあります。1つのサイトを運営する労力で、10、20のサイトを同時に育て、テクノロジーを収益に変える。このオーナー視点での運営こそが、AI時代のエンジニアリングです。</p>
 
-        <ul class="article-card-list">
-            <li class="article-card-item"><a href="66.html">66. AIオートメーション：運用の自動化ロードマップ</a></li>
-            <li class="article-card-item"><a href="67.html">67. Python×AIで記事を自動投稿する仕組み</a></li>
-            <li class="article-card-item"><a href="68.html">68. 複数サイトを同時に育てるポートフォリオ戦略</a></li>
-            <li class="article-card-item"><a href="69.html">69. AIエージェントによる自動リサーチとトレンドキャッチ</a></li>
-            <li class="article-card-item"><a href="70.html">70. API連携：最新AIモデルをサイト運用に組み込む方法</a></li>
-            <li class="article-card-item"><a href="71.html">71. データの自動バックアップと復旧体制の構築</a></li>
-            <li class="article-card-item"><a href="72.html">72. 検索順位の自動監視：変動をいち早く察知する</a></li>
-            <li class="article-card-item"><a href="73.html">73. SNS自動投稿システム：流入経路の多角化</a></li>
-            <li class="article-card-item"><a href="74.html">74. AIによるコメント返信の効率化：コミュニティ活性化</a></li>
-            <li class="article-card-item"><a href="75.html">75. 競合サイトの自動分析：AIで優位性を保つ</a></li>
-            <li class="article-card-item"><a href="76.html">76. 広告運用の自動化：最小コストで最大アクセスを得る</a></li>
-            <li class="article-card-item"><a href="77.html">77. 画像生成の自動ワークフロー：アイキャッチ量産術</a></li>
-            <li class="article-card-item"><a href="78.html">78. 外注化のAI化：AIをディレクターとして活用する</a></li>
-            <li class="article-card-item"><a href="79.html">79. サーバーレス構成の検討：さらなる安定性と速度を求めて</a></li>
-            <li class="article-card-item"><a href="80.html">80. 第5章まとめ：AIに任せられることはすべて任せる</a></li>
-        </ul>
+        <h2>第5章：全15記事リスト</h2>
+        <div class="article-footer-nav" style="margin-top: 20px;">
+            <div class="article-card-item"><a href="66.html">66. AIオートメーション：運用の自動化ロードマップ</a></div>
+            <div class="article-card-item"><a href="67.html">67. Python×AIで記事を自動投稿する仕組み</a></div>
+            <div class="article-card-item"><a href="68.html">68. 複数サイトを同時に育てるポートフォリオ戦略</a></div>
+            <div class="article-card-item"><a href="69.html">69. AIエージェントによる自動リサーチとトレンド</a></div>
+            <div class="article-card-item"><a href="70.html">70. API連携：最新AIモデルをサイト運用に組み込む</a></div>
+            <div class="article-card-item"><a href="71.html">71. データの自動バックアップと復旧体制の構築</a></div>
+            <div class="article-card-item"><a href="72.html">72. 検索順位の自動監視：変動をいち早く察知する</a></div>
+            <div class="article-card-item"><a href="73.html">73. SNS自動投稿システム：流入経路の多角化</a></div>
+            <div class="article-card-item"><a href="74.html">74. AIによるコメント返信の効率化：コミュニティ活性化</a></div>
+            <div class="article-card-item"><a href="75.html">75. 競合サイトの自動分析：AIで優位性を保つ</a></div>
+            <div class="article-card-item"><a href="76.html">76. 広告運用の自動化：最小コストで最大アクセス</a></div>
+            <div class="article-card-item"><a href="77.html">77. 画像生成の自動ワークフロー：アイキャッチ量産術</a></div>
+            <div class="article-card-item"><a href="78.html">78. 外注化のAI化：AIをディレクターとして活用する</a></div>
+            <div class="article-card-item"><a href="79.html">79. サーバーレス構成の検討：さらなる安定性と速度</a></div>
+            <div class="article-card-item"><a href="80.html">80. 第5章まとめ：AIに任せられることはすべて任せる</a></div>
+        </div>
     </article>
 
-    <nav class="post-nav" style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0;">
-        <a href="79.html" style="text-decoration: none; color: #f39c12; font-weight: bold; background: white; padding: 15px 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); flex: 0 1 48%; text-align: center;">← [79. サーバーレス構成]</a>
-        <a href="81.html" style="text-decoration: none; color: #f39c12; font-weight: bold; background: white; padding: 15px 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); flex: 0 1 48%; text-align: center;">[81. 第6章：未来戦略編] →</a>
+    <nav class="post-nav">
+        <a href="79.html">← [79. サーバーレス構成]</a>
+        <a href="81.html">[81. 第6章：未来戦略編] →</a>
     </nav>
 </main>
 
-<footer class="main-footer">
+<footer class="main-footer" style="padding-bottom: 30px;">
     <div class="container">
         <a href="https://tomokazu-hoshi.github.io/migration-guide.html" class="migration-banner">
             🚀 移行ガイド：GitHubからWordPressへ
         </a>
-        <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
+        <p style="text-align: center; color: #888; font-size: 0.85rem;">&copy; 2026 Zero-Cost SEO - 星 友和</p>
     </div>
 </footer>
 
