@@ -16,20 +16,114 @@
     <style>
         /* 全画面メニューのスタイル */
         #full-screen-menu {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(44, 62, 80, 0.98); color: white; z-index: 2000; display: none; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(44, 62, 80, 0.98); 
+            color: white;
+            z-index: 2000;
+            display: none; 
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
-        #full-screen-menu.open { display: flex; }
-        .menu-close { position: absolute; top: 30px; right: 30px; font-size: 2.5rem; cursor: pointer; color: #f39c12; line-height: 1; }
-        .menu-list { list-style: none; padding: 0; width: 80%; }
-        .menu-list li { margin: 20px 0; border-bottom: 1px solid #3e5871; padding-bottom: 10px; }
-        .menu-list a { color: white; text-decoration: none; font-size: 1.2rem; font-weight: bold; display: block; }
-        .menu-category { font-size: 0.8rem; color: #f39c12; display: block; margin-bottom: 5px; }
-        .search-trigger { display: flex; align-items: center; justify-content: center; background: #e67e22; color: white; padding: 12px 20px; border-radius: 30px; cursor: pointer; font-size: 1rem; border: none; margin: 15px auto; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: 0.2s; }
-        .post-nav { display: flex; justify-content: space-between; gap: 15px; margin: 30px 0; }
-        .post-nav a { flex: 1; background: white; padding: 20px 10px; border-radius: 12px; text-decoration: none; color: #f39c12; font-weight: bold; text-align: center; font-size: 0.9rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center; }
-        .article-card-item { background: white; border-radius: 12px; padding: 20px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
-        .article-card-item a { text-decoration: none; color: #483d8b; font-weight: bold; display: block; }
-        .migration-banner { display: block; background: #4a86c4; color: white; text-align: center; padding: 15px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-weight: bold; font-size: 0.95rem; }
+        #full-screen-menu.open {
+            display: flex;
+        }
+
+        .menu-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 2.5rem;
+            cursor: pointer;
+            color: #f39c12; line-height: 1;
+        }
+
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            width: 80%;
+        }
+        .menu-list li {
+            margin: 20px 0;
+            border-bottom: 1px solid #3e5871;
+            padding-bottom: 10px;
+        }
+        .menu-list a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: block;
+        }
+        .menu-category {
+            font-size: 0.8rem;
+            color: #f39c12;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* 離脱防止用ヘッダーボタン */
+        .search-trigger {
+            display: flex; align-items: center; justify-content: center; background: #e67e22; color: white; padding: 12px 20px; border-radius: 30px; cursor: pointer; font-size: 1rem; border: none; margin: 15px auto; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: 0.2s;
+        }
+        .search-trigger:active { transform: scale(0.95); }
+
+        /* ナビゲーションカードのスタイル */
+        .post-nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .post-nav a {
+            flex: 1;
+            background: white;
+            padding: 20px 10px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #f39c12;
+            font-weight: bold;
+            text-align: center;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 記事リストカード */
+        .article-card-item {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .article-card-item a {
+            text-decoration: none;
+            color: #483d8b;
+            font-weight: bold;
+            display: block;
+        }
+
+        /* 移行ガイドバナー */
+        .migration-banner {
+            display: block;
+            background: #4a86c4; 
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
     </style>
 </head>
 <body>
@@ -51,7 +145,9 @@
     <div class="container">
         <h1>Zero-Cost SEO</h1>
         <p>技術とAIで、コストゼロの資産サイトを構築する</p>
-        <button class="search-trigger" onclick="toggleMenu()">🔍 お探しのページはこちら</button>
+        <button class="search-trigger" onclick="toggleMenu()">
+            🔍 お探しのページはこちら
+        </button>
     </div>
 </header> 
 
@@ -62,22 +158,23 @@
     
     <article class="post-content" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
         <h1>91. 撤退と投資の判断基準：効率的な資産ポートフォリオ</h1>
-        <p>第5章で構築した「複数サイト運営」を成功させる鍵は、リソースの冷徹な配分にあります。どのサイトを伸ばし、どれを切り捨てるか。データに基づいた経営判断基準を解説します。</p>
+        <p>第5章で構築した「複数サイト運営（ポートフォリオ戦略）」を成功させる鍵は、リソースの冷徹な配分にあります。どのサイトを伸ばし、どれを切り捨てるか。AIを参謀に据え、客観的なデータに基づいた経営判断基準を解説します。</p>
 
         <div style="background-color: #fff9db; border: 2px dashed #f39c12; padding: 20px; margin: 30px 0; border-radius: 10px;">
             <h3 style="margin-top: 0; color: #e67e22;">🚀 この記事のあとの作業工程</h3>
             <ol style="line-height: 1.8; font-size: 0.95rem;">
-                <li><strong>所有している全サイトの収益性とコストをAIに比較させる</strong></li>
-                <li><strong>第92回「サイトM&A：資産を売却する技術」へ進む</strong></li>
+                <li><strong>所有している全サイトの収益性と運用コストをAIに比較させる</strong></li>
+                <li><strong>AIに対し「自分のポートフォリオのリバランス案」を作成させる</strong></li>
+                <li><strong>第92回「サイトM&A：資産としてのWebサイトを売却する技術」へ進む</strong></li>
             </ol>
         </div>
 
         <h2 style="border-left: 5px solid #f39c12; padding-left: 15px; margin-top: 40px;">「勝ち筋」へのリソース集中投資</h2>
-        <p>急激に伸び始めたサイトには、多言語展開（第86回）やマルチメディア化（第85回）を優先的に実施し、独占的な地位をエンジニアリングします。</p>
+        <p>急激に伸び始めたサイトや、APIコストを大きく上回る収益を上げているサイトには、多言語展開（第86回）やマルチメディア化（第85回）を優先的に実施し、独占的な地位をエンジニアリングします。</p>
 
         <div style="margin: 30px 0; padding: 20px; background: #f1f8ff; border: 1px solid #c8e1ff; border-radius: 8px; font-size: 0.95rem;">
             <strong style="color: #0366d6;">💡 ポートフォリオ・マネジメント：</strong><br>
-            <p style="margin-top: 10px;">「継続か、撤退か？」AIを使った客観的なスコアリング手法と分析マニュアルはこちら。</p>
+            <p style="margin-top: 10px;">「継続か、撤退か？」AIを使った客観的なスコアリング手法と、具体的な判断基準はこちら。</p>
             <a href="ai-portfolio-optimization-manual.html" style="display: inline-block; margin-top: 5px; font-weight: bold; color: #0366d6; text-decoration: underline;">
                 👉 AI時代の「投資と撤退」判断マニュアルを読む
             </a>
@@ -88,11 +185,37 @@
         <a href="90.html">← [90. データ駆動経営]</a>
         <a href="92.html">[92. サイトM&A技術] →</a>
     </nav>
+
+    <section class="article-footer-nav">
+        <h2 style="font-size: 1.3rem; color: #2c3e50; margin-bottom: 20px;">第6章：全20記事リスト</h2>
+        <div class="article-card-item"><a href="81.html">81. 新時代のサイト運営：10年先を見据えたビジョン</a></div>
+        <div class="article-card-item"><a href="82.html">82. AI共生時代のSEOサバイバル術</a></div>
+        <div class="article-card-item"><a href="83.html">83. サイトのブランド化とコミュニティ形成の重要性</a></div>
+        <div class="article-card-item"><a href="84.html">84. 次世代の集客チャネル開拓：SEOの枠を超えて</a></div>
+        <div class="article-card-item"><a href="85.html">85. 動画・音声コンテンツへの展開：AIによるマルチメディア化</a></div>
+        <div class="article-card-item"><a href="86.html">86. AIによる多言語展開：世界市場をターゲットにする</a></div>
+        <div class="article-card-item"><a href="87.html">87. パーソナライズド・コンテンツ：読者ごとに内容を変える技術</a></div>
+        <div class="article-card-item"><a href="88.html">88. Web3.0と資産サイト：分散型メディアの可能性</a></div>
+        <div class="article-card-item"><a href="89.html">89. AI倫理と著作権：長くサイトを続けるための法的知識</a></div>
+        <div class="article-card-item"><a href="90.html">90. データ駆動の意思決定：AIを参謀にしたサイト経営</a></div>
+        <div class="article-card-item"><a href="91.html">91. 撤退と投資の判断基準：効率的な資産ポートフォリオ</a></div>
+        <div class="article-card-item"><a href="92.html">92. サイトM&A：資産としてのWebサイトを売却する技術</a></div>
+        <div class="article-card-item"><a href="93.html">93. 次世代AIライターの育成：AIを教官にしたチーム構築</a></div>
+        <div class="article-card-item"><a href="94.html">94. セキュリティの未来：AIによる攻撃と防御の最前線</a></div>
+        <div class="article-card-item"><a href="95.html">95. ユーザー体験（UX）の究極形：AIアシスタントの導入</a></div>
+        <div class="article-card-item"><a href="96.html">96. 持続可能なサイト運営：デジタル・ガバナンス</a></div>
+        <div class="article-card-item"><a href="97.html">97. 成功者のマインドセット：AI時代に価値を生み続ける人</a></div>
+        <div class="article-card-item"><a href="98.html">98. 100本ノックのその先へ：あなたの物語はここから始まる</a></div>
+        <div class="article-card-item"><a href="99.html">99. Zero-Cost SEO：最終検証とプロジェクトの完成</a></div>
+        <div class="article-card-item"><a href="100.html">100. 第6章まとめ：未来の資産は、あなたの手で創り出す</a></div>
+    </section>
 </main>
 
-<footer class="main-footer" style="padding-bottom: 30px;">
+<footer class="main-footer" style="padding-bottom: 30px; margin-top: 40px;">
     <div class="container">
-        <a href="https://tomokazu-hoshi.github.io/migration-guide.html" class="migration-banner">🚀 移行ガイド：GitHubからWordPressへ</a>
+        <a href="https://tomokazu-hoshi.github.io/migration-guide.html" class="migration-banner">
+            🚀 移行ガイド：GitHubからWordPressへ
+        </a>
         <p style="text-align: center; color: #888; font-size: 0.85rem;">&copy; 2026 Zero-Cost SEO - 星 友和</p>
     </div>
 </footer>
@@ -100,8 +223,13 @@
 <script>
     function toggleMenu() {
         document.getElementById('full-screen-menu').classList.toggle('open');
-        document.body.style.overflow = document.getElementById('full-screen-menu').classList.contains('open') ? 'hidden' : 'auto';
+        if (document.getElementById('full-screen-menu').classList.contains('open')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
     }
 </script>
+
 </body>
 </html>
