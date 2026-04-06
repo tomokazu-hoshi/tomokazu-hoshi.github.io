@@ -13,105 +13,8 @@
     <title>第1章：移行の決断と戦略編 | WordPress移行ガイド</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body { background-color: #f0f7ff; color: #333; font-family: 'Noto Sans JP', sans-serif; line-height: 1.6; margin: 0; padding: 0; }
-        .container { max-width: 600px; margin: 0 auto; padding: 0 20px; }
-
-        /* ヘッダー：トップページのデザインを継承しつつ水色に固定 */
-        .main-header {
-            text-align: center;
-            padding: 40px 0;
-            background: #3498db; /* 特別ガイド用の水色 */
-            color: white;
-            border-radius: 0 0 20px 20px;
-            margin-bottom: 30px;
-        }
-        .main-header h1 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            color: white;
-        }
-        .main-header p {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin: 0;
-            color: white;
-        }
-
-        /* 戻るリンク */
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            text-decoration: none;
-            color: #3498db;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-        .back-link:hover { text-decoration: underline; }
-
-        /* 章見出しのデザイン */
-        .chapter-header {
-            background: #3498db;
-            color: white;
-            padding: 30px 20px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .chapter-header h1 { font-size: 1.4rem; margin: 0 0 10px 0; }
-        .chapter-header p { font-size: 0.9rem; opacity: 0.9; margin: 0; }
-
-        /* 記事リストカード */
-        .article-list-container { margin-top: 30px; }
-        .article-item-card {
-            display: flex;
-            align-items: center;
-            background: #fff;
-            border: 1px solid #e1e8ed;
-            border-radius: 12px;
-            padding: 18px 20px;
-            margin-bottom: 12px;
-            text-decoration: none;
-            color: #333;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        .article-item-card:hover {
-            border-color: #3498db;
-            background-color: #f0faff;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-        }
-        .article-item-number {
-            font-weight: bold;
-            color: #3498db;
-            margin-right: 15px;
-            font-size: 1.2rem;
-            min-width: 30px;
-        }
-        .article-item-title {
-            flex-grow: 1;
-            font-weight: bold;
-            font-size: 0.95rem;
-            color: #2c3e50;
-        }
-        .article-item-arrow {
-            color: #3498db;
-            font-weight: bold;
-            margin-left: 10px;
-            opacity: 0.5;
-        }
-
-        /* フッター */
-        .footer {
-            text-align: center;
-            padding: 40px 0;
-            color: #999;
-            font-size: 0.8rem;
-        }
-    </style>
-</head>
-<body>
+    </head>
+<body class="migration-theme">
 
 <header class="main-header">
     <div class="container">
@@ -121,9 +24,11 @@
 </header>
 
 <main class="container">
-    <a href="migration-guide.html" class="back-link">← 移行ガイド目次へ戻る</a>
+    <nav>
+        <a href="migration-guide.html" class="back-link">← 移行ガイド目次へ戻る</a>
+    </nav>
     
-    <div class="chapter-header">
+    <article class="post-content">
         <h1>第1章：移行の決断と戦略編</h1>
         <p>なぜ今、WordPressなのか。コストゼロ運営の先にある「投資」としてのサイト構築を学びます。</p>
     </div>
@@ -155,7 +60,7 @@
     </div>
 </main>
 
-<footer class="footer">
+<footer class="footer-text">
     <div class="container">
         <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
     </div>
