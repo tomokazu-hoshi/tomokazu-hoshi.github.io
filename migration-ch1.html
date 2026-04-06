@@ -45,12 +45,16 @@
         .article-item-title { flex-grow: 1; font-weight: 500; }
         .article-item-arrow { color: #3498db; font-weight: bold; margin-left: 10px; opacity: 0.5; }
         
-        /* ヘッダーの背景を下のチャプターヘッダーと同じ水色に設定 */
+        /* ヘッダーの背景色を下の水色と同じ設定に強制固定 */
         .main-header {
-            background-color: #3498db;
-            color: white;
+            background: #3498db !important;
+            color: #ffffff !important;
             padding: 20px 0;
             text-align: center;
+        }
+        .main-header h1, .main-header p {
+            color: #ffffff !important;
+            margin: 0;
         }
         
         .chapter-header {
