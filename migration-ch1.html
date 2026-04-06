@@ -13,8 +13,33 @@
     <title>第1章：移行の決断と戦略編 | WordPress移行ガイド</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         body { background-color: #f0f7ff; color: #333; }
+        
+        /* 外部ファイルの紺色(#2c3e50)を水色(#3498db)で上書き */
+        html body .main-header {
+            background: #3498db !important;
+            color: white !important;
+            padding: 30px 0 !important;
+            border-radius: 0 0 20px 20px !important;
+            text-align: center !important;
+            margin-bottom: 30px !important;
+        }
+        
+        html body .main-header h1 {
+            color: white !important;
+            font-size: 1.5rem !important;
+            margin: 0 !important;
+        }
+        
+        html body .main-header p {
+            color: white !important;
+            opacity: 0.9 !important;
+            margin: 5px 0 0 0 !important;
+            font-size: 0.9rem !important;
+        }
+
         .article-list-container { margin-top: 30px; }
         .article-item-card {
             display: flex;
@@ -61,10 +86,10 @@
 </head>
 <body>
 
-<header class="main-header" style="background: #3498db !important; color: white !important; text-align: center; padding: 30px 0; border-radius: 0 0 20px 20px; margin-bottom: 30px;">
+<header class="main-header">
     <div class="container">
-        <h1 style="color: white !important; margin: 0; font-size: 1.5rem;">Zero-Cost SEO</h1>
-        <p style="color: white !important; margin: 5px 0 0 0; opacity: 0.9; font-size: 0.9rem;">特別ガイド：移行の決断と戦略</p>
+        <h1>Zero-Cost SEO</h1>
+        <p>特別ガイド：移行の決断と戦略</p>
     </div>
 </header>
 
@@ -103,7 +128,7 @@
     </div>
 </main>
 
-<footer class="main-footer" style="text-align: center; padding: 40px 0; color: #999; font-size: 0.8rem;">
+<footer class="main-footer" style="margin-top: 50px;">
     <div class="container">
         <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
     </div>
