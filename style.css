@@ -18,11 +18,12 @@ body {
     padding: 0 20px;
 }
 
-/* --- 共通ヘッダー (index.htmlのデザインを継承) --- */
+/* --- 共通ヘッダー (サイト全体で水色に統一) --- */
 .main-header {
     text-align: center;
     padding: 40px 0;
-    background: #2c3e50;
+    /* 背景色を紺色(#2c3e50)から水色(#3498db)に変更しました */
+    background: #3498db; 
     color: white;
     border-radius: 0 0 20px 20px;
     margin-bottom: 30px;
