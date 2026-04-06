@@ -13,43 +13,171 @@
     <title>15. 第1章まとめ：インフラ構築が資産サイトの命運を握る | Zero-Cost SEO</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 全画面メニューのスタイル */
+        #full-screen-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(44, 62, 80, 0.98); 
+            color: white;
+            z-index: 2000;
+            display: none; 
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        #full-screen-menu.open {
+            display: flex;
+        }
+
+        .menu-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 2.5rem;
+            cursor: pointer;
+            color: #f39c12; line-height: 1;
+        }
+
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            width: 80%;
+        }
+        .menu-list li {
+            margin: 20px 0;
+            border-bottom: 1px solid #3e5871;
+            padding-bottom: 10px;
+        }
+        .menu-list a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: block;
+        }
+        .menu-category {
+            font-size: 0.8rem;
+            color: #f39c12;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* 離脱防止用ヘッダーボタン */
+        .search-trigger {
+            display: flex; align-items: center; justify-content: center; background: #e67e22; color: white; padding: 12px 20px; border-radius: 30px; cursor: pointer; font-size: 1rem; border: none; margin: 15px auto; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: 0.2s;
+        }
+        .search-trigger:active { transform: scale(0.95); }
+
+        /* ナビゲーションカードのスタイル */
+        .post-nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .post-nav a {
+            flex: 1;
+            background: white;
+            padding: 20px 10px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #f39c12;
+            font-weight: bold;
+            text-align: center;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 記事リストカード */
+        .article-card-item {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .article-card-item a {
+            text-decoration: none;
+            color: #483d8b;
+            font-weight: bold;
+            display: block;
+        }
+
+        /* 移行ガイドバナー */
+        .migration-banner {
+            display: block;
+            background: #4a86c4; 
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+    </style>
 </head>
 <body>
+
+<div id="full-screen-menu">
+    <div class="menu-close" onclick="toggleMenu()">×</div>
+    <ul class="menu-list">
+        <li><span class="menu-category">迷った時はこちら</span><a href="index.html">🏠 トップページに戻る</a></li>
+        <li><span class="menu-category">基本から始める</span><a href="chapter1.html">第1章：インフラ構築編</a></li>
+        <li><span class="menu-category">AIで記事を書く</span><a href="chapter2.html">第2章：コンテンツ編</a></li>
+        <li><span class="menu-category">収益を最大化する</span><a href="chapter3.html">第3章：マネタイズ編</a></li>
+        <li><span class="menu-category">信頼を構築する</span><a href="chapter4.html">第4章：E-E-A-T編</a></li>
+        <li><span class="menu-category">運営を自動化する</span><a href="chapter5.html">第5章：オートメーション編</a></li>
+        <li><span class="menu-category">ブランドを創る</span><a href="chapter6.html">第6章：未来戦略編</a></li>
+    </ul>
+</div>
 
 <header class="main-header">
     <div class="container">
         <h1>Zero-Cost SEO</h1>
         <p>技術とAIで、コストゼロの資産サイトを構築する</p>
+        <button class="search-trigger" onclick="toggleMenu()">
+            🔍 お探しのページはこちら
+        </button>
     </div>
-</header>
+</header> 
 
 <main class="container">
     <nav>
-        <a href="chapter1.html" class="back-link">← 第1章 目次へ戻る</a>
+        <a href="chapter1.html" class="back-link" style="color: #f39c12; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px;">← 第1章 目次へ戻る</a>
     </nav>
     
-    <article class="post-content">
+    <article class="post-content" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
         <h1>15. 第1章まとめ：インフラ構築が資産サイトの命運を握る</h1>
         <p>お疲れ様でした。ここまでで、Zero-Cost SEOプロジェクトの土台となる「第1章：爆速インフラ構築編」が完了しました。多くの人が「記事を書くこと」から始めて挫折する中で、あなたは「維持費0円で一生使い続けられる、最高性能の土地と建物」を手に入れたのです。この強固な土台こそが、競合を寄せ付けない圧倒的な武器になります。</p>
 
-        <div style="background-color: #fff9db; border: 2px dashed #f39c12; padding: 20px; margin: 30px 0; border-radius: 8px;">
+        <div style="background-color: #fff9db; border: 2px dashed #f39c12; padding: 20px; margin: 30px 0; border-radius: 10px;">
             <h3 style="margin-top: 0; color: #e67e22;">🚀 第1章完了の最終チェック</h3>
             <ol style="line-height: 1.8; font-size: 0.95rem;">
                 <li><strong>独自ドメインとSSL化が完了し、サイトが正しく表示される</strong></li>
                 <li><strong>速度スコアが「合格」ラインに達している</strong><br>
-                    → <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">PageSpeed Insightsで計測（外部リンク）</a></li>
+                    <small>→ <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">PageSpeed Insightsで計測（外部リンク）</a></small></li>
                 <li><strong>計測ツール（GSC/GA4）がデータ受信を開始している</strong></li>
                 <li><strong>第2章「AIライティング編」へ進む準備ができた</strong></li>
             </ol>
         </div>
 
-        <h2>最強の土台が完成した今、やるべきこと</h2>
+        <h2 style="border-left: 5px solid #f39c12; padding-left: 15px; margin-top: 40px;">最強の土台が完成した今、やるべきこと</h2>
         <p>これであなたは、サーバー代の支払いを気にすることなく、何千本の記事を公開する権利を得ました。静的サイトの爆速表示は、Googleのアルゴリズムから好評価を受けるだけでなく、読者のユーザー体験を最高のものにします。次に必要なのは、この素晴らしい器の中に「価値あるコンテンツ」を満たしていくことです。第2章からは、いよいよAIを真の「相棒」として、高品質な記事を量産するフェーズに移行します。</p>
 
-        <h2>「仕組み」があなたの代わりに働き始める</h2>
+        <h2 style="border-left: 5px solid #f39c12; padding-left: 15px; margin-top: 40px;">「仕組み」があなたの代わりに働き始める</h2>
         <p>インフラ構築は一度完了してしまえば、あとはほとんど手をかける必要がありません。あなたが寝ている間も、GitHubの強力なサーバーが世界中にあなたの記事を高速で配信し続けます。これが「デジタル資産」の第一歩です。技術を味方につけたあなたは、もはや孤独な執筆者ではありません。AIという軍師と共に、自由を手に入れるための戦略的発信を開始しましょう。</p>
 
-        <div style="margin: 30px 0; padding: 20px; background: #f1f8ff; border: 1px solid #c8e1ff; border-radius: 8px; font-size: 0.95rem;">
+        <div style="margin-top: 40px; padding: 20px; background: #f1f8ff; border: 1px solid #c8e1ff; border-radius: 8px; font-size: 0.95rem;">
             <strong style="color: #0366d6;">💡 第1章総括ガイド：</strong><br>
             <p style="margin-top: 10px;">これまでのステップに漏れがないか、最終的なパフォーマンスチェックをしたい方は、こちらのチェックシートをご活用ください。</p>
             <a href="chapter1-summary-checklist.html" style="display: inline-block; margin-top: 5px; font-weight: bold; color: #0366d6; text-decoration: underline;">
@@ -58,38 +186,50 @@
         </div>
     </article>
 
-    <nav class="post-nav" style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
-        <a href="14.html" style="text-decoration: none; color: #f39c12; font-weight: bold; flex: 1; text-align: left;">← [14. Google Analytics 4による計測] へ戻る</a>
-        <a href="chapter2.html" style="text-decoration: none; color: #f39c12; font-weight: bold; flex: 1; text-align: right;">[第2章：AIライティング編] へ進む →</a>
+    <nav class="post-nav">
+        <a href="14.html">← [14. GA4による計測開始]</a>
+        <a href="chapter2.html">[第2章：AIライティング編] へ →</a>
     </nav>
 
     <section class="article-footer-nav">
-        <h3>同じカテゴリーの記事</h3>
-        <ul class="vertical-article-list">
-            <li><a href="01.html">1. GitHub Pages×AIで作る「維持費0円」の資産サイト</a></li>
-            <li><a href="02.html">2. AI軍師と共に戦略を練る：プロンプトエンジニアリング</a></li>
-            <li><a href="03.html">3. 個人が資本に勝つためのランチェスター戦略</a></li>
-            <li><a href="04.html">4. 爆速表示を実現する静的サイトの優位性</a></li>
-            <li><a href="05.html">5. GitHubアカウントの作成とリポジトリの設定</a></li>
-            <li><a href="06.html">6. ローカル環境の構築：VS CodeとGitの連携</a></li>
-            <li><a href="07.html">7. HTML5/CSS3の基本構造：SEOに強いコードの書き方</a></li>
-            <li><a href="08.html">8. 独自ドメインの取得とGitHub Pagesへの紐付け</a></li>
-            <li><a href="09.html">9. SSL化の確認とセキュリティ設定の基本</a></li>
-            <li><a href="10.html">10. AIを活用したサイトマップとディレクトリ設計</a></li>
-            <li><a href="11.html">11. 内部リンク構造の最適化：クローラビリティを高める</a></li>
-            <li><a href="12.html">12. サイトデザインの基本：ユーザビリティと表示速度の両立</a></li>
-            <li><a href="13.html">13. Google Search Consoleへの登録と初期設定</a></li>
-            <li><a href="14.html">14. Google Analytics 4 (GA4) によるデータ計測の開始</a></li>
-            <li><a href="15.html">15. 第1章まとめ：インフラ構築が資産サイトの命運を握る</a></li>
-        </ul>
+        <h2 style="font-size: 1.3rem; color: #2c3e50; margin-bottom: 20px;">第1章：全15記事リスト</h2>
+        <div class="article-card-item"><a href="01.html">1. GitHub Pages×AIで作る「維持費0円」の資産サイト</a></div>
+        <div class="article-card-item"><a href="02.html">2. AI軍師と共に戦略を練る：プロンプトエンジニアリング</a></div>
+        <div class="article-card-item"><a href="03.html">3. 個人が資本に勝つためのランチェスター戦略</a></div>
+        <div class="article-card-item"><a href="04.html">4. 爆速表示を実現する静的サイトの優位性</a></div>
+        <div class="article-card-item"><a href="05.html">5. GitHubアカウントの作成とリポジトリの設定</a></div>
+        <div class="article-card-item"><a href="06.html">6. ローカル環境の構築：VS CodeとGitの連携</a></div>
+        <div class="article-card-item"><a href="07.html">7. HTML5/CSS3の基本構造：SEOに強いコードの書き方</a></div>
+        <div class="article-card-item"><a href="08.html">8. 独自ドメインの取得とGitHub Pagesへの紐付け</a></div>
+        <div class="article-card-item"><a href="09.html">9. SSL化の確認とセキュリティ設定の基本</a></div>
+        <div class="article-card-item"><a href="10.html">10. AIを活用したサイトマップとディレクトリ設計</a></div>
+        <div class="article-card-item"><a href="11.html">11. 内部リンク構造の最適化：クローラビリティを高める</a></div>
+        <div class="article-card-item"><a href="12.html">12. サイトデザインの基本：ユーザビリティと表示速度の両立</a></div>
+        <div class="article-card-item"><a href="13.html">13. Google Search Consoleへの登録と初期設定</a></div>
+        <div class="article-card-item"><a href="14.html">14. Google Analytics 4 (GA4) によるデータ計測の開始</a></div>
+        <div class="article-card-item"><a href="15.html">15. 第1章まとめ：インフラ構築が資産サイトの命運を握る</a></div>
     </section>
 </main>
 
-<footer class="main-footer">
+<footer class="main-footer" style="padding-bottom: 30px; margin-top: 40px;">
     <div class="container">
-        <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
+        <a href="https://tomokazu-hoshi.github.io/migration-guide.html" class="migration-banner">
+            🚀 移行ガイド：GitHubからWordPressへ
+        </a>
+        <p style="text-align: center; color: #888; font-size: 0.85rem;">&copy; 2026 Zero-Cost SEO - 星 友和</p>
     </div>
 </footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('full-screen-menu').classList.toggle('open');
+        if (document.getElementById('full-screen-menu').classList.contains('open')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }
+</script>
 
 </body>
 </html>
