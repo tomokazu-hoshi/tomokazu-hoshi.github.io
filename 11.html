@@ -13,40 +13,99 @@
     <title>11. 内部リンク構造の最適化：クローラビリティを高める | Zero-Cost SEO</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 全画面メニューのスタイル */
+        #full-screen-menu {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(44, 62, 80, 0.98); color: white; z-index: 2000;
+            display: none; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+        }
+        #full-screen-menu.open { display: flex; }
+        .menu-close { position: absolute; top: 30px; right: 30px; font-size: 2.5rem; cursor: pointer; color: #f39c12; line-height: 1; }
+        .menu-list { list-style: none; padding: 0; width: 80%; }
+        .menu-list li { margin: 20px 0; border-bottom: 1px solid #3e5871; padding-bottom: 10px; }
+        .menu-list a { color: white; text-decoration: none; font-size: 1.2rem; font-weight: bold; display: block; }
+        .menu-category { font-size: 0.8rem; color: #f39c12; display: block; margin-bottom: 5px; }
+
+        /* 離脱防止用ヘッダーボタン */
+        .search-trigger {
+            display: flex; align-items: center; justify-content: center; background: #e67e22; color: white;
+            padding: 12px 20px; border-radius: 30px; cursor: pointer; font-size: 1rem; border: none;
+            margin: 15px auto; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: 0.2s;
+        }
+        .search-trigger:active { transform: scale(0.95); }
+
+        /* ナビゲーションカードのスタイル */
+        .post-nav { display: flex; justify-content: space-between; gap: 15px; margin: 30px 0; }
+        .post-nav a {
+            flex: 1; background: white; padding: 20px 10px; border-radius: 12px; text-decoration: none;
+            color: #f39c12; font-weight: bold; text-align: center; font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center;
+        }
+
+        /* 記事リストカード */
+        .article-card-item {
+            background: white; border-radius: 12px; padding: 20px; margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .article-card-item a { text-decoration: none; color: #483d8b; font-weight: bold; display: block; }
+
+        /* 移行ガイドバナー */
+        .migration-banner {
+            display: block; background: #4a86c4; color: white; text-align: center; padding: 15px;
+            border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-weight: bold; font-size: 0.95rem;
+        }
+    </style>
 </head>
 <body>
+
+<div id="full-screen-menu">
+    <div class="menu-close" onclick="toggleMenu()">×</div>
+    <ul class="menu-list">
+        <li><span class="menu-category">迷った時はこちら</span><a href="index.html">🏠 トップページに戻る</a></li>
+        <li><span class="menu-category">基本から始める</span><a href="chapter1.html">第1章：インフラ構築編</a></li>
+        <li><span class="menu-category">AIで記事を書く</span><a href="chapter2.html">第2章：コンテンツ編</a></li>
+        <li><span class="menu-category">収益を最大化する</span><a href="chapter3.html">第3章：マネタイズ編</a></li>
+        <li><span class="menu-category">信頼を構築する</span><a href="chapter4.html">第4章：E-E-A-T編</a></li>
+        <li><span class="menu-category">運営を自動化する</span><a href="chapter5.html">第5章：オートメーション編</a></li>
+        <li><span class="menu-category">ブランドを創る</span><a href="chapter6.html">第6章：未来戦略編</a></li>
+    </ul>
+</div>
 
 <header class="main-header">
     <div class="container">
         <h1>Zero-Cost SEO</h1>
         <p>技術とAIで、コストゼロの資産サイトを構築する</p>
+        <button class="search-trigger" onclick="toggleMenu()">
+            🔍 お探しのページはこちら
+        </button>
     </div>
-</header>
+</header> 
 
 <main class="container">
     <nav>
-        <a href="chapter1.html" class="back-link">← 第1章 目次へ戻る</a>
+        <a href="chapter1.html" class="back-link" style="color: #f39c12; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px;">← 第1章 目次へ戻る</a>
     </nav>
     
-    <article class="post-content">
+    <article class="post-content" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
         <h1>11. 内部リンク構造の最適化：クローラビリティを高める</h1>
         <p>サイト内の各記事が孤立した「点」になっていませんか？内部リンクとは、それらの点をつなぎ、サイト全体を強力な「面」に変える神経網です。適切に配置された内部リンクは、検索エンジンのクローラーが巡回しやすい道を作り（クローラビリティの向上）、同時に読者がより深く情報を学べる環境を提供します。これこそが、Googleからの評価を最大化させる最短距離です。</p>
 
-        <div style="background-color: #fff9db; border: 2px dashed #f39c12; padding: 20px; margin: 30px 0; border-radius: 8px;">
+        <div style="background-color: #fff9db; border: 2px dashed #f39c12; padding: 20px; margin: 30px 0; border-radius: 10px;">
             <h3 style="margin-top: 0; color: #e67e22;">🚀 この記事のあとの作業工程</h3>
             <ol style="line-height: 1.8; font-size: 0.95rem;">
                 <li><strong>SEOスターターガイドを読み、リンクの基本を理解する</strong><br>
-                    → <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ja#use-links-wisely" target="_blank" rel="noopener">Google SEOスターターガイド（外部リンク）</a></li>
+                    <small>→ <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ja#use-links-wisely" target="_blank" rel="noopener">Google SEOスターターガイド（外部リンク）</a></small></li>
                 <li><strong>関連性の高い記事同士をアンカーテキスト（文字リンク）でつなぐ</strong></li>
                 <li><strong>「孤立したページ」がないかディレクトリを確認する</strong></li>
-                <li><strong>第12回「デザインと表示速度の両立」へ進む</strong></li>
+                <li><strong>第12回「ユーザビリティと表示速度の両立」へ進む</strong></li>
             </ol>
         </div>
 
-        <h2>リンクジュースを循環させる</h2>
+        <h2 style="border-left: 5px solid #f39c12; padding-left: 15px; margin-top: 40px;">リンクジュースを循環させる</h2>
         <p>SEOの世界には「リンクジュース」という概念があります。これは、評価の高いページからリンクを貼ることで、リンク先のページにも評価を分け与える仕組みです。第10回で設計したクラスター構造に基づき、親記事から子記事へ、そして子記事から親記事へと双方向にリンクを貼ることで、サイト内を評価が駆け巡ります。GitHub Pagesの爆速表示とこの戦略的なリンク構造が組み合わさることで、Googleの評価速度は飛躍的に高まります。</p>
 
-        <h2>「次の一手」をAIに特定させる</h2>
+        <h2 style="border-left: 5px solid #f39c12; padding-left: 15px; margin-top: 40px;">「次の一手」をAIに特定させる</h2>
         <p>どの記事とどの記事をリンクさせるべきか？迷ったときはAIの出番です。「この記事を読んだ人が、次に読みたくなる関連性の高いトピックを3つ挙げて、その理由も説明して」とAIに聞くことで、文脈的に最も自然で、SEO効果の高い内部リンク案を手に入れることができます。機械的なリンクではなく、読者の「知りたい」に応えるリンク配置こそが、滞在時間を伸ばし、Googleからの信頼を勝ち取る王道です。</p>
 
         <div style="margin: 30px 0; padding: 20px; background: #f1f8ff; border: 1px solid #c8e1ff; border-radius: 8px; font-size: 0.95rem;">
@@ -58,38 +117,50 @@
         </div>
     </article>
 
-    <nav class="post-nav" style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
-        <a href="10.html" style="text-decoration: none; color: #f39c12; font-weight: bold; flex: 1; text-align: left;">← [10. サイトマップとディレクトリ設計] へ戻る</a>
-        <a href="12.html" style="text-decoration: none; color: #f39c12; font-weight: bold; flex: 1; text-align: right;">[12. ユーザビリティと表示速度の両立] へ進む →</a>
+    <nav class="post-nav">
+        <a href="10.html">← [10. サイトマップとディレクトリ設計]</a>
+        <a href="12.html">[12. ユーザビリティと表示速度の両立] →</a>
     </nav>
 
     <section class="article-footer-nav">
-        <h3>同じカテゴリーの記事</h3>
-        <ul class="vertical-article-list">
-            <li><a href="01.html">1. GitHub Pages×AIで作る「維持費0円」の資産サイト</a></li>
-            <li><a href="02.html">2. AI軍師と共に戦略を練る：プロンプトエンジニアリング</a></li>
-            <li><a href="03.html">3. 個人が資本に勝つためのランチェスター戦略</a></li>
-            <li><a href="04.html">4. 爆速表示を実現する静的サイトの優位性</a></li>
-            <li><a href="05.html">5. GitHubアカウントの作成とリポジトリの設定</a></li>
-            <li><a href="06.html">6. ローカル環境の構築：VS CodeとGitの連携</a></li>
-            <li><a href="07.html">7. HTML5/CSS3の基本構造：SEOに強いコードの書き方</a></li>
-            <li><a href="08.html">8. 独自ドメインの取得とGitHub Pagesへの紐付け</a></li>
-            <li><a href="09.html">9. SSL化の確認とセキュリティ設定の基本</a></li>
-            <li><a href="10.html">10. AIを活用したサイトマップとディレクトリ設計</a></li>
-            <li><a href="11.html">11. 内部リンク構造の最適化：クローラビリティを高める</a></li>
-            <li><a href="12.html">12. サイトデザインの基本：ユーザビリティと表示速度の両立</a></li>
-            <li><a href="13.html">13. Google Search Consoleへの登録と初期設定</a></li>
-            <li><a href="14.html">14. Google Analytics 4 (GA4) によるデータ計測の開始</a></li>
-            <li><a href="15.html">15. 第1章まとめ：インフラ構築が資産サイトの命運を握る</a></li>
-        </ul>
+        <h2 style="font-size: 1.3rem; color: #2c3e50; margin-bottom: 20px;">第1章：全15記事リスト</h2>
+        <div class="article-card-item"><a href="01.html">1. GitHub Pages×AIで作る「維持費0円」の資産サイト</a></div>
+        <div class="article-card-item"><a href="02.html">2. AI軍師と共に戦略を練る：プロンプトエンジニアリング</a></div>
+        <div class="article-card-item"><a href="03.html">3. 個人が資本に勝つためのランチェスター戦略</a></div>
+        <div class="article-card-item"><a href="04.html">4. 爆速表示を実現する静的サイトの優位性</a></div>
+        <div class="article-card-item"><a href="05.html">5. GitHubアカウントの作成とリポジトリの設定</a></div>
+        <div class="article-card-item"><a href="06.html">6. ローカル環境の構築：VS CodeとGitの連携</a></div>
+        <div class="article-card-item"><a href="07.html">7. HTML5/CSS3の基本構造：SEOに強いコードの書き方</a></div>
+        <div class="article-card-item"><a href="08.html">8. 独自ドメインの取得とGitHub Pagesへの紐付け</a></div>
+        <div class="article-card-item"><a href="09.html">9. SSL化の確認とセキュリティ設定の基本</a></div>
+        <div class="article-card-item"><a href="10.html">10. AIを活用したサイトマップとディレクトリ設計</a></div>
+        <div class="article-card-item"><a href="11.html">11. 内部リンク構造の最適化：クローラビリティを高める</a></div>
+        <div class="article-card-item"><a href="12.html">12. サイトデザインの基本：ユーザビリティと表示速度の両立</a></div>
+        <div class="article-card-item"><a href="13.html">13. Google Search Consoleへの登録と初期設定</a></div>
+        <div class="article-card-item"><a href="14.html">14. Google Analytics 4 (GA4) によるデータ計測の開始</a></div>
+        <div class="article-card-item"><a href="15.html">15. 第1章まとめ：インフラ構築が資産サイトの命運を握る</a></div>
     </section>
 </main>
 
-<footer class="main-footer">
+<footer class="main-footer" style="padding-bottom: 30px; margin-top: 40px;">
     <div class="container">
-        <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
+        <a href="https://tomokazu-hoshi.github.io/migration-guide.html" class="migration-banner">
+            🚀 移行ガイド：GitHubからWordPressへ
+        </a>
+        <p style="text-align: center; color: #888; font-size: 0.85rem;">&copy; 2026 Zero-Cost SEO - 星 友和</p>
     </div>
 </footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('full-screen-menu').classList.toggle('open');
+        if (document.getElementById('full-screen-menu').classList.contains('open')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }
+</script>
 
 </body>
 </html>
