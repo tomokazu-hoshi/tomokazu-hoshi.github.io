@@ -13,95 +13,161 @@
     <title>34. コピペチェック：独自性を確保するための最終確認 | Zero-Cost SEO</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 全画面メニューのスタイル */
+        #full-screen-menu {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(44, 62, 80, 0.98); color: white; z-index: 2000;
+            display: none; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+        }
+        #full-screen-menu.open { display: flex; }
+        .menu-close { position: absolute; top: 30px; right: 30px; font-size: 2.5rem; cursor: pointer; color: #f39c12; line-height: 1; }
+        .menu-list { list-style: none; padding: 0; width: 80%; }
+        .menu-list li { margin: 20px 0; border-bottom: 1px solid #3e5871; padding-bottom: 10px; }
+        .menu-list a { color: white; text-decoration: none; font-size: 1.2rem; font-weight: bold; display: block; }
+        .menu-category { font-size: 0.8rem; color: #f39c12; display: block; margin-bottom: 5px; }
+
+        /* 離脱防止用ヘッダーボタン */
+        .search-trigger {
+            display: flex; align-items: center; justify-content: center; background: #e67e22; color: white;
+            padding: 12px 20px; border-radius: 30px; cursor: pointer; font-size: 1rem; border: none;
+            margin: 15px auto; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: 0.2s;
+        }
+        .search-trigger:active { transform: scale(0.95); }
+
+        /* ナビゲーションカードのスタイル */
+        .post-nav { display: flex; justify-content: space-between; gap: 15px; margin: 30px 0; }
+        .post-nav a {
+            flex: 1; background: white; padding: 20px 10px; border-radius: 12px; text-decoration: none;
+            color: #f39c12; font-weight: bold; text-align: center; font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center;
+        }
+
+        /* 記事リストカード */
+        .article-card-item {
+            background: white; border-radius: 12px; padding: 20px; margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .article-card-item a { text-decoration: none; color: #483d8b; font-weight: bold; display: block; }
+
+        /* 移行ガイドバナー */
+        .migration-banner {
+            display: block; background: #4a86c4; color: white; text-align: center; padding: 15px;
+            border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-weight: bold; font-size: 0.95rem;
+        }
+    </style>
 </head>
 <body>
+
+<div id="full-screen-menu">
+    <div class="menu-close" onclick="toggleMenu()">×</div>
+    <ul class="menu-list">
+        <li><span class="menu-category">迷った時はこちら</span><a href="index.html">🏠 トップページに戻る</a></li>
+        <li><span class="menu-category">基本から始める</span><a href="chapter1.html">第1章：インフラ構築編</a></li>
+        <li><span class="menu-category">AIで記事を書く</span><a href="chapter2.html">第2章：コンテンツ編</a></li>
+        <li><span class="menu-category">収益を最大化する</span><a href="chapter3.html">第3章：マネタイズ編</a></li>
+        <li><span class="menu-category">信頼を構築する</span><a href="chapter4.html">第4章：E-E-A-T編</a></li>
+        <li><span class="menu-category">運営を自動化する</span><a href="chapter5.html">第5章：オートメーション編</a></li>
+        <li><span class="menu-category">ブランドを創る</span><a href="chapter6.html">第6章：未来戦略編</a></li>
+    </ul>
+</div>
 
 <header class="main-header">
     <div class="container">
         <h1>Zero-Cost SEO</h1>
         <p>技術とAIで、コストゼロの資産サイトを構築する</p>
+        <button class="search-trigger" onclick="toggleMenu()">
+            🔍 お探しのページはこちら
+        </button>
     </div>
-</header>
+</header> 
 
 <main class="container">
     <nav>
-        <a href="chapter2.html" class="back-link">← 第2章 目次へ戻る</a>
+        <a href="chapter2.html" class="back-link" style="color: #f39c12; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px;">← 第2章 目次へ戻る</a>
     </nav>
     
-    <article class="post-content">
+    <article class="post-content" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
         <h1>34. コピペチェック：独自性を確保するための最終確認</h1>
         <p>記事を公開する前の「最終確認」として絶対に欠かせないのが、コピペチェックと独自性の検証です。AIは膨大なデータを学習しているため、意図せずとも既存のWebサイトと酷似した表現を出力してしまうリスクがあります。検索エンジンから「コピーコンテンツ」と見なされることを防ぎ、あなたのサイトならではの価値を盤石にするためのエンジニアリング手法を学びましょう。</p>
 
-        <div style="background-color: #fff9db; border: 2px dashed #f39c12; padding: 20px; margin: 30px 0; border-radius: 8px;">
+        <div style="background-color: #fff9db; border: 2px dashed #f39c12; padding: 20px; margin: 30px 0; border-radius: 10px;">
             <h3 style="margin-top: 0; color: #e67e22;">🚀 この記事のあとの作業工程</h3>
             <ol style="line-height: 1.8; font-size: 0.95rem;">
-                <li><strong>無料・有料のコピペチェックツール（CopyContentDetector等）で重複率を確認する</strong></li>
-                <li><strong>Googleの「AI生成コンテンツに関するガイドライン」を再読し、独自性の基準を満たしているか照合する</strong><br>
-                    → <a href="https://developers.google.com/search/blog/2023/02/google-search-and-ai-content?hl=ja" target="_blank" rel="noopener">Google検索セントラル（外部リンク）</a></li>
-                <li><strong>第35回「第2章まとめ：AIを使いこなし高品質な記事を量産する」へ進む</strong></li>
+                <li><strong>コピペチェックツール（CopyContentDetector等）で重複率を確認する</strong></li>
+                <li><strong>Googleの「AI生成コンテンツに関するガイドライン」を再読する</strong><br>
+                    <small>→ <a href="https://developers.google.com/search/blog/2023/02/google-search-and-ai-content?hl=ja" target="_blank" rel="noopener">Google検索セントラル（外部リンク）</a></small></li>
+                <li><strong>第35回「第2章まとめ」へ進む</strong></li>
             </ol>
         </div>
 
-        <h2>なぜ「独自性」がSEOの生命線なのか</h2>
+        <h2 style="border-left: 5px solid #f39c12; padding-left: 15px; margin-top: 40px;">なぜ「独自性」がSEOの生命線なのか</h2>
         <p>Googleのアルゴリズムは、検索結果に多様性を持たせることを重視しています。他のサイトと同じような情報ばかりが並ぶ記事は、たとえ内容が正しくても上位表示されることはありません。独自性（オリジナリティ）を確保することは、読者にとっての価値を高めるだけでなく、検索エンジンに対して「このサイトを掲載する理由」を明確に提示することに繋がります。</p>
 
-        <h2>AIを活用したコピペリスクの回避</h2>
+        <h2 style="border-left: 5px solid #f39c12; padding-left: 15px; margin-top: 40px;">AIを活用したコピペリスクの回避</h2>
         <p>AIが出力した文章をそのまま公開するのではなく、必ずコピペチェックツールやAI自身の再検証機能を活用します。AIに対し、「この文章の中に、一般的なWeb記事で使い古されている定型句や、特定のサイトに依存した表現がないか確認せよ」と指示します。もし重複のリスクが高いと判断された場合は、文脈を維持したまま、あなた独自の語彙や比喩表現に置き換える「リライト・エンジニアリング」を実行します。</p>
 
-        <h2>「あなたにしか書けないこと」を付け加える</h2>
+        <h2 style="border-left: 5px solid #f39c12; padding-left: 15px; margin-top: 40px;">「あなたにしか書けないこと」を付け加える</h2>
         <p>コピペチェックをクリアした後の最終ステップは、人間による「経験（Experience）」の注入です。AIが作成した論理的な文章の合間に、自分自身の体験談、独自の視点による考察、あるいは失敗から学んだ教訓を一行加えるだけで、その記事の独自性は飛躍的に高まります。AIによる効率化と、人間による感性の融合。これこそが、AI時代に勝ち残る資産サイトを構築するための究極のチェックポイントです。</p>
 
-        <div style="margin: 30px 0; padding: 20px; background: #f1f8ff; border: 1px solid #c8e1ff; border-radius: 8px; font-size: 0.95rem;">
+        <div style="margin-top: 40px; padding: 20px; background: #f1f8ff; border: 1px solid #c8e1ff; border-radius: 8px; font-size: 0.95rem;">
             <strong style="color: #0366d6;">💡 独自性確保ガイド：</strong><br>
-            <p style="margin-top: 10px;">「AIの文章をどう加工すれば、コピペ判定を回避しつつ価値を上げられるのか？」具体的なリライトプロンプトやチェック法を知りたい方は、こちらのガイドをご覧ください。</p>
+            <p style="margin-top: 10px;">「AIの文章をどう加工すれば、コピペ判定を回避しつつ価値を上げられるのか？」具体的なリライトプロンプトを知りたい方は、こちらのガイドをご覧ください。</p>
             <a href="ai-originality-check-guide.html" style="display: inline-block; margin-top: 5px; font-weight: bold; color: #0366d6; text-decoration: underline;">
                 👉 AIによる独自性向上とコピペチェック・マニュアルを読む
             </a>
         </div>
     </article>
 
-    <nav class="post-nav" style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eee;">
-        <a href="33.html" style="text-decoration: none; color: #f39c12; font-weight: bold; flex: 1; text-align: left;">← [33. 読者の「悩み」を解決するQ&Aコーナーの作り方] へ戻る</a>
-        <a href="35.html" style="text-decoration: none; color: #f39c12; font-weight: bold; flex: 1; text-align: right;">[35. 第2章まとめ：AIを使いこなし高品質な記事を量産する] へ進む →</a>
+    <nav class="post-nav">
+        <a href="33.html">← [33. Q&Aコーナーの作り方]</a>
+        <a href="35.html">[35. 第2章まとめ] →</a>
     </nav>
 
     <section class="article-footer-nav">
-        <h3>同じカテゴリー（第2章：AIコンテンツ・エンジニアリング編）の記事</h3>
-        <ul class="vertical-article-list">
-            <li><a href="16.html">16. AIコンテンツ・エンジニアリングの極意</a></li>
-            <li><a href="17.html">17. 読者の検索意図をAIで完璧に解読する</a></li>
-            <li><a href="18.html">18. 心を動かすAIライティング：共感の設計図</a></li>
-            <li><a href="19.html">19. ファクトチェック：AIの嘘を見抜く技術</a></li>
-            <li><a href="20.html">20. キーワード選定術：AIで穴場キーワードを見つける</a></li>
-            <li><a href="21.html">21. 記事構成案の自動生成：論理的な骨組みを作る</a></li>
-            <li><a href="22.html">22. タイトルと見出しの最適化：クリック率を高めるエンジニアリング</a></li>
-            <li><a href="23.html">23. AIによる導入文の作成：読者を一瞬で引き込む手法</a></li>
-            <li><a href="24.html">24. 本文の肉付け：AIと人間の知見を融合させる執筆術</a></li>
-            <li><a href="25.html">25. まとめ文の作成：読者の行動（CTA）を促す締めくくり</a></li>
-            <li><a href="26.html">26. 共起語の自然な挿入：AIでSEOスコアを高める方法</a></li>
-            <li><a href="27.html">27. 画像選定とAlt属性：AI生成画像の活用術</a></li>
-            <li><a href="28.html">28. 内部リンクの文脈的配置：AIによる関連記事の特定</a></li>
-            <li><a href="29.html">29. 定期的なリサーチ：AIで情報の鮮度を保つ仕組み</a></li>
-            <li><a href="30.html">30. AIによる文体（トーン＆マナー）の統一と調整</a></li>
-            <li><a href="31.html">31. 長文記事の構成術：読者を飽きさせない工夫</a></li>
-            <li><a href="32.html">32. 箇条書きと表の活用：AIで情報を構造化する</a></li>
-            <li><a href="33.html">33. 読者の「悩み」を解決するQ&Aコーナーの作り方</a></li>
-            <li><a href="34.html">34. コピペチェック：独自性を確保するための最終確認</a></li>
-            <li><a href="35.html">35. 第2章まとめ：AIを使いこなし高品質な記事を量産する</a></li>
-        </ul>
+        <h2 style="font-size: 1.3rem; color: #2c3e50; margin-bottom: 20px;">第2章：全20記事リスト</h2>
+        <div class="article-card-item"><a href="16.html">16. AIコンテンツ・エンジニアリングの極意</a></div>
+        <div class="article-card-item"><a href="17.html">17. 読者の検索意図をAIで完璧に解読する</a></div>
+        <div class="article-card-item"><a href="18.html">18. 心を動かすAIライティング：共感の設計図</a></div>
+        <div class="article-card-item"><a href="19.html">19. ファクトチェック：AIの嘘を見抜く技術</a></div>
+        <div class="article-card-item"><a href="20.html">20. キーワード選定術：AIで穴場キーワードを見つける</a></div>
+        <div class="article-card-item"><a href="21.html">21. 記事構成案の自動生成：論理的な骨組みを作る</a></div>
+        <div class="article-card-item"><a href="22.html">22. タイトルと見出しの最適化：クリック率を高めるエンジニアリング</a></div>
+        <div class="article-card-item"><a href="23.html">23. AIによる導入文の作成：読者を一瞬で引き込む手法</a></div>
+        <div class="article-card-item"><a href="24.html">24. 本文の肉付け：AIと人間の知見を融合させる執筆術</a></div>
+        <div class="article-card-item"><a href="25.html">25. まとめ文の作成：読者の行動（CTA）を促す締めくくり</a></div>
+        <div class="article-card-item"><a href="26.html">26. 共起語の自然な挿入：AIでSEOスコアを高める方法</a></div>
+        <div class="article-card-item"><a href="27.html">27. 画像選定とAlt属性：AI生成画像の活用術</a></div>
+        <div class="article-card-item"><a href="28.html">28. 内部リンクの文脈적配置：AIによる関連記事の特定</a></div>
+        <div class="article-card-item"><a href="29.html">29. 定期的なリサーチ：AIで情報の鮮度を保つ仕組み</a></div>
+        <div class="article-card-item"><a href="30.html">30. AIによる文体（トーン＆マナー）の統一と調整</a></div>
+        <div class="article-card-item"><a href="31.html">31. 長文記事の構成術：読者を飽きさせない工夫</a></div>
+        <div class="article-card-item"><a href="32.html">32. 箇条書きと表の活用：AIで情報を構造化する</a></div>
+        <div class="article-card-item"><a href="33.html">33. 読者の「悩み」を解決するQ&Aコーナーの作り方</a></div>
+        <div class="article-card-item"><a href="34.html">34. コピペチェック：独自性を確保するための最終確認</a></div>
+        <div class="article-card-item"><a href="35.html">35. 第2章まとめ：AIを使いこなし高品質な記事を量産する</a></div>
     </section>
 </main>
 
-<footer class="main-footer">
+<footer class="main-footer" style="padding-bottom: 30px; margin-top: 40px;">
     <div class="container">
-        <div style="margin-bottom: 20px;">
-            <a href="hosting-comparison-guide.html" style="color: #bbb; text-decoration: none; font-size: 0.85rem;">
-                Webサイト構築における無料と有料の真実：GitHubからWordPressへの移行ガイド
-            </a>
-        </div>
-        <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
+        <a href="https://tomokazu-hoshi.github.io/migration-guide.html" class="migration-banner">
+            🚀 移行ガイド：GitHubからWordPressへ
+        </a>
+        <p style="text-align: center; color: #888; font-size: 0.85rem;">&copy; 2026 Zero-Cost SEO - 星 友和</p>
     </div>
 </footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('full-screen-menu').classList.toggle('open');
+        if (document.getElementById('full-screen-menu').classList.contains('open')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }
+</script>
 
 </body>
 </html>
