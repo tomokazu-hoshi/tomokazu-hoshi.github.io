@@ -1,8 +1,8 @@
 /* =========================================
-   Zero-Cost SEO 決定版スタイルシート
+   Zero-Cost SEO 共通スタイルシート
    ========================================= */
 
-/* --- 全体リセット --- */
+/* --- 基本設定 --- */
 body {
     font-family: 'Noto Sans JP', sans-serif;
     background-color: #f4f7f9;
@@ -18,83 +18,30 @@ body {
     padding: 0 20px;
 }
 
-/* --- ヘッダー（基本：紺色 / 移行ガイド：水色） --- */
+/* --- ヘッダー (紺色・角丸) --- */
 .main-header {
     text-align: center;
     padding: 40px 0;
-    background: #2c3e50; /* デフォルトは紺 */
+    background: #2c3e50;
     color: white;
     border-radius: 0 0 20px 20px;
     margin-bottom: 30px;
 }
 
-/* 移行ガイド用の上書き設定 */
-.migration-theme .main-header {
-    background: #5ca1e6; /* 画像通りの水色 */
-    padding: 50px 0;
-    border-radius: 0 0 25px 25px;
-}
-
 .main-header h1 {
     font-size: 1.8rem;
     margin: 0 0 10px 0;
-    color: white !important;
+    color: white;
 }
 
 .main-header p {
     font-size: 0.9rem;
     opacity: 0.9;
     margin: 0;
-    color: white !important;
-}
-
-/* メニュー起動ボタン */
-.search-trigger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #e67e22;
     color: white;
-    padding: 12px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 1rem;
-    border: none;
-    margin: 15px auto;
-    font-weight: bold;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* --- 全画面メニュー --- */
-#full-screen-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(44, 62, 80, 0.98); 
-    color: white;
-    z-index: 2000;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-#full-screen-menu.open { display: flex; }
-.menu-close {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    font-size: 2.5rem;
-    cursor: pointer;
-    color: #f39c12;
-}
-.menu-list { list-style: none; padding: 0; width: 80%; }
-.menu-list li { margin: 20px 0; border-bottom: 1px solid #3e5871; padding-bottom: 10px; }
-.menu-list a { color: white; text-decoration: none; font-size: 1.2rem; font-weight: bold; display: block; }
-
-/* --- 記事本文・カード（トップページ用：紺/オレンジ） --- */
+/* --- チャプターカード (トップページ用) --- */
 .chapter-card {
     background: white;
     border-radius: 12px;
@@ -105,16 +52,137 @@ body {
     text-decoration: none;
     display: block;
     color: inherit;
+    transition: transform 0.2s;
 }
-.chapter-card h2 { font-size: 1.2rem; color: #2c3e50; margin: 0 0 10px 0; display: flex; align-items: center; }
-.chapter-card h2::before { content: "▶"; font-size: 0.8rem; margin-right: 8px; color: #f39c12; }
 
-/* 特別カード */
-.special-card { border-top: 5px solid #3498db; background: #f0f7ff; border: 1px solid #3498db; }
-.badge { background: #3498db; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; margin-bottom: 8px; display: inline-block; }
+.chapter-card:active {
+    transform: scale(0.98);
+}
 
-/* --- 移行ガイド専用リスト（丸数字：水色） --- */
-.article-card-item {
+.chapter-card h2 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.chapter-card h2::before {
+    content: "▶";
+    font-size: 0.8rem;
+    margin-right: 8px;
+    color: #f39c12;
+}
+
+.chapter-card p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+}
+
+/* 特別ガイド用カード (移行ガイド) */
+.special-card {
+    border-top: 5px solid #3498db;
+    background: #f0f7ff;
+    border: 1px solid #3498db;
+}
+
+.special-card h2 {
+    color: #2980b9;
+}
+
+.special-card h2::before {
+    color: #3498db;
+}
+
+.badge {
+    background: #3498db;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+/* --- 記事ページ用スタイル --- */
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.post-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.post-content h1 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-top: 0;
+    line-height: 1.4;
+}
+
+.post-content h2 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    border-left: 4px solid #f39c12;
+    padding-left: 12px;
+    margin-top: 40px;
+}
+
+/* --- 記事下部リスト (第3章用：金色数字) --- */
+.vertical-article-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vertical-article-list li {
+    margin-bottom: 15px;
+}
+
+.vertical-article-list a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.card-number {
+    color: #f39c12;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 40px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.card-title {
+    color: #333;
+    font-size: 0.95rem;
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+.card-arrow {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+/* --- 移行ガイド用リスト (青色丸数字) --- */
+.migration-article-item {
     display: flex;
     align-items: center;
     background: #fff;
@@ -125,22 +193,25 @@ body {
     text-decoration: none;
     color: inherit;
 }
-.card-circle-num {
+
+.blue-circle {
     background: #3498db;
-    color: #fff;
-    width: 45px;
-    height: 45px;
+    color: white;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 1.2rem;
-    margin-right: 20px;
+    margin-right: 15px;
     flex-shrink: 0;
 }
-.card-title { font-weight: bold; font-size: 1.1rem; color: #2c3e50; }
-.card-desc { font-size: 0.85rem; color: #888; display: block; line-height: 1.4; }
 
-/* フッター */
-.footer { text-align: center; padding: 40px 0; color: #999; font-size: 0.8rem; }
+/* --- 共通フッター --- */
+.footer, .main-footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #999;
+    font-size: 0.8rem;
+}
