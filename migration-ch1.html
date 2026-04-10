@@ -5,165 +5,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>第1章：移行の決断と戦略編 - Zero-Cost SEO</title>
     <style>
+        /* 移行ガイド専用：水色（#71c9f8）のデザインルール */
         :root {
-            --primary-color: #4a90e2;
-            --text-color: #333;
-            --bg-color: #f9f9f9;
-            --box-bg: #ffffff;
-            --accent-color: #d4af37;
+            --primary-water: #71c9f8;
+            --bg-light: #e8f5fe;
+            --text-main: #1c2938;
+            --border-color: #add8e6;
         }
 
         body {
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f7f9f9;
+            color: var(--text-main);
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
 
-        .header {
-            background-color: var(--primary-color);
+        /* ヘッダー：移行ガイドの水色 */
+        header {
+            background-color: var(--primary-water);
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 35px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .header h1 {
+        header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 1.5rem;
         }
 
-        .header p {
+        header p {
             margin: 10px 0 0;
-            font-size: 14px;
+            font-size: 0.9rem;
             opacity: 0.9;
         }
 
-        .container {
-            max-width: 600px;
+        main {
+            max-width: 700px;
             margin: 20px auto;
             padding: 0 15px;
         }
 
         .nav-back {
-            display: block;
-            margin-bottom: 20px;
-            color: var(--primary-color);
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #1da1f2;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 0.95rem;
+            font-weight: bold;
         }
 
         h2 {
-            font-size: 22px;
+            font-size: 1.3rem;
             margin-bottom: 15px;
+            border-left: 6px solid var(--primary-water);
+            padding-left: 12px;
+            color: #1da1f2;
         }
 
-        .intro-text {
+        .intro-box {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
             margin-bottom: 30px;
-            font-size: 15px;
+            font-size: 0.95rem;
         }
 
-        /* ボックスリストのデザイン */
-        .article-list {
+        /* ボックスタイルのリスト */
+        .card-list {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
-        .article-card {
-            background-color: var(--box-bg);
+        .card {
+            background-color: white;
+            border: 1px solid var(--border-color);
             border-radius: 12px;
             display: flex;
             align-items: center;
             padding: 20px;
             text-decoration: none;
-            color: var(--text-color);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
+            color: var(--text-main);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.2s;
         }
 
-        .article-card:active {
-            transform: scale(0.98);
+        .card:active {
+            background-color: var(--bg-light);
+            transform: scale(0.97);
         }
 
-        .article-number {
-            font-size: 24px;
+        .card-number {
+            font-size: 1.5rem;
             font-weight: bold;
-            color: var(--accent-color);
+            color: var(--primary-water);
             width: 40px;
             flex-shrink: 0;
             text-align: center;
             margin-right: 15px;
         }
 
-        .article-title {
+        .card-title {
             flex-grow: 1;
-            font-size: 15px;
-            font-weight: 500;
-            padding-right: 10px;
+            font-size: 1rem;
+            font-weight: bold;
             line-height: 1.4;
         }
 
         .arrow {
             color: #ccc;
-            font-size: 18px;
+            font-size: 1.2rem;
         }
 
         footer {
             text-align: center;
-            padding: 40px 0;
-            font-size: 13px;
-            color: #888;
+            padding: 50px 20px;
+            font-size: 0.8rem;
+            color: #657786;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>Zero-Cost SEO</h1>
-        <p>特別ガイド：WordPress移行戦略</p>
+<header>
+    <h1>Zero-Cost SEO</h1>
+    <p>特別ガイド：WordPress移行戦略</p>
+</header>
+
+<main>
+    <a href="index.html" class="nav-back">← 玄関（目次）へ戻る</a>
+
+    <h2>第1章：移行の決断と戦略編</h2>
+    
+    <div class="intro-box">
+        なぜ今、GitHub PagesからWordPressへ踏み出すのか。コスト0運営の先にある「投資」としてのサイト構築を学びます。
     </div>
 
-    <div class="container">
-        <a href="index.html" class="nav-back">← 移行ガイド目次へ戻る</a>
+    <div class="card-list">
+        <a href="migration-1.html" class="card">
+            <span class="card-number">1</span>
+            <span class="card-title">GitHub Pagesの限界とWordPressの優位性</span>
+            <span class="arrow">→</span>
+        </a>
 
-        <h2>第1章：移行の決断と戦略編</h2>
-        
-        <p class="intro-text">
-            なぜ今、WordPressなのか。コストゼロ運営の先にある「投資」としてのサイト構築を学びます。
-        </p>
+        <a href="migration-2.html" class="card">
+            <span class="card-number">2</span>
+            <span class="card-title">「自分の時間」を「お金」で買う：レバレッジの考え方</span>
+            <span class="arrow">→</span>
+        </a>
 
-        <div class="article-list">
-            <a href="1.html" class="article-card">
-                <span class="article-number">1</span>
-                <span class="article-title">GitHub Pagesの限界とWordPressの優位性</span>
-                <span class="arrow">→</span>
-            </a>
+        <a href="migration-3.html" class="card">
+            <span class="card-number">3</span>
+            <span class="card-title">移行すべき数値基準：PV数と収益性のデッドライン</span>
+            <span class="arrow">→</span>
+        </a>
 
-            <a href="2.html" class="article-card">
-                <span class="article-number">2</span>
-                <span class="article-title">「自分の時間」を「お金」で買う：レバレッジの考え方</span>
-                <span class="arrow">→</span>
-            </a>
-
-            <a href="3.html" class="article-card">
-                <span class="article-number">3</span>
-                <span class="article-title">移行すべき数値基準：PV数と収益性のデッドライン</span>
-                <span class="arrow">→</span>
-            </a>
-
-            <a href="4.html" class="article-card">
-                <span class="article-number">4</span>
-                <span class="article-title">WordPress移行で得られる3つの武器</span>
-                <span class="arrow">→</span>
-            </a>
-        </div>
-
-        <footer>
-            © 2026 Zero-Cost SEO - 星 友和
-        </footer>
+        <a href="migration-4.html" class="card">
+            <span class="card-number">4</span>
+            <span class="card-title">WordPress移行で得られる3つの武器</span>
+            <span class="arrow">→</span>
+        </a>
     </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
+</footer>
 
 </body>
 </html>
