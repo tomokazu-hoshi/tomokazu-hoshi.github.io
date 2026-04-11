@@ -1,66 +1,67 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H56XHD5MLW"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-H56XHD5MLW');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>第5章：機能拡張と最適化編 | WordPress移行ガイド</title>
+    <title>第5章：デザイン・機能実装編 | WordPress移行ガイド</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-    </head>
-<body class="migration-theme">
+</head>
+<body class="migration-page">
 
 <header class="main-header">
     <div class="container">
         <h1>Zero-Cost SEO</h1>
-        <p>特別ガイド：機能拡張と最適化</p>
+        <p>特別ガイド：インフラ準備</p>
     </div>
 </header>
 
 <main class="container">
-    <nav>
+    <nav class="breadcrumb-nav" style="margin: 20px 0;">
         <a href="migration-guide.html" class="back-link">← 移行ガイド目次へ戻る</a>
     </nav>
     
-    <div class="chapter-header">
-        <h1>第5章：機能拡張と最適化編</h1>
-        <p>WordPressならではのプラグインエコシステムをフル活用。サイト速度の極限化や高度な分析、そしてスケーラブルなチーム運営の仕組みを構築します。</p>
-    </div>
+    <article class="post-content">
+        <h1 style="font-size: 2rem; font-weight: bold; margin-top: 0;">第5章：デザイン・機能実装編</h1>
+        <p>WordPressならではの機能を最大限に活用。GitHub Pages時代には難しかったUI/UXの実装を行います。</p>
+    </article>
 
-    <div class="article-list-container">
-        <a href="migration-17.html" class="article-item-card">
-            <span class="article-item-number">17</span>
-            <span class="article-item-title">サイト速度を極限まで高めるキャッシュ設定と画像軽量化</span>
-            <span class="article-item-arrow">→</span>
-        </a>
-
-        <a href="migration-18.html" class="article-item-card">
-            <span class="article-item-number">18</span>
-            <span class="article-item-title">高度なコンバージョン計測：WordPressプラグインによるABテスト</span>
-            <span class="article-item-arrow">→</span>
-        </a>
-
-        <a href="migration-19.html" class="article-item-card">
-            <span class="article-item-number">19</span>
-            <span class="article-item-title">チーム運営の自動化：権限管理とワークフローの構築</span>
-            <span class="article-item-arrow">→</span>
-        </a>
-
-        <a href="migration-20.html" class="article-item-card">
-            <span class="article-item-number">20</span>
-            <span class="article-item-title">サーバーレス環境からサーバー環境への「運用マインド」の切り替え</span>
-            <span class="article-item-arrow">→</span>
-        </a>
-    </div>
+    <section class="category-section">
+        <h2 style="font-size: 1.2rem; font-weight: bold; margin-bottom: 25px;">第5章：全記事リスト</h2>
+        <div class="article-card-list">
+            <a href="migration-17.html" class="migration-article-item">
+                <div class="blue-circle">17</div>
+                <div>
+                    <span class="card-title">WordPressプラグインの厳選と最小構成</span>
+                    <span class="card-desc">速度を維持するために必要な「本当に役立つ」プラグイン。</span>
+                </div>
+            </a>
+            <a href="migration-18.html" class="migration-article-item">
+                <div class="blue-circle">18</div>
+                <div>
+                    <span class="card-title">ウィジェットとメニューの再構築</span>
+                    <span class="card-desc">回遊率を高めるためのサイドバーとナビゲーション設計。</span>
+                </div>
+            </a>
+            <a href="migration-19.html" class="migration-article-item">
+                <div class="blue-circle">19</div>
+                <div>
+                    <span class="card-title">高速化設定：GitHub Pages並みの速度へ</span>
+                    <span class="card-desc">キャッシュ設定とコードの最適化で表示時間を短縮。</span>
+                </div>
+            </a>
+            <a href="migration-20.html" class="migration-article-item">
+                <div class="blue-circle">20</div>
+                <div>
+                    <span class="card-title">コンタクトフォームと分析ツールの再設定</span>
+                    <span class="card-desc">GA4とSearch Consoleの計測を確実に行う。</span>
+                </div>
+            </a>
+        </div>
+    </section>
 </main>
 
-<footer class="footer-text">
+<footer class="footer">
     <div class="container">
         <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
     </div>
