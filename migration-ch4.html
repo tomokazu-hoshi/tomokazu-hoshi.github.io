@@ -18,6 +18,45 @@
         .main-header {
             background: #3498db !important;
         }
+
+        /* 応用記事セクションの追加スタイル */
+        .applied-section {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+        .bonus-card {
+            display: flex;
+            align-items: center;
+            background: #e67e22; /* 応用記事用のアクセントカラー（オレンジ） */
+            color: white !important;
+            padding: 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: transform 0.2s, background 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .bonus-card:hover {
+            transform: translateY(-3px);
+            background: #d35400;
+        }
+        .bonus-icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            background: rgba(255,255,255,0.2);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .bonus-text-main {
+            font-weight: bold;
+            display: block;
+            font-size: 1.05rem;
+        }
     </style>
 </head>
 <body>
@@ -71,6 +110,17 @@
             <div>
                 <span style="font-weight: bold; color: #2c3e50; display: block;">パーマリンク設定の整合性確保</span>
                 <span style="font-size: 0.85rem; color: #888;">URL構造を変えずにWordPressで再現する設定法。</span>
+            </div>
+        </a>
+    </section>
+
+    <section class="applied-section">
+        <h2 style="font-size: 1.2rem; font-weight: bold; margin-bottom: 20px; color: #2c3e50;">あわせてチェックしたい応用記事</h2>
+        
+        <a href="https://tomokazu-hoshi.github.io/theme-main.html" class="bonus-card">
+            <div class="bonus-icon">★</div>
+            <div>
+                <span class="bonus-text-main">【プロ厳選】収益を加速させるWordPressテーマ比較ガイド</span>
             </div>
         </a>
     </section>
