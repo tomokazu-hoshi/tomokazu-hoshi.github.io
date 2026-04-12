@@ -1,128 +1,97 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H56XHD5MLW"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-H56XHD5MLW');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordPress移行ガイド | Zero-Cost SEO</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <title>【2026年版】WordPressテーマ選びの決定版 - ゼロコストSEO</title>
     <style>
-        body { background-color: #f0f7ff; color: #333; line-height: 1.6; }
-        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        body { font-family: "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
+        h1 { text-align: center; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { border-left: 5px solid #3498db; padding-left: 15px; margin-top: 40px; }
+        .intro { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 30px; }
         
-        .main-header { text-align: center; padding: 30px 0; background: #3498db; color: white; border-radius: 0 0 20px 20px; margin-bottom: 20px; }
-        .main-header h1 { font-size: 1.5rem; }
-
-        .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #3498db; font-weight: bold; font-size: 0.9rem; }
-
-        .guide-item {
-            background: white;
-            border-radius: 12px;
-            padding: 18px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: inherit;
-            border: 1px solid #e1e8ed;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        .guide-item:active { background: #f9f9f9; transform: scale(0.98); }
-        .guide-number {
-            background: #3498db;
-            color: white;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-        .guide-content h3 { font-size: 1rem; color: #2c3e50; margin-bottom: 4px; }
-        .guide-content p { font-size: 0.8rem; color: #7f8c8d; margin-bottom: 0; }
+        /* 戻るリンクのスタイル */
+        .back-to-guide { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #3498db; font-weight: bold; font-size: 0.9rem; }
+        .back-to-guide:hover { text-decoration: underline; }
         
-        .intro-text { background: white; padding: 20px; border-radius: 12px; margin-bottom: 25px; font-size: 0.9rem; border-left: 5px solid #3498db; }
+        /* 2x2 Box Layout */
+        .nav-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 40px; }
+        .nav-item { background: #3498db; color: white; padding: 25px; text-align: center; text-decoration: none; border-radius: 10px; font-weight: bold; transition: transform 0.2s, background 0.2s; display: flex; align-items: center; justify-content: center; font-size: 1.1em; }
+        .nav-item:hover { background: #2980b9; transform: translateY(-3px); }
+        
+        /* Section styling */
+        .section-box { background: white; padding: 25px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .btn-more { display: inline-block; background: #e67e22; color: white; padding: 10px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 15px; transition: opacity 0.2s; }
+        .btn-more:hover { opacity: 0.8; }
+        
+        /* 下部戻るボタン */
+        .footer-nav { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; }
+        .btn-back-main { display: inline-block; background: #3498db; color: white; padding: 12px 30px; text-decoration: none; border-radius: 30px; font-weight: bold; transition: background 0.2s; }
+        .btn-back-main:hover { background: #2980b9; }
+
+        @media (max-width: 600px) { .nav-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
-<header class="main-header">
-    <div class="container">
-        <h1>WordPress 移行ガイド</h1>
-    </div>
-</header>
+    <a href="https://tomokazu-hoshi.github.io/migration-guide.html" class="back-to-guide">← WordPress移行ガイドに戻る</a>
 
-<main class="container">
-    <a href="index.html" class="back-link">← トップページへ戻る</a>
+    <h1>WordPressテーマ選びの決定版</h1>
 
-    <div class="intro-text">
-        100記事の資産を築いたあなたへ。このガイドでは、SEO評価を完全に引き継ぎながら、GitHub PagesからWordPressへ安全に移行する全プロセスを解説します。
+    <div class="intro">
+        <p>WordPressのテーマ選びは、単なる着せ替えではありません。サイトの表示速度、SEO構造、 seniorそして収益化の導線を左右する<strong>「収益の土台」</strong>です。本記事ではゼロコストSEOの視点で、今選ぶべき答えをまとめました。</p>
     </div>
 
-    <div class="guide-list">
-        <a href="migration-ch1.html" class="guide-item">
-            <div class="guide-number">1</div>
-            <div class="guide-content">
-                <h3>第1章：移行の決断と戦略編</h3>
-                <p>ゼロコスト卒業のタイミングと有料化のメリット。</p>
-            </div>
-        </a>
-
-        <a href="migration-ch2.html" class="guide-item">
-            <div class="guide-number">2</div>
-            <div class="guide-content">
-                <h3>第2章：インフラ準備編</h3>
-                <p>サーバー選定とWordPress初期設定の正解。</p>
-            </div>
-        </a>
-
-        <a href="migration-ch3.html" class="guide-item">
-            <div class="guide-number">3</div>
-            <div class="guide-content">
-                <h3>第3章：SEO資産継承編</h3>
-                <p>301リダイレクトで評価を1ミリも漏らさない技術。</p>
-            </div>
-        </a>
-
-        <a href="migration-ch4.html" class="guide-item">
-            <div class="guide-number">4</div>
-            <div class="guide-content">
-                <h3>第4章：コンテンツ移行編</h3>
-                <p>HTMLからWordPressへのデータ変換とお引っ越し。</p>
-            </div>
-        </a>
-
-        <a href="migration-ch5.html" class="guide-item">
-            <div class="guide-number">5</div>
-            <div class="guide-content">
-                <h3>第5章：機能拡張と最適化編</h3>
-                <p>プラグインによるスケーリングと収益の最大化。</p>
-            </div>
-        </a>
-
-        <a href="migration-ch6.html" class="guide-item">
-            <div class="guide-number">6</div>
-            <div class="guide-content">
-                <h3>第6章：移行後の再成長編</h3>
-                <p>アドレス変更申請と、新しいステージでの運用術。</p>
-            </div>
-        </a>
+    <div class="nav-grid">
+        <a href="#blog" class="nav-item">ブログ・アフィリエイト</a>
+        <a href="#business" class="nav-item">企業・コーポレート</a>
+        <a href="#portfolio" class="nav-item">ポートフォリオ</a>
+        <a href="#ec" class="nav-item">ECサイト（販売）</a>
     </div>
-</main>
 
-<footer class="footer" style="text-align: center; padding: 40px 0; color: #999; font-size: 0.8rem;">
-    <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
-</footer>
+    <div id="blog" class="section-box">
+        <h2>ブログ・アフィリエイト向け</h2>
+        <p>個人で稼ぐために最も重要な「読みやすさ」と「クリック率」を追求したテーマ群です。SEO設定が最初から組み込まれているため、執筆に集中できます。</p>
+        <ul>
+            <li><strong>推奨テーマ：</strong> SWELL, Cocoon, AFFINGER6</li>
+        </ul>
+        <a href="theme-blog.html" class="btn-more">ブログ向けテーマを詳しく見る</a>
+    </div>
+
+    <div id="business" class="section-box">
+        <h2>企業サイト・コーポレート向け</h2>
+        <p>会社の信頼を形にし、問い合わせ（コンバージョン）を生む設計。専門知識がなくても更新しやすい管理画面が特徴です。</p>
+        <ul>
+            <li><strong>推奨テーマ：</strong> Lightning, Snow Monkey, TCD</li>
+        </ul>
+        <a href="theme-business.html" class="btn-more">企業向けテーマを詳しく見る</a>
+    </div>
+
+    <div id="portfolio" class="section-box">
+        <h2>ポートフォリオ・クリエイティブ向け</h2>
+        <p>作品を主役にする視覚的インパクトを重視。画像が重くなりがちなサイトでも高速に表示させる技術が詰まっています。</p>
+        <ul>
+            <li><strong>推奨テーマ：</strong> LIQUID PORTFOLIO, Astra</li>
+        </ul>
+        <a href="theme-portfolio.html" class="btn-more">クリエイティブ向けテーマを詳しく見る</a>
+    </div>
+
+    <div id="ec" class="section-box">
+        <h2>ECサイト（販売）向け</h2>
+        <p>「商品を売る」ことに特化。ショッピングカートプラグインとの親和性が高く、スムーズな購買体験を提供します。</p>
+        <ul>
+            <li><strong>推奨テーマ：</strong> Storefront, Welcart Basic</li>
+        </ul>
+        <a href="theme-ec.html" class="btn-more">EC向けテーマを詳しく見る</a>
+    </div>
+
+    <div class="footer-nav">
+        <a href="https://tomokazu-hoshi.github.io/migration-guide.html" class="btn-back-main">WordPress移行ガイド目次へ戻る</a>
+    </div>
+
+    <footer style="text-align: center; padding: 40px 0; color: #999; font-size: 0.8rem;">
+        <p>&copy; 2026 Zero-Cost SEO - 星 友和</p>
+    </footer>
 
 </body>
 </html>
